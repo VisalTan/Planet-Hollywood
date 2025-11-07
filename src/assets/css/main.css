@@ -1,0 +1,53 @@
+/* assets/css/main.css */
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+    /* Breakpoints */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 976px;
+    
+    /* Light theme - Modern E-commerce Colors */
+    --color-primary: #2563eb;        /* Trust-inspiring blue for CTAs */
+    --color-secondary: #8b5cf6;      /* Purple for accents/secondary actions */
+    --color-accent: #f59e0b;         /* Warm amber for highlights/deals */
+    --color-success: #10b981;        /* Green for success states */
+    --color-warning: #f59e0b;        /* Amber for warnings */
+    --color-error: #ef4444;          /* Red for errors/urgent */
+    --color-background: #ffffff;     /* Clean white background */
+    --color-surface: #f8fafc;        /* Subtle gray for cards */
+    --color-surface-elevated: #ffffff; /* Elevated elements */
+    --color-text: #0f172a;           /* Dark slate for readability */
+    --color-text-secondary: #64748b; /* Muted text */
+    --color-border: #e2e8f0;         /* Subtle borders */
+    --color-twitter-blue: #1DA1F2;
+    --color-orange-500: #f97316;
+}
+
+/* Dark theme - E-commerce Optimized */
+[data-theme="dark"] {
+    --color-primary: #3b82f6;        /* Brighter blue for dark mode */
+    --color-secondary: #a78bfa;      /* Lighter purple for visibility */
+    --color-accent: #fbbf24;         /* Vibrant amber for deals */
+    --color-success: #34d399;        /* Bright green */
+    --color-warning: #fbbf24;        /* Bright amber */
+    --color-error: #f87171;          /* Softer red for dark bg */
+    --color-background: #0f172a;     /* Deep slate background */
+    --color-surface: #1e293b;        /* Elevated slate for cards */
+    --color-surface-elevated: #334155; /* More elevated elements */
+    --color-text: #f1f5f9;           /* Light text */
+    --color-text-secondary: #94a3b8; /* Muted light text */
+    --color-border: #334155;         /* Visible borders in dark */
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Add smooth transitions for theme switching */
+* {
+    transition: border-color 0.3s ease;
+}
