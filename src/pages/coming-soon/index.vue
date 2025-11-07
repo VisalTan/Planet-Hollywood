@@ -73,7 +73,7 @@
     </section>
 
     <!-- Hotel Highlight -->
-    <section class="relative z-10 py-20 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent">
+    <section class="relative z-10 py-20 bg-linear-to-b from-transparent via-purple-900/10 to-transparent">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-bold text-center mb-16">
           <span class="gradient-text-animated">THE STAR EXPERIENCE</span>
@@ -142,7 +142,7 @@
     </section>
 
     <!-- Cliff Pool -->
-    <section class="relative z-10 py-20 bg-gradient-to-b from-transparent via-cyan-900/10 to-transparent">
+    <section class="relative z-10 py-20 bg-linear-to-b from-transparent via-cyan-900/10 to-transparent">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-5xl font-bold mb-6">
@@ -155,7 +155,7 @@
         
         <div class="relative">
           <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200" alt="Infinity Pool" class="rounded-lg shadow-2xl w-full neon-border-glow" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg"></div>
+          <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent rounded-lg"></div>
           <div class="absolute bottom-8 left-8 right-8">
             <div class="grid md:grid-cols-3 gap-6">
               <div class="bg-black/60 backdrop-blur-md p-6 rounded-lg neon-border-cyan">
@@ -187,7 +187,7 @@
           <!-- Cafe Hollywood -->
           <div class="neon-card-hover rounded-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600" alt="Restaurant Interior" class="w-full h-64 object-cover" />
-            <div class="p-6 bg-gradient-to-b from-black/80 to-black">
+            <div class="p-6 bg-linear-to-b from-black/80 to-black">
               <h3 class="text-2xl font-bold mb-3 neon-text-pink">Café Hollywood</h3>
               <p class="text-gray-300 mb-4">All-day dining with international & local flavours. Located on the 30th floor lobby.</p>
               <div class="flex items-center gap-2 text-cyan-400">
@@ -201,7 +201,7 @@
           <!-- The Marquee Bar -->
           <div class="neon-card-hover rounded-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600" alt="Bar" class="w-full h-64 object-cover" />
-            <div class="p-6 bg-gradient-to-b from-black/80 to-black">
+            <div class="p-6 bg-linear-to-b from-black/80 to-black">
               <h3 class="text-2xl font-bold mb-3 neon-text-cyan">The Marquee Bar</h3>
               <p class="text-gray-300 mb-4">Cocktails, live entertainment, and Las Vegas sparkle under Hollywood-style marquee lighting.</p>
               <div class="flex items-center gap-2 text-pink-400">
@@ -215,7 +215,7 @@
           <!-- Gordon Ramsay -->
           <div class="neon-card-hover rounded-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600" alt="Burger Restaurant" class="w-full h-64 object-cover" />
-            <div class="p-6 bg-gradient-to-b from-black/80 to-black">
+            <div class="p-6 bg-linear-to-b from-black/80 to-black">
               <h3 class="text-2xl font-bold mb-3 neon-text-purple">Gordon Ramsay Burger</h3>
               <p class="text-gray-300 mb-4">Southeast Asia's first Gordon Ramsay Burger, perched beside the rooftop cliff pool.</p>
               <div class="flex items-center gap-2 text-purple-400">
@@ -230,7 +230,7 @@
     </section>
 
     <!-- Room Themes -->
-    <section class="relative z-10 py-20 bg-gradient-to-b from-transparent via-pink-900/10 to-transparent">
+    <section class="relative z-10 py-20 bg-linear-to-b from-transparent via-pink-900/10 to-transparent">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-bold text-center mb-16">
           <span class="gradient-text-animated">FOUR THEMES. ONE STAR EXPERIENCE.</span>
@@ -240,7 +240,7 @@
           <!-- Phamous -->
           <div class="group relative overflow-hidden rounded-lg neon-card-hover">
             <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500" alt="Luxury Suite" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent">
+            <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent">
               <div class="absolute bottom-0 p-6">
                 <h3 class="text-3xl font-bold neon-text-pink mb-2">PHAMOUS</h3>
                 <p class="text-sm text-gray-300">Red-carpet glamour with gold & copper tones. The crown jewel suite.</p>
@@ -251,7 +251,7 @@
           <!-- Phantastic -->
           <div class="group relative overflow-hidden rounded-lg neon-card-hover">
             <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500" alt="Modern Room" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent">
+            <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent">
               <div class="absolute bottom-0 p-6">
                 <h3 class="text-3xl font-bold neon-text-cyan mb-2">PHANTASTIC</h3>
                 <p class="text-sm text-gray-300">Hollywood film set illusions with cinematic lighting & layered textures.</p>
