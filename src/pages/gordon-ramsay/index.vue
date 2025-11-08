@@ -9,7 +9,7 @@
           alt="Gourmet Burger"
           class="w-full h-full object-cover opacity-40"
         />
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-black via-transparent to-black"></div>
       </div>
 
       <!-- Animated Fire Particles -->
@@ -80,15 +80,15 @@
               Every burger is a testament to his uncompromising standards and passion for perfection. From carefully sourced premium beef to the secret Hell's Kitchen sauce, experience what happens when culinary genius meets classic American comfort food.
             </p>
             <div class="flex gap-6 text-center">
-              <div class="flex-1 bg-gradient-to-b from-red-900/50 to-black border border-red-500/30 rounded-2xl p-6">
+              <div class="flex-1 bg-linear-to-b from-red-900/50 to-black border border-red-500/30 rounded-2xl p-6">
                 <p class="text-4xl font-black text-red-500 mb-2">7</p>
                 <p class="text-gray-400 text-sm uppercase tracking-wider">Michelin Stars</p>
               </div>
-              <div class="flex-1 bg-gradient-to-b from-orange-900/50 to-black border border-orange-500/30 rounded-2xl p-6">
+              <div class="flex-1 bg-linear-to-b from-orange-900/50 to-black border border-orange-500/30 rounded-2xl p-6">
                 <p class="text-4xl font-black text-orange-500 mb-2">35+</p>
                 <p class="text-gray-400 text-sm uppercase tracking-wider">Restaurants</p>
               </div>
-              <div class="flex-1 bg-gradient-to-b from-yellow-900/50 to-black border border-yellow-500/30 rounded-2xl p-6">
+              <div class="flex-1 bg-linear-to-b from-yellow-900/50 to-black border border-yellow-500/30 rounded-2xl p-6">
                 <p class="text-4xl font-black text-yellow-500 mb-2">100M+</p>
                 <p class="text-gray-400 text-sm uppercase tracking-wider">Fans Worldwide</p>
               </div>
@@ -569,15 +569,15 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="relative py-32 px-4 bg-gradient-to-b from-black via-red-950/20 to-black">
+    <section class="relative py-32 px-4 bg-linear-to-b from-black via-red-950/20 to-black">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-6xl md:text-7xl font-black text-center mb-20 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500">
+        <h2 class="text-6xl md:text-7xl font-black text-center mb-20 text-transparent bg-clip-text bg-linear-to-r from-yellow-500 via-red-500 to-orange-500">
           THE FULL EXPERIENCE
         </h2>
 
         <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
           <div class="relative group">
-            <div class="absolute -inset-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+            <div class="absolute -inset-4 bg-linear-to-r from-red-600 to-orange-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
             <img 
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" 
               alt="Restaurant interior"

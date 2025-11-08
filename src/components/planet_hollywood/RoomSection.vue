@@ -2,7 +2,8 @@
   <section id="rooms" class="py-20 bg-black relative overflow-hidden">
     <!-- Animated background gradients -->
     <div class="absolute inset-0 opacity-20">
-      <div class="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-cyan-400 to-transparent"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-cyan-400 to-transparent">
+      </div>
       <div class="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-pink-400 to-transparent">
       </div>
     </div>
@@ -16,25 +17,61 @@
         <p class="text-gray-400 text-xl">Each floor tells its own story through design, colour, and energy</p>
       </div>
 
-      <!-- 3D Carousel Container -->
-      <div class="relative h-[600px] flex items-center justify-center perspective-container mb-16">
-        <!-- Carousel wrapper -->
-        <div class="carousel-3d" :style="{ transform: `rotateY(${rotation}deg)` }">
-          <div v-for="(room, index) in rooms" :key="index" class="carousel-item" :style="getCardStyle(index)"
-            @click="rotateToCard(index)">
-            <div class="card-inner">
-              <div class="card-glow" :class="`glow-${room.color}`"></div>
-              <img :src="room.image" :alt="room.name" class="card-image" />
-              <div class="card-overlay">
-                <div class="card-content">
-                  <h3 class="text-3xl font-bold mb-2 gradient-text">{{ room.name }}</h3>
-                  <p class="text-sm text-gray-300 mb-3">{{ room.description }}</p>
-                  <div class="flex items-center text-xs text-cyan-400">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Room Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div v-for="(room, index) in rooms" :key="index"
+          class="room-card group relative overflow-hidden rounded-2xl cursor-pointer transform transition-all duration-500 hover:scale-[1.02] h-[400px]"
+          :style="{ animationDelay: `${index * 0.1}s` }">
+
+          <!-- Animated border gradient -->
+          <div class="absolute inset-0 rounded-2xl p-[2px] z-0" :class="`border-glow-${room.color}`">
+            <div class="absolute inset-[2px] bg-black rounded-2xl"></div>
+          </div>
+
+          <!-- Image container -->
+          <div class="absolute inset-0 overflow-hidden rounded-2xl">
+            <img :src="room.image" :alt="room.name"
+              class="w-full h-full object-fill transition-transform duration-700 group-hover:scale-120" />
+
+            <!-- Overlay gradient -->
+            <div class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent"></div>
+          </div>
+
+          <!-- Content overlay -->
+          <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-10">
+
+            <!-- Room info -->
+            <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-12 h-1 rounded-full transition-all duration-300 group-hover:w-20"
+                  :class="`bg-${room.color}-400`"></div>
+              </div>
+
+              <h3 class="text-4xl font-bold mb-3 gradient-text">{{ room.name }}</h3>
+
+              <p
+                class="text-gray-300 text-lg mb-4 transition-all duration-300 delay-100">
+                {{ room.description }}
+              </p>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-sm" :class="`text-${room.color}-400`">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  <span class="font-semibold">{{ room.size }}</span>
+                </div>
+
+                <div
+                  class="opacity-0 group-hover:opacity-100 transition-all duration-300 delay-150 transform translate-x-4 group-hover:translate-x-0">
+                  <div class="flex items-center gap-2 text-sm font-semibold" :class="`text-${room.color}-400`">
+                    <span>View Details</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                    {{ room.size }}
                   </div>
                 </div>
               </div>
@@ -42,19 +79,10 @@
           </div>
         </div>
 
-        <!-- Navigation buttons -->
-        <button @click="rotate(-1)" class="nav-button nav-button-left">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button @click="rotate(1)" class="nav-button nav-button-right">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+
       </div>
 
+      <!-- Stats Grid -->
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-20">
         <div v-for="(stat, index) in stats" :key="index"
           class="neon-card bg-black/50 p-6 rounded-lg border transition-all duration-300 hover:scale-105"
@@ -68,11 +96,12 @@
 
       <!-- Penthouse Showcase Video Section -->
       <div class="relative">
-        <!-- Decorative elements -->
+        <!-- Decorative top line -->
         <div
           class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-64 h-px bg-linear-to-r from-transparent via-pink-500 to-transparent">
         </div>
 
+        <!-- Header -->
         <div class="text-center mb-12">
           <div class="inline-block mb-4">
             <span
@@ -88,6 +117,23 @@
           </p>
         </div>
 
+        <!-- Video Tabs -->
+        <div class="flex justify-center mb-8 gap-4">
+          <button v-for="video in videos" :key="video.id" @click="activeVideo = video.id"
+            class="px-6 py-3 rounded-full font-semibold transition-all duration-300 text-sm uppercase tracking-wider"
+            :class="activeVideo === video.id
+              ? 'bg-linear-to-r from-pink-500 via-purple-500 to-cyan-500 text-white shadow-lg shadow-pink-500/50'
+              : 'bg-black/50 text-gray-400 border border-gray-700 hover:border-pink-400/50 hover:text-white'">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              {{ video.label }}
+            </span>
+          </button>
+        </div>
+
         <!-- Video Container with 3D effects -->
         <div class="relative group">
           <!-- Glow effect behind video -->
@@ -100,25 +146,25 @@
             <div class="relative bg-black rounded-3xl overflow-hidden shadow-2xl">
               <!-- Decorative corner accents -->
               <div
-                class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-pink-400 rounded-tl-3xl opacity-50">
+                class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-pink-400 rounded-tl-3xl opacity-50 z-10">
               </div>
               <div
-                class="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-cyan-400 rounded-tr-3xl opacity-50">
+                class="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-cyan-400 rounded-tr-3xl opacity-50 z-10">
               </div>
               <div
-                class="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-purple-400 rounded-bl-3xl opacity-50">
+                class="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-purple-400 rounded-bl-3xl opacity-50 z-10">
               </div>
               <div
-                class="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-yellow-400 rounded-br-3xl opacity-50">
+                class="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-yellow-400 rounded-br-3xl opacity-50 z-10">
               </div>
 
-              <!-- Video element -->
-              <!-- <video class="w-full aspect-video object-cover" controls autoplay muted loop playsinline>
-                <source src="/videos/ph-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video> -->
-
-              <Video360Viewer />
+              <!-- Video Player with Transition -->
+               <div class="relative w-full aspect-video">
+                <transition name="fade" mode="out-in">
+                  <Video360Viewer :key="activeVideo" :src="videos.find(v => v.id === activeVideo)?.src"
+                    class="w-full h-full absolute inset-0" />
+                </transition>
+              </div>
 
               <!-- Overlay gradient on hover -->
               <div
@@ -126,8 +172,6 @@
               </div>
             </div>
           </div>
-
-
         </div>
 
         <!-- Bottom decorative line -->
@@ -182,6 +226,12 @@ const stats = [
   { count: "2", label: "Penthouses", color: "pink" }
 ];
 
+const videos = [
+  { id: 'hotel', label: 'Hotel Tour', src: '/videos/ph-video.mp4' },
+  { id: 'penthouse', label: 'Penthouse Suite', src: '/videos/penhouse.mp4' }
+];
+
+const activeVideo = ref('hotel');
 const rotation = ref(0);
 const currentIndex = ref(0);
 const isAutoRotating = ref(true);
@@ -192,9 +242,6 @@ const radius = 400;
 
 const getCardStyle = (index: number) => {
   const angle = angleStep * index;
-  const x = Math.sin((angle * Math.PI) / 180) * radius;
-  const z = Math.cos((angle * Math.PI) / 180) * radius;
-
   return {
     transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
   };
@@ -364,6 +411,13 @@ onUnmounted(() => {
   background-clip: text;
 }
 
+.gradient-text-gold {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #eab308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .nav-button {
   position: absolute;
   top: 50%;
@@ -411,6 +465,22 @@ onUnmounted(() => {
 .neon-text-purple {
   color: #a855f7;
   text-shadow: 0 0 10px #a855f7;
+}
+
+.neon-text-yellow {
+  color: #eab308;
+  text-shadow: 0 0 10px #eab308;
+}
+
+/* Video transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 @media (max-width: 768px) {

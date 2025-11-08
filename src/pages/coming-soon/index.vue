@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-black text-white overflow-x-hidden">
     <!-- Animated Background -->
     <div class="fixed inset-0 z-0">
-      <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 via-purple-900/20 to-cyan-900/20"></div>
+      <div class="absolute inset-0 bg-linear-to-br from-pink-900/20 via-purple-900/20 to-cyan-900/20"></div>
       <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920'); background-size: cover; background-position: center; opacity: 0.15;"></div>
       <div class="absolute inset-0 bg-black/60"></div>
     </div>
@@ -262,7 +262,7 @@
           <!-- Phabulous -->
           <div class="group relative overflow-hidden rounded-lg neon-card-hover">
             <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500" alt="Elegant Suite" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent">
+            <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent">
               <div class="absolute bottom-0 p-6">
                 <h3 class="text-3xl font-bold neon-text-purple mb-2">PHABULOUS</h3>
                 <p class="text-sm text-gray-300">Cambodian weaving patterns as contemporary mosaics. Heritage meets modernity.</p>
@@ -273,7 +273,7 @@
           <!-- Phun -->
           <div class="group relative overflow-hidden rounded-lg neon-card-hover">
             <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500" alt="Vibrant Room" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent">
+            <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent">
               <div class="absolute bottom-0 p-6">
                 <h3 class="text-3xl font-bold neon-text-gold mb-2">PHUN</h3>
                 <p class="text-sm text-gray-300">Vibrant energy with LED lighting & bold décor. Music equalizer inspiration.</p>
@@ -358,7 +358,7 @@
     <!-- Newsletter Signup -->
     <section class="relative z-10 py-20">
       <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto text-center bg-gradient-to-r from-pink-900/30 via-purple-900/30 to-cyan-900/30 p-12 rounded-lg neon-border-glow">
+        <div class="max-w-4xl mx-auto text-center bg-linear-to-r from-pink-900/30 via-purple-900/30 to-cyan-900/30 p-12 rounded-lg neon-border-glow">
           <h2 class="text-4xl font-bold mb-6">
             <span class="gradient-text-animated">BE THE FIRST TO KNOW</span>
           </h2>
