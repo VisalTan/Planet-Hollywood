@@ -55,11 +55,11 @@
                     <!-- Main Image Container -->
                     <div
                         class="relative rounded-3xl overflow-hidden border-2 border-cyan-400 shadow-2xl shadow-cyan-500/20 group">
-                        <div class="aspect-[4/3] bg-linear-to-br from-gray-800 to-gray-900">
+                        <div class="aspect-4/3 bg-linear-to-br from-gray-800 to-gray-900">
                             <!-- Placeholder for hotel interior image -->
                             <div
                                 class="relative rounded-3xl overflow-hidden border border-cyan-400 shadow-2xl shadow-cyan-500/20 group">
-                                <div class="aspect-[4/3] bg-linear-to-br from-gray-800 to-gray-900">
+                                <div class="aspect-4/3 bg-linear-to-br from-gray-800 to-gray-900">
                                     <!-- Placeholder for hotel interior image -->
                                     <img src="/images/ph1.png" class="w-full h-full object-cover"
                                         alt="Planet Hollywood Hotel"></img>

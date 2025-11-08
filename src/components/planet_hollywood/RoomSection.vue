@@ -24,8 +24,8 @@
           :style="{ animationDelay: `${index * 0.1}s` }">
 
           <!-- Animated border gradient -->
-          <div class="absolute inset-0 rounded-2xl p-[2px] z-0" :class="`border-glow-${room.color}`">
-            <div class="absolute inset-[2px] bg-black rounded-2xl"></div>
+          <div class="absolute inset-0 rounded-2xl p-0.5 z-0" :class="`border-glow-${room.color}`">
+            <div class="absolute inset-0.5 bg-black rounded-2xl"></div>
           </div>
 
           <!-- Image container -->
