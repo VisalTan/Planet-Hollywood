@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { restaurants } from '~/data/planet_hollywood';
+import { useDining } from '~/composables/useDining';
 import { Utensils } from 'lucide-vue-next';
+
+const { diningContent } = useDining();
 </script>
 
 <template>
@@ -11,12 +13,12 @@ import { Utensils } from 'lucide-vue-next';
     </div>
     <div class="container mx-auto px-6 relative z-10">
       <div class="text-center mb-16">
-        <h2 class="text-5xl font-bold mb-4">Dining <span class="gradient-text">Experiences</span></h2>
-        <p class="text-gray-400 text-xl">Where every meal feels like a moment on the red carpet</p>
+        <h2 class="text-5xl font-bold mb-4">{{ diningContent?.title || "Dining" }} <span class="gradient-text">{{ diningContent?.title?.split(' ')[1] || "Experiences" }}</span></h2>
+        <p class="text-gray-400 text-xl">{{ diningContent?.subtitle || "Where every meal feels like a moment on the red carpet" }}</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div v-for="(restaurant, index) in restaurants" :key="index"
+        <div v-for="(restaurant, index) in diningContent?.restaurants || []" :key="index"
           class="neon-card-hover bg-black/50 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-400 shadow-lg shadow-cyan-500/20 hover:shadow-2xl hover:shadow-cyan-400/40">
           <div class="relative overflow-hidden">
             <img :src="restaurant.image" :alt="restaurant.name"

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { MapPin } from 'lucide-vue-next'
+import { useAbout } from '~/composables/useAbout'
+
+const { aboutContent } = useAbout()
 </script>
 
 <template>
@@ -12,11 +15,10 @@ import { MapPin } from 'lucide-vue-next'
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-5xl font-bold mb-6">
-            Where <span class="gradient-text">Hollywood</span> Meets Cambodia
+            {{ aboutContent?.title || "Where Hollywood Meets Cambodia" }}
           </h2>
           <p class="text-gray-300 text-lg leading-relaxed mb-6">
-            Planet Hollywood Hotel Phnom Penh marks the brand's first-ever hotel in Asia — a milestone that brings
-            Hollywood's signature energy to the heart of Cambodia.
+            {{ aboutContent?.description || "Planet Hollywood Hotel Phnom Penh marks the brand's first-ever hotel in Asia — a milestone that brings Hollywood's signature energy to the heart of Cambodia." }}
           </p>
           <p class="text-gray-300 text-lg leading-relaxed mb-8">
             Blending cinematic glamour with contemporary sophistication, the hotel features 148 rooms, each designed
@@ -24,29 +26,29 @@ import { MapPin } from 'lucide-vue-next'
           </p>
           <div class="grid grid-cols-3 gap-6 text-center">
             <div class="neon-card bg-black/50 p-6 rounded-lg border-2 border-pink-400">
-              <div class="text-4xl font-bold neon-text-pink mb-2">148</div>
-              <div class="text-sm text-gray-400">Rooms</div>
+              <div class="text-4xl font-bold neon-text-pink mb-2">{{ aboutContent?.stats.rooms.count || "148" }}</div>
+              <div class="text-sm text-gray-400">{{ aboutContent?.stats.rooms.label || "Rooms" }}</div>
             </div>
             <div class="neon-card bg-black/50 p-6 rounded-lg border-2 border-cyan-400">
-              <div class="text-4xl font-bold neon-text-cyan mb-2">900+</div>
-              <div class="text-sm text-gray-400">Event Space (sqm)</div>
+              <div class="text-4xl font-bold neon-text-cyan mb-2">{{ aboutContent?.stats.eventSpace.count || "900+" }}</div>
+              <div class="text-sm text-gray-400">{{ aboutContent?.stats.eventSpace.label || "Event Space (sqm)" }}</div>
             </div>
             <div class="neon-card bg-black/50 p-6 rounded-lg border-2 border-purple-400">
-              <div class="text-4xl font-bold text-purple-400 mb-2">5★</div>
-              <div class="text-sm text-gray-400">Facilities</div>
+              <div class="text-4xl font-bold text-purple-400 mb-2">{{ aboutContent?.stats.facilities.count || "5★" }}</div>
+              <div class="text-sm text-gray-400">{{ aboutContent?.stats.facilities.label || "Facilities" }}</div>
             </div>
           </div>
         </div>
         <div class="relative">
           <div class="absolute inset-0 bg-linear-to-r from-pink-500 to-cyan-500 rounded-lg blur-xl opacity-50">
           </div>
-          <img src="/images/ph1.png" alt="Hotel Lobby"
+          <img :src="aboutContent?.image || '/images/ph1.png'" alt="Hotel Lobby"
             class="rounded-lg shadow-2xl relative z-10 border-2 border-cyan-400" />
           <div
             class="absolute -bottom-6 -left-6 bg-linear-to-r from-pink-500 to-purple-500 text-white p-6 rounded-lg shadow-xl neon-border z-20">
             <MapPin class="w-8 h-8 mb-2" />
-            <div class="font-bold text-lg">BKK1 District</div>
-            <div class="text-sm">JS Tower, Phnom Penh</div>
+            <div class="font-bold text-lg">{{ aboutContent?.location || "BKK1 District" }}</div>
+            <div class="text-sm">{{ aboutContent?.address || "JS Tower, Phnom Penh" }}</div>
           </div>
         </div>
       </div>

@@ -15,7 +15,10 @@
     "@pinia/nuxt": "^0.11.2",
     "@tailwindcss/vite": "^4.1.16",
     "aframe": "^1.7.1",
+    "firebase": "^12.6.0",
+    "firebase-admin": "^13.6.0",
     "lucide-vue-next": "^0.552.0",
+    "node-telegram-bot-api": "^0.66.0",
     "nuxt": "^4.0.3",
     "pinia": "^3.0.3",
     "three": "^0.181.0",
@@ -24,6 +27,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.64",
+    "@types/node-telegram-bot-api": "^0.64.12",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }

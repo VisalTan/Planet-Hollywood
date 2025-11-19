@@ -1,9 +1,11 @@
 <template>
-    <section class="relative py-32 overflow-hidden">
-      <img 
-        src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1600&q=80" 
-        alt="Infinity Pool" 
+    <section id="amenities" class="relative py-32 overflow-hidden">
+      <NuxtImg
+        src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1600&q=80"
+        alt="Infinity Pool"
         class="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+        :modifiers="{ quality: 85 }"
       />
       <div class="absolute inset-0 bg-linear-to-r from-purple-900/60 via-black/60 to-cyan-900/60"></div>
       <div class="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent"></div>

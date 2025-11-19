@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { attractions } from '~/data/planet_hollywood';
+import { useLocation } from '~/composables/useLocation';
 import { MapPin } from 'lucide-vue-next'
+
+const { locationContent } = useLocation();
 </script>
 
 <template>
-  <section class="relative py-32 overflow-hidden">
+  <section id="location" class="relative py-32 overflow-hidden">
     <!-- Animated Background -->
     <div class="absolute inset-0 bg-linear-to-b from-black via-purple-950/20 to-black">
       <div class="absolute inset-0 opacity-20">
@@ -25,17 +27,17 @@ import { MapPin } from 'lucide-vue-next'
           </div>
         </div>
         <h2 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-          Perfectly <span
-            class="bg-linear-to-r from-cyan-400 via-pink-400 to-purple-400 text-transparent bg-clip-text animate-pulse">Located</span>
+          {{ locationContent?.title?.split(' ')[0] || "Perfectly" }} <span
+            class="bg-linear-to-r from-cyan-400 via-pink-400 to-purple-400 text-transparent bg-clip-text animate-pulse">{{ locationContent?.title?.split(' ')[1] || "Located" }}</span>
         </h2>
         <p class="text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto">
-          In the vibrant heart of Phnom Penh's prestigious BKK1 district
+          {{ locationContent?.subtitle || "In the vibrant heart of Phnom Penh's prestigious BKK1 district" }}
         </p>
       </div>
 
       <!-- Attractions Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        <div v-for="(attraction, index) in attractions" :key="index"
+        <div v-for="(attraction, index) in locationContent?.attractions || []" :key="index"
           class="group relative bg-linear-to-b from-gray-900/90 to-black/90 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-800/50 hover:border-cyan-400/50 transition-all duration-700 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
 
           <!-- Image Container -->

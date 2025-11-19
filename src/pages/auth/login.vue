@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useLoginStore } from '#imports'
-import Dialog from '~/components/Dialog.vue'
 
 const message = computed(() => {
     if (loginStore.error) return loginStore.error

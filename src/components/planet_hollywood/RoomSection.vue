@@ -12,14 +12,14 @@
       <!-- Header -->
       <div class="text-center mb-16">
         <h2 class="text-5xl font-bold mb-4">
-          Four Themes. One <span class="gradient-text">Star</span> Experience
+          {{ roomsContent?.title || "Four Themes. One Star Experience" }}
         </h2>
-        <p class="text-gray-400 text-xl">Each floor tells its own story through design, colour, and energy</p>
+        <p class="text-gray-400 text-xl">{{ roomsContent?.subtitle || "Each floor tells its own story through design, colour, and energy" }}</p>
       </div>
 
       <!-- Room Gallery Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        <div v-for="(room, index) in rooms" :key="index"
+        <div v-for="(room, index) in roomsContent?.rooms || rooms" :key="index"
           class="room-card group relative overflow-hidden rounded-2xl cursor-pointer transform transition-all duration-500 hover:scale-[1.02] h-[400px]"
           :style="{ animationDelay: `${index * 0.1}s` }">
 
@@ -31,7 +31,7 @@
           <!-- Image container -->
           <div class="absolute inset-0 overflow-hidden rounded-2xl">
             <img :src="room.image" :alt="room.name"
-              class="w-full h-full object-fill transition-transform duration-700 group-hover:scale-120" />
+              class="w-full h-full rounded-2xl transition-transform duration-700 group-hover:scale-120" />
 
             <!-- Overlay gradient -->
             <div class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent"></div>
@@ -84,7 +84,7 @@
 
       <!-- Stats Grid -->
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-20">
-        <div v-for="(stat, index) in stats" :key="index"
+        <div v-for="(stat, index) in roomsContent?.stats || stats" :key="index"
           class="neon-card bg-black/50 p-6 rounded-lg border transition-all duration-300 hover:scale-105"
           :class="`border-${stat.color}-400/50 hover:border-${stat.color}-400`">
           <div class="text-2xl font-bold mb-2" :class="`neon-text-${stat.color}`">
@@ -110,10 +110,10 @@
             </span>
           </div>
           <h3 class="text-4xl md:text-5xl font-bold mb-4">
-            The <span class="gradient-text-gold">Penthouse</span> Experience
+            The <span class="gradient-text-gold">{{ roomsContent?.penthouseTitle?.split(' ')[1] || "Penthouse" }}</span> Experience
           </h3>
           <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-            Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood.
+            {{ roomsContent?.penthouseDescription || "Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood." }}
           </p>
         </div>
 
@@ -186,6 +186,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 import Video360Viewer from '../Video360Viewer.vue';
+import { useRooms } from '~/composables/useRooms';
+
+const { roomsContent } = useRooms();
 
 const rooms = [
   {
