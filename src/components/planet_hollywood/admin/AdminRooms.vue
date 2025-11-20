@@ -257,75 +257,44 @@
           </div>
         </div>
 
-        <!-- Videos Section -->
+        <!-- Main Video Section -->
         <div class="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200">
-          <div class="flex items-center justify-between mb-6">
-            <label class="flex items-center text-lg font-semibold text-slate-700">
-              <svg class="w-5 h-5 mr-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              Room Videos
-              <span class="ml-2 text-sm text-slate-500 font-normal">({{ roomsForm.videos.length }} videos)</span>
-            </label>
-            <button
-              type="button"
-              @click="addVideo"
-              class="inline-flex items-center px-4 py-2 bg-linear-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5 transform"
-            >
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-              Add Video
-            </button>
+          <div class="flex items-center mb-6">
+            <svg class="w-6 h-6 mr-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <h3 class="text-lg font-bold text-slate-900">Main Promotional Video</h3>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div
-              v-for="(video, index) in roomsForm.videos"
-              :key="index"
-              class="bg-white rounded-lg shadow-md border border-slate-200 p-4 hover:shadow-lg transition-all duration-200"
-            >
-              <div class="flex items-center justify-between mb-3">
-                <h4 class="text-sm font-semibold text-slate-900">{{ video.label || `Video ${index + 1}` }}</h4>
-                <button
-                  type="button"
-                  @click="removeVideo(index)"
-                  class="w-6 h-6 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-all duration-200"
-                >
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div class="space-y-3">
-                <div>
-                  <label class="block text-xs text-slate-600 mb-1">Video ID</label>
-                  <input
-                    v-model="video.id"
-                    type="text"
-                    class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500"
-                    placeholder="e.g., video_001"
-                  />
-                </div>
-                <div>
-                  <label class="block text-xs text-slate-600 mb-1">Label</label>
-                  <input
-                    v-model="video.label"
-                    type="text"
-                    class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500"
-                    placeholder="e.g., Room Tour"
-                  />
-                </div>
-                <div>
-                  <label class="block text-xs text-slate-600 mb-1">Source URL</label>
-                  <input
-                    v-model="video.src"
-                    type="text"
-                    class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500"
-                    placeholder="Video source URL"
-                  />
-                </div>
-              </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Video Title -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Video Title</label>
+              <input
+                v-model="roomsForm.videoTitle"
+                type="text"
+                class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+                placeholder="e.g., Experience Planet Hollywood"
+              />
+            </div>
+
+            <!-- Video Description -->
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-slate-700 mb-2">Video Description</label>
+              <textarea
+                v-model="roomsForm.videoDescription"
+                rows="3"
+                class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 resize-none"
+                placeholder="Describe what this video showcases about your hotel experience"
+              ></textarea>
+            </div>
+
+            <!-- Video Upload -->
+            <div class="md:col-span-2">
+              <VideoUpload
+                v-model="roomsForm.mainVideo"
+                label="Upload Main Promotional Video"
+              />
             </div>
           </div>
         </div>
@@ -360,6 +329,14 @@
                 class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 resize-none"
                 placeholder="Describe the exclusive penthouse suite features, amenities, and luxury experience"
               ></textarea>
+            </div>
+
+            <!-- Penthouse Video Upload -->
+            <div class="md:col-span-2">
+              <VideoUpload
+                v-model="roomsForm.penthouseVideo"
+                label="Penthouse Experience Video"
+              />
             </div>
           </div>
         </div>
@@ -397,6 +374,7 @@
 import { ref, watch } from 'vue'
 import { useRooms, type RoomsContent, type Room, type Video } from '~/composables/useRooms'
 import ImageUpload from '~/components/admin/ImageUpload.vue'
+import VideoUpload from '~/components/admin/VideoUpload.vue'
 
 const { roomsContent, loading, updateRoomsContent } = useRooms()
 
@@ -407,8 +385,12 @@ const roomsForm = ref<RoomsContent>({
   rooms: [],
   stats: [],
   videos: [],
+  videoTitle: '',
+  videoDescription: '',
+  mainVideo: '',
   penthouseTitle: '',
-  penthouseDescription: ''
+  penthouseDescription: '',
+  penthouseVideo: ''
 })
 
 // Watch for rooms content changes and update form
@@ -420,8 +402,12 @@ watch(roomsContent, (newContent) => {
       rooms: newContent.rooms.map(r => ({ ...r })),
       stats: newContent.stats.map(s => ({ ...s })),
       videos: newContent.videos.map(v => ({ ...v })),
+      videoTitle: newContent.videoTitle || '',
+      videoDescription: newContent.videoDescription || '',
+      mainVideo: newContent.mainVideo || '',
       penthouseTitle: newContent.penthouseTitle,
-      penthouseDescription: newContent.penthouseDescription
+      penthouseDescription: newContent.penthouseDescription,
+      penthouseVideo: newContent.penthouseVideo || ''
     }
   }
 }, { immediate: true })
@@ -462,17 +448,6 @@ const removeStat = (index: number) => {
   roomsForm.value.stats.splice(index, 1)
 }
 
-const addVideo = () => {
-  roomsForm.value.videos.push({
-    id: '',
-    label: '',
-    src: ''
-  })
-}
-
-const removeVideo = (index: number) => {
-  roomsForm.value.videos.splice(index, 1)
-}
 </script>
 
 <style scoped>

@@ -19,7 +19,7 @@
 
       <!-- Room Gallery Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        <div v-for="(room, index) in roomsContent?.rooms || rooms" :key="index"
+       <div v-for="(room, index) in rooms" :key="index"
           class="room-card group relative overflow-hidden rounded-2xl cursor-pointer transform transition-all duration-500 hover:scale-[1.02] h-[400px]"
           :style="{ animationDelay: `${index * 0.1}s` }">
 
@@ -84,7 +84,7 @@
 
       <!-- Stats Grid -->
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-20">
-        <div v-for="(stat, index) in roomsContent?.stats || stats" :key="index"
+        <div v-for="(stat, index) in stats" :key="index"
           class="neon-card bg-black/50 p-6 rounded-lg border transition-all duration-300 hover:scale-105"
           :class="`border-${stat.color}-400/50 hover:border-${stat.color}-400`">
           <div class="text-2xl font-bold mb-2" :class="`neon-text-${stat.color}`">
@@ -115,6 +115,13 @@
           <p class="text-gray-400 text-lg max-w-2xl mx-auto">
             {{ roomsContent?.penthouseDescription || "Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood." }}
           </p>
+
+          <!-- Video Description -->
+          <div v-if="roomsContent?.videoDescription" class="mt-6 text-center">
+            <p class="text-gray-300 text-base max-w-xl mx-auto italic">
+              "{{ roomsContent.videoDescription }}"
+            </p>
+          </div>
         </div>
 
         <!-- Video Tabs -->
@@ -184,13 +191,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, watch } from 'vue';
 import Video360Viewer from '../Video360Viewer.vue';
 import { useRooms } from '~/composables/useRooms';
 
 const { roomsContent } = useRooms();
 
-const rooms = [
+// Fallback data for when Firebase data is not available
+const fallbackRooms = [
   {
     name: "Superior",
     description: "Modern comfort with Hollywood glamour",
@@ -221,7 +229,7 @@ const rooms = [
   }
 ];
 
-const stats = [
+const fallbackStats = [
   { count: "70", label: "Superior Rooms", color: "pink" },
   { count: "40", label: "Deluxe Rooms", color: "cyan" },
   { count: "10", label: "Premier Deluxe", color: "purple" },
@@ -229,184 +237,59 @@ const stats = [
   { count: "2", label: "Penthouses", color: "pink" }
 ];
 
-const videos = [
+const fallbackVideos = [
   { id: 'hotel', label: 'Hotel Tour', src: '/videos/ph-video.mp4' },
   { id: 'penthouse', label: 'Penthouse Suite', src: '/videos/penhouse.mp4' }
 ];
 
-const activeVideo = ref('hotel');
-const rotation = ref(0);
-const currentIndex = ref(0);
-const isAutoRotating = ref(true);
-let autoRotateInterval: NodeJS.Timeout | null = null;
+// Computed properties for dynamic data with fallbacks
+const rooms = computed(() => roomsContent.value?.rooms || fallbackRooms);
+const stats = computed(() => roomsContent.value?.stats || fallbackStats);
 
-const angleStep = 360 / rooms.length;
-const radius = 400;
+// Computed property to combine main video with penthouse video
+const videos = computed(() => {
+  const result = [];
+  const mainVideo = roomsContent.value?.mainVideo;
+  const penthouseVideo = roomsContent.value?.penthouseVideo;
 
-const getCardStyle = (index: number) => {
-  const angle = angleStep * index;
-  return {
-    transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
-  };
-};
-
-const rotate = (direction: number) => {
-  isAutoRotating.value = false;
-  if (autoRotateInterval) {
-    clearInterval(autoRotateInterval);
+  // Add main video if it exists
+  if (mainVideo && mainVideo.trim()) {
+    result.push({
+      id: 'main-video',
+      label: roomsContent.value?.videoTitle || 'Hotel Experience',
+      src: mainVideo
+    });
   }
 
-  currentIndex.value = (currentIndex.value + direction + rooms.length) % rooms.length;
-  rotation.value = -angleStep * currentIndex.value;
-
-  // Resume auto-rotation after 5 seconds
-  setTimeout(() => {
-    startAutoRotate();
-  }, 5000);
-};
-
-const rotateToCard = (index: number) => {
-  isAutoRotating.value = false;
-  if (autoRotateInterval) {
-    clearInterval(autoRotateInterval);
+  // Add penthouse video if it exists
+  if (penthouseVideo && penthouseVideo.trim()) {
+    result.push({
+      id: 'penthouse-experience',
+      label: 'Penthouse Experience',
+      src: penthouseVideo
+    });
   }
 
-  currentIndex.value = index;
-  rotation.value = -angleStep * index;
-
-  setTimeout(() => {
-    startAutoRotate();
-  }, 5000);
-};
-
-const startAutoRotate = () => {
-  if (autoRotateInterval) {
-    clearInterval(autoRotateInterval);
+  // If no videos, return fallback
+  if (result.length === 0) {
+    return fallbackVideos;
   }
 
-  isAutoRotating.value = true;
-  autoRotateInterval = setInterval(() => {
-    if (isAutoRotating.value) {
-      currentIndex.value = (currentIndex.value + 1) % rooms.length;
-      rotation.value = -angleStep * currentIndex.value;
-    }
-  }, 3000);
-};
-
-onMounted(() => {
-  startAutoRotate();
+  return result;
 });
 
-onUnmounted(() => {
-  if (autoRotateInterval) {
-    clearInterval(autoRotateInterval);
+// Initialize activeVideo as empty string
+const activeVideo = ref('');
+
+// Watch for videos changes and auto-select first video
+watch(videos, (newVideos) => {
+  if (newVideos && newVideos.length > 0 && newVideos[0]) {
+    activeVideo.value = newVideos[0].id;
   }
-});
+}, { immediate: true });
 </script>
 
 <style scoped>
-.perspective-container {
-  perspective: 2000px;
-}
-
-.carousel-3d {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.carousel-item {
-  position: absolute;
-  width: 350px;
-  height: 500px;
-  left: 50%;
-  top: 50%;
-  margin-left: -175px;
-  margin-top: -250px;
-  transform-style: preserve-3d;
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
-  transition: all 0.3s ease;
-}
-
-.carousel-item:hover .card-inner {
-  transform: scale(1.05);
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.9);
-}
-
-.card-glow {
-  position: absolute;
-  inset: -2px;
-  border-radius: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.carousel-item:hover .card-glow {
-  opacity: 1;
-}
-
-.glow-pink {
-  background: linear-gradient(45deg, #ec4899, #f472b6);
-  filter: blur(20px);
-}
-
-.glow-cyan {
-  background: linear-gradient(45deg, #06b6d4, #22d3ee);
-  filter: blur(20px);
-}
-
-.glow-purple {
-  background: linear-gradient(45deg, #a855f7, #c084fc);
-  filter: blur(20px);
-}
-
-.glow-yellow {
-  background: linear-gradient(45deg, #eab308, #fbbf24);
-  filter: blur(20px);
-}
-
-.card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.carousel-item:hover .card-image {
-  transform: scale(1.1);
-}
-
-.card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.4) 50%, transparent);
-  display: flex;
-  align-items: flex-end;
-  transition: background 0.3s ease;
-}
-
-.carousel-item:hover .card-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.2));
-}
-
-.card-content {
-  padding: 2rem;
-  width: 100%;
-}
-
 .gradient-text {
   background: linear-gradient(135deg, #ec4899, #06b6d4, #a855f7);
   -webkit-background-clip: text;
@@ -419,35 +302,6 @@ onUnmounted(() => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.nav-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(236, 72, 153, 0.3);
-  color: #ec4899;
-  padding: 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nav-button:hover {
-  background: rgba(236, 72, 153, 0.2);
-  border-color: #ec4899;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.nav-button-left {
-  left: 2rem;
-}
-
-.nav-button-right {
-  right: 2rem;
 }
 
 .neon-card {
@@ -487,19 +341,9 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
-  .carousel-item {
-    width: 280px;
-    height: 400px;
-    margin-left: -140px;
-    margin-top: -200px;
-  }
-
-  .nav-button-left {
-    left: 0.5rem;
-  }
-
-  .nav-button-right {
-    right: 0.5rem;
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 </style>

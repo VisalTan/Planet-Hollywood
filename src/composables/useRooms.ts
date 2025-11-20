@@ -21,8 +21,12 @@ export interface RoomsContent {
   rooms: Room[]
   stats: { count: string; label: string; color: string }[]
   videos: Video[]
+  videoTitle: string
+  videoDescription: string
+  mainVideo: string
   penthouseTitle: string
   penthouseDescription: string
+  penthouseVideo: string
 }
 
 const roomsContent = ref<RoomsContent | null>(null)
@@ -79,8 +83,12 @@ export const useRooms = () => {
           { id: 'hotel', label: 'Hotel Tour', src: '/videos/ph-video.mp4' },
           { id: 'penthouse', label: 'Penthouse Suite', src: '/videos/penhouse.mp4' }
         ],
+        videoTitle: "Experience Planet Hollywood",
+        videoDescription: "Take a virtual tour of our luxurious accommodations and world-class amenities",
+        mainVideo: "",
         penthouseTitle: "The Penthouse Experience",
-        penthouseDescription: "Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood."
+        penthouseDescription: "Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood.",
+        penthouseVideo: ""
       }
       loading.value = false
       return
@@ -139,8 +147,12 @@ export const useRooms = () => {
             { id: 'hotel', label: 'Hotel Tour', src: '/videos/ph-video.mp4' },
             { id: 'penthouse', label: 'Penthouse Suite', src: '/videos/penhouse.mp4' }
           ],
+          videoTitle: "Experience Planet Hollywood",
+          videoDescription: "Take a virtual tour of our luxurious accommodations and world-class amenities",
+          mainVideo: "",
           penthouseTitle: "The Penthouse Experience",
-          penthouseDescription: "Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood."
+          penthouseDescription: "Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood.",
+          penthouseVideo: ""
         }
         await setDoc(docRef, defaultContent)
         roomsContent.value = defaultContent
