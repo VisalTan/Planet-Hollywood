@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+  <div class="bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl shadow-xl overflow-hidden border border-slate-200">
     <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 px-8 py-6">
+    <div class="bg-linear-to-r from-blue-600 to-indigo-700 px-8 py-6">
       <div class="flex items-center space-x-3">
         <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,28 +67,11 @@
           <p class="text-xs text-slate-500 mt-2">{{ heroForm.description.length }} characters</p>
         </div>
 
-        <!-- Video Source -->
-        <div class="group">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
-            <svg class="w-4 h-4 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            Video Source URL
-          </label>
-          <div class="relative">
-            <input 
-              v-model="heroForm.videoSrc" 
-              type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300 pl-10"
-              placeholder="https://example.com/video.mp4" 
-            />
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-              </svg>
-            </div>
-          </div>
-        </div>
+        <!-- Video Upload -->
+        <VideoUpload
+          v-model="heroForm.videoSrc"
+          label="Hero Video"
+        />
 
         <!-- Tags -->
         <div class="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200">
@@ -170,6 +153,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useHero, type HeroContent } from '~/composables/useHero'
+import VideoUpload from '~/components/admin/VideoUpload.vue'
 
 const { heroContent, loading, updateHeroContent } = useHero()
 

@@ -160,28 +160,11 @@
           </div>
         </div>
 
-        <!-- Image URL -->
-        <div class="group">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
-            <svg class="w-4 h-4 mr-2 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            Image URL
-          </label>
-          <div class="relative">
-            <input 
-              v-model="aboutForm.image" 
-              type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-emerald-200 rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200 hover:border-emerald-300 pl-10"
-              placeholder="https://example.com/image.jpg" 
-            />
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-              </svg>
-            </div>
-          </div>
-        </div>
+        <!-- Image Upload -->
+        <ImageUpload
+          v-model="aboutForm.image"
+          label="About Image"
+        />
 
         <!-- Location & Address -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -251,6 +234,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useAbout, type AboutContent } from '~/composables/useAbout'
+import ImageUpload from '~/components/admin/ImageUpload.vue'
 
 const { aboutContent, loading, updateAboutContent } = useAbout()
 

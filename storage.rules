@@ -1,0 +1,15 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Allow read access to all users
+      allow read;
+
+      // Allow write access to all users (admin authentication handled locally)
+      allow write;
+
+      // Allow delete access to all users (admin authentication handled locally)
+      allow delete;
+    }
+  }
+}

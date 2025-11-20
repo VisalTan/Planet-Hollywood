@@ -630,7 +630,7 @@
                 <span class="text-gray-300">Dedicated event coordinator</span>
               </li>
             </ul>
-            <button class="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-bold text-lg hover:scale-105 transition-transform">
+            <button class="px-8 py-4 bg-linear-to-r from-red-600 to-orange-600 rounded-full font-bold text-lg hover:scale-105 transition-transform">
               INQUIRE ABOUT EVENTS
             </button>
           </div>
@@ -676,7 +676,7 @@
               </p>
             </div>
             
-            <div class="bg-gradient-to-r from-gray-900 to-black p-8 rounded-3xl border-2 border-red-500/30">
+            <div class="bg-linear-to-r from-gray-900 to-black p-8 rounded-3xl border-2 border-red-500/30">
               <h3 class="text-2xl font-black mb-4 text-red-500">RESERVATION TIPS</h3>
               <ul class="space-y-3 text-gray-300">
                 <li>• Book in advance for weekend dining</li>
@@ -740,7 +740,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="relative py-32 px-4 bg-gradient-to-b from-black to-red-950">
+    <section class="relative py-32 px-4 bg-linear-to-b from-black to-red-950">
       <div class="max-w-4xl mx-auto text-center">
         <div class="text-8xl mb-8">🔥</div>
         <h2 class="text-6xl md:text-7xl font-black mb-8 text-white">

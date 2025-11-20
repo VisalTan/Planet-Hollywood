@@ -1,133 +1,139 @@
 <template>
-    <div v-if="showSplash" class="splash-screen">
-      <div class="splash-content">
-        <!-- Logo/Brand -->
-        <div class="logo">
-          <h1 class="brand-name">Your App</h1>
-        </div>
-        
-        <!-- Loading Animation -->
-        <div class="loading-container">
-          <div class="loading-spinner"></div>
-          <p class="loading-text">Loading...</p>
+  <div class="min-h-screen bg-black text-white overflow-x-hidden">
+    <nav :class="[
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+      scrolled ? 'bg-black shadow-lg' : 'bg-transparent'
+    ]">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo/Brand -->
+          <div class="text-2xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Planet Hollywood
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="hidden md:flex items-center space-x-8">
+            <button @click="scrollToSection('rooms')" class="hover:text-purple-400 transition-colors">
+              Rooms
+            </button>
+            <button @click="scrollToSection('dining')" class="hover:text-purple-400 transition-colors">
+              Dining
+            </button>
+            <button @click="scrollToSection('amenities')" class="hover:text-purple-400 transition-colors">
+              Amenities
+            </button>
+            <button @click="scrollToSection('events')" class="hover:text-purple-400 transition-colors">
+              Events
+            </button>
+            <button @click="scrollToSection('location')" class="hover:text-purple-400 transition-colors">
+              Location
+            </button>
+            <button @click="scrollToSection('contact')" class="hover:text-purple-400 transition-colors">
+              Contact
+            </button>
+          </div>
+
+          <!-- Book Us Button -->
+          <button @click="scrollToSection('contact')"
+            class="bg-linear-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
+            Book Us
+          </button>
         </div>
       </div>
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted } from 'vue'
-  
-  // Reactive state
-  const showSplash = ref(true)
-  
-  // Hide splash screen and navigate to /home after 3 seconds
-  onMounted(() => {
-    setTimeout(() => {
-      showSplash.value = false
-      // Navigate to /home page
-      navigateTo('/planet-hollywood')
-    }, 3000)
-  })
-  </script>
-  
-  <style scoped>
-  .splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    animation: fadeOut 0.5s ease-in-out 2.5s forwards;
+    </nav>
+    <!-- Hero Section -->
+    <PlanetHollywoodHeroSection />
+
+    <planet-hollywood-introduction-section />
+
+    <PlanetHollywoodRoomSection />
+
+    <PlanetHollywoodDiningSection />
+
+    <!-- Amenities Section -->
+    <planet-hollywood-pool-section />
+
+    <!-- Events Section -->
+    <PlanetHollywoodEventSection />
+
+    <!-- Sustainability Section -->
+    <planet-hollywood-sustainability />
+
+    <!-- Location Section -->
+    <planet-hollywood-location-section />
+
+    <!-- CTA Section -->
+    <planet-hollywood-contact-section />
+
+    <!-- Footer -->
+    <planet-hollywood-footer />
+
+  </div>
+</template>
+
+<script setup>
+import { PlanetHollywoodDiningSection, PlanetHollywoodEventSection, PlanetHollywoodHeroSection, PlanetHollywoodRoomSection, } from '#components'
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const hoveredRoom = ref(null)
+const scrolled = ref(false)
+
+const handleScroll = () => {
+  scrolled.value = window.scrollY > 50
+}
+
+const scrollToSection = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
   }
-  
-  .splash-content {
-    text-align: center;
-    color: white;
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
+
+<style scoped>
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .logo {
-    margin-bottom: 2rem;
+
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .brand-name {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
-    letter-spacing: -0.02em;
-    animation: slideUp 0.8s ease-out;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .loading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid white;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  
-  .loading-text {
-    font-size: 1.1rem;
-    margin: 0;
-    opacity: 0.9;
-    animation: pulse 1.5s ease-in-out infinite;
-  }
-  
-  /* Animations */
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 0.9;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-  
-  @keyframes fadeOut {
-    to {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .brand-name {
-      font-size: 2.5rem;
-    }
-    
-    .loading-spinner {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  </style>
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+</style>

@@ -10,7 +10,7 @@ const showPassword = ref(false)
 const handleLogin = async () => {
     const success = await login(username.value, password.value)
     if (success) {
-        await navigateTo('/planet-hollywood/admin')
+        await navigateTo('/admin')
     }
 }
 </script>

@@ -306,6 +306,7 @@
         <!-- Content Sections -->
         <AdminHero v-if="activeMenu === 'hero'" />
         <AdminAbout v-if="activeMenu === 'about'" />
+        <AdminPool v-if="activeMenu === 'pool'" />
         <AdminContact v-if="activeMenu === 'contact'" />
         <AdminDining v-if="activeMenu === 'dining'" />
         <AdminRooms v-if="activeMenu === 'rooms'" />
@@ -322,6 +323,7 @@ import { useReservations } from '~/composables/useReservation'
 import { useAdminAuth } from '~/composables/useAdminAuth'
 import AdminHero from '~/components/planet_hollywood/admin/AdminHero.vue'
 import AdminAbout from '~/components/planet_hollywood/admin/AdminAbout.vue'
+import AdminPool from '~/components/planet_hollywood/admin/AdminPool.vue'
 import AdminContact from '~/components/planet_hollywood/admin/AdminContact.vue'
 import AdminDining from '~/components/planet_hollywood/admin/AdminDining.vue'
 import AdminRooms from '~/components/planet_hollywood/admin/AdminRooms.vue'
@@ -332,7 +334,7 @@ const { isAuthenticated, logout } = useAdminAuth()
 
 // Redirect to login if not authenticated
 if (!isAuthenticated.value) {
-  await navigateTo('/planet-hollywood/admin-login')
+  await navigateTo('/admin-login')
 }
 
 const sidebarOpen = ref(true)
@@ -359,6 +361,7 @@ const menuItems = [
   { id: 'analytics', label: 'Analytics', icon: 'chart' },
   { id: 'hero', label: 'Hero Section', icon: 'star' },
   { id: 'about', label: 'About Section', icon: 'info' },
+  { id: 'pool', label: 'Pool Section', icon: 'home' },
   { id: 'contact', label: 'Contact Section', icon: 'mail' },
   { id: 'dining', label: 'Dining Section', icon: 'utensils' },
   { id: 'rooms', label: 'Rooms Section', icon: 'bed' },
@@ -446,7 +449,7 @@ const updateStatus = async (id: string, status: 'pending' | 'confirmed' | 'cance
 // Handle logout
 const handleLogout = () => {
   logout()
-  navigateTo('/planet-hollywood/admin-login')
+  navigateTo('/admin-login')
 }
 </script>
 
