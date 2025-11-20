@@ -11,11 +11,9 @@
     <!-- Current Image Preview -->
     <div v-if="modelValue" class="mb-4 relative">
       <img :src="modelValue" :alt="label" class="w-full h-80 object-cover rounded-xl border-2 border-cyan-200" />
-      <button
-        @click="removeImage"
+      <button @click="removeImage"
         class="absolute top-2 right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
-        type="button"
-      >
+        type="button">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
@@ -23,24 +21,13 @@
     </div>
 
     <!-- Upload Area -->
-    <div
-      @dragover.prevent
-      @dragleave.prevent
-      @drop.prevent="handleDrop"
-      @click="triggerFileInput"
+    <div @dragover.prevent @dragleave.prevent @drop.prevent="handleDrop" @click="triggerFileInput"
       class="relative border-2 border-dashed rounded-xl p-6 text-center cursor-pointer transition-all duration-200 hover:border-cyan-400 hover:bg-cyan-50/50"
       :class="{
         'border-cyan-400 bg-cyan-50/50': isDragOver,
         'border-gray-300': !isDragOver
-      }"
-    >
-      <input
-        ref="fileInput"
-        type="file"
-        accept="image/*"
-        @change="handleFileSelect"
-        class="hidden"
-      />
+      }">
+      <input ref="fileInput" type="file" accept="image/*" @change="handleFileSelect" class="hidden" />
 
       <!-- Upload Icon -->
       <div class="mb-4">
@@ -61,10 +48,8 @@
       <!-- Upload Progress -->
       <div v-if="uploading" class="mt-4">
         <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
-          <div
-            class="bg-cyan-600 h-2 rounded-full transition-all duration-300"
-            :style="{ width: uploadProgress + '%' }"
-          ></div>
+          <div class="bg-cyan-600 h-2 rounded-full transition-all duration-300"
+            :style="{ width: uploadProgress + '%' }"></div>
         </div>
         <p class="text-xs text-gray-600">{{ uploadProgress }}% uploaded</p>
       </div>
@@ -163,8 +148,4 @@ const removeImage = async () => {
 }
 </script>
 
-<style scoped>
-.image-upload {
-  /* Additional styles if needed */
-}
-</style>
+<style scoped></style>
