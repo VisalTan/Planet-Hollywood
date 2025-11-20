@@ -10,7 +10,7 @@
 
     <!-- Current Image Preview -->
     <div v-if="modelValue" class="mb-4 relative">
-      <img :src="modelValue" :alt="label" class="w-full h-64 object-cover rounded-xl border-2 border-cyan-200" />
+      <img :src="modelValue" :alt="label" class="w-full h-80 object-cover rounded-xl border-2 border-cyan-200" />
       <button
         @click="removeImage"
         class="absolute top-2 right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
