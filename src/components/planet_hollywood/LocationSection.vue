@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLocation } from '~/composables/useLocation';
+import { useLocation } from '~/composables/content/useLocation';
 import { MapPin } from 'lucide-vue-next'
 
 const { locationContent } = useLocation();

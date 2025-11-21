@@ -218,7 +218,7 @@ input:focus, textarea:focus {
   color: #991b1b;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .form-row {
     grid-template-columns: 1fr;
   }

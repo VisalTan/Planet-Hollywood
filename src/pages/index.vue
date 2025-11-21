@@ -36,10 +36,10 @@
           <!-- Right side: Book Us and Hamburger -->
           <div class="ml-auto flex items-center space-x-4">
             <!-- Book Us Button -->
-            <button @click="scrollToSection('contact')"
+            <NuxtLink to="/booking"
               class="hidden md:block bg-linear-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
               Book Us
-            </button>
+            </NuxtLink>
 
             <!-- Hamburger Menu Button -->
             <button @click="sidebarOpen = !sidebarOpen" class="md:hidden text-white focus:outline-none">
@@ -99,6 +99,10 @@
               class="block w-full text-left text-white hover:text-purple-400 transition-colors py-2">
               Contact
             </button>
+            <NuxtLink to="/booking"
+              class="block w-full text-left text-white hover:text-purple-400 transition-colors py-2">
+              Book Now
+            </NuxtLink>
           </nav>
         </div>
       </div>
@@ -202,3 +206,4 @@ html {
   scroll-behavior: smooth;
 }
 </style>
+
