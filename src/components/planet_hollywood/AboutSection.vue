@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { MapPin } from 'lucide-vue-next'
-import { useAbout } from '~/composables/useAbout'
+import { useAbout } from '~/composables/content/useAbout'
 
 const { aboutContent } = useAbout()
 </script>

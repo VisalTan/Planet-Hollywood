@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, readonly } from 'vue'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 
 export interface Room {

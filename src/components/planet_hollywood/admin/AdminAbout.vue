@@ -233,7 +233,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useAbout, type AboutContent } from '~/composables/useAbout'
+import { useAbout, type AboutContent } from '~/composables/content/useAbout'
 import ImageUpload from '~/components/admin/ImageUpload.vue'
 
 const { aboutContent, loading, updateAboutContent } = useAbout()

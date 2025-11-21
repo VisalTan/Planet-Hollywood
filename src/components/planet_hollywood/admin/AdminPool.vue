@@ -100,7 +100,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { usePool, type PoolContent } from '~/composables/usePool'
+import { usePool, type PoolContent } from '~/composables/content/usePool'
 import ImageUpload from '~/components/admin/ImageUpload.vue'
 
 const { poolContent, loading, updatePoolContent } = usePool()

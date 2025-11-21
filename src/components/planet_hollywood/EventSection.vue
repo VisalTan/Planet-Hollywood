@@ -57,7 +57,7 @@
 
 <script setup lang="ts">
 import { Calendar } from 'lucide-vue-next'
-import { useEvent } from '~/composables/useEvent'
+import { useEvent } from '~/composables/content/useEvent'
 
 const { eventContent } = useEvent()
 </script>

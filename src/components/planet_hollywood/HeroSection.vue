@@ -59,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import { useHero } from '~/composables/useHero'
+import { useHero } from '~/composables/content/useHero'
 
 const { heroContent } = useHero()
 

@@ -1,29 +1,29 @@
 <template>
-    <section class="py-20 bg-linear-to-b from-black via-gray-900 to-black">
+    <section class="py-12 md:py-20 bg-linear-to-b from-black via-gray-900 to-black">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                 <!-- Left Content -->
-                <div class="space-y-8">
-                    <h2 class="text-6xl md:text-7xl font-black leading-tight">
+                <div class="space-y-6 md:space-y-8">
+                    <h2 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
                         Where Hollywood<br />
                         <span class="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-blue-500">Meets
                             Cambodia</span>
                     </h2>
 
-                    <p class="text-lg text-gray-300 leading-relaxed">
+                    <p class="text-base md:text-lg text-gray-300 leading-relaxed">
                         Planet Hollywood Hotel Phnom Penh marks the brand's first-ever hotel in Asia — a milestone that
                         brings
                         Hollywood's signature energy to the heart of Cambodia.
                     </p>
 
-                    <p class="text-base text-gray-400 leading-relaxed">
+                    <p class="text-sm md:text-base text-gray-400 leading-relaxed">
                         Blending cinematic glamour with contemporary sophistication, the hotel features 148 rooms, each
                         designed
                         to deliver an elevated smart-living experience.
                     </p>
 
                     <!-- Stats Grid -->
-                    <div class="grid grid-cols-3 gap-4 pt-6">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
                         <div
                             class="border-2 border-pink-500 rounded-2xl p-6 text-center bg-black/40 backdrop-blur-sm hover:border-pink-400 transition-colors duration-300">
                             <p class="text-5xl font-black text-white mb-2">148</p>

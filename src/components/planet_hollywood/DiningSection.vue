@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDining } from '~/composables/useDining';
+import { useDining } from '~/composables/content/useDining';
 import { Utensils } from 'lucide-vue-next';
 
 const { diningContent } = useDining();

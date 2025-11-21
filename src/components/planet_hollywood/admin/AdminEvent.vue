@@ -251,7 +251,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useEvent, type EventContent } from '~/composables/useEvent'
+import { useEvent, type EventContent } from '~/composables/content/useEvent'
 import ImageUpload from '~/components/admin/ImageUpload.vue'
 
 const { eventContent, loading, updateEventContent } = useEvent()

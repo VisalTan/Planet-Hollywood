@@ -372,7 +372,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useRooms, type RoomsContent, type Room, type Video } from '~/composables/useRooms'
+import { useRooms, type RoomsContent, type Room, type Video } from '~/composables/content/useRooms'
 import ImageUpload from '~/components/admin/ImageUpload.vue'
 import VideoUpload from '~/components/admin/VideoUpload.vue'
 

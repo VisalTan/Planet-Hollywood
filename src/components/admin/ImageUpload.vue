@@ -64,7 +64,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useFirebaseStorage } from '~/composables/useFirebaseStorage'
+import { useFirebaseStorage } from '~/composables/firebase';
 
 interface Props {
   modelValue: string

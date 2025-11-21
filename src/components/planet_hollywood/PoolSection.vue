@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { usePool } from '~/composables/usePool'
+import { usePool } from '~/composables/content/usePool'
 
 const { poolContent } = usePool()
 </script>

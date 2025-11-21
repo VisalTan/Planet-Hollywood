@@ -215,7 +215,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useDining, type DiningContent, type Restaurant } from '~/composables/useDining'
+import { useDining, type DiningContent, type Restaurant } from '~/composables/content/useDining'
 import ImageUpload from '~/components/admin/ImageUpload.vue'
 
 const { diningContent, loading, updateDiningContent } = useDining()

@@ -208,7 +208,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useLocation, type LocationContent, type Attraction } from '~/composables/useLocation'
+import { useLocation, type LocationContent, type Attraction } from '~/composables/content/useLocation'
 import ImageUpload from '~/components/admin/ImageUpload.vue'
 
 const { locationContent, loading, updateLocationContent } = useLocation()

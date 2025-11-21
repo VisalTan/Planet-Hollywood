@@ -147,8 +147,8 @@
 
 <script setup lang="ts">
 import { Mail, Phone, Instagram, Facebook } from 'lucide-vue-next'
-import { useReservations } from '~/composables/useReservation'
-import { useContact } from '~/composables/useContact'
+import { useReservations } from '~/composables/api/useReservation'
+import { useContact } from '~/composables/content/useContact'
 
 const { addReservation } = useReservations()
 const { contactContent } = useContact()

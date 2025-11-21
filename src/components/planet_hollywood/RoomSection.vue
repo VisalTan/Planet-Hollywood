@@ -75,6 +75,7 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -115,13 +116,6 @@
           <p class="text-gray-400 text-lg max-w-2xl mx-auto">
             {{ roomsContent?.penthouseDescription || "Where Hollywood luxury meets sky-high sophistication. Experience the pinnacle of Planet Hollywood." }}
           </p>
-
-          <!-- Video Description -->
-          <div v-if="roomsContent?.videoDescription" class="mt-6 text-center">
-            <p class="text-gray-300 text-base max-w-xl mx-auto italic">
-              "{{ roomsContent.videoDescription }}"
-            </p>
-          </div>
         </div>
 
         <!-- Video Tabs -->
@@ -187,13 +181,14 @@
         </div>
       </div>
     </div>
+
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue';
 import Video360Viewer from '../Video360Viewer.vue';
-import { useRooms } from '~/composables/useRooms';
+import { useRooms } from '~/composables/content/useRooms';
 
 const { roomsContent } = useRooms();
 

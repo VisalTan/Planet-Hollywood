@@ -22,10 +22,25 @@
         <nav class="flex-1 px-4 py-6 overflow-y-auto">
           <ul class="space-y-1">
             <li v-for="item in menuItems" :key="item.id">
-              <button 
-                @click="activeMenu = item.id" 
+              <!-- Group Header -->
+              <button v-if="item.group"
+                @click="managementExpanded = !managementExpanded"
+                class="flex items-center w-full px-4 py-2 mt-4 mb-2 text-left hover:bg-slate-800/30 rounded-lg transition-colors group"
+              >
+                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-slate-300 transition-transform duration-200"
+                     :class="{ 'rotate-90': managementExpanded }"
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">{{ item.label }}</h3>
+              </button>
+              <!-- Menu Item -->
+              <button
+                v-else-if="!item.subgroup || managementExpanded"
+                @click="activeMenu = item.id"
                 :class="[
                   'flex items-center w-full px-4 py-3 rounded-xl transition-all duration-200 group',
+                  item.subgroup ? 'ml-4 text-sm' : '',
                   activeMenu === item.id
                     ? 'bg-linear-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/50 scale-105'
                     : 'text-slate-300 hover:bg-slate-800/50 hover:text-white'
@@ -304,6 +319,19 @@
         </div>
 
         <!-- Content Sections -->
+        <div v-if="activeMenu === 'management'" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
+          <div class="text-center py-16">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-blue-100 to-indigo-100 rounded-2xl mb-6">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Content Management</h2>
+            <p class="text-slate-600">Select a section from the sidebar to manage your website content</p>
+          </div>
+        </div>
+
         <AdminHero v-if="activeMenu === 'hero'" />
         <AdminAbout v-if="activeMenu === 'about'" />
         <AdminPool v-if="activeMenu === 'pool'" />
@@ -319,8 +347,8 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { useReservations } from '~/composables/useReservation'
-import { useAdminAuth } from '~/composables/useAdminAuth'
+import { useReservations } from '~/composables/api/useReservation'
+import { useAdminAuth } from '~/composables/auth/useAdminAuth'
 import AdminHero from '~/components/planet_hollywood/admin/AdminHero.vue'
 import AdminAbout from '~/components/planet_hollywood/admin/AdminAbout.vue'
 import AdminPool from '~/components/planet_hollywood/admin/AdminPool.vue'
@@ -339,6 +367,7 @@ if (!isAuthenticated.value) {
 
 const sidebarOpen = ref(true)
 const activeMenu = ref('dashboard')
+const managementExpanded = ref(true)
 
 // Use reservations composable
 const {
@@ -359,14 +388,15 @@ const menuItems = [
   { id: 'dashboard', label: 'Dashboard', icon: 'home' },
   { id: 'reservations', label: 'Reservations', icon: 'users' },
   { id: 'analytics', label: 'Analytics', icon: 'chart' },
-  { id: 'hero', label: 'Hero Section', icon: 'star' },
-  { id: 'about', label: 'About Section', icon: 'info' },
-  { id: 'pool', label: 'Pool Section', icon: 'home' },
-  { id: 'contact', label: 'Contact Section', icon: 'mail' },
-  { id: 'dining', label: 'Dining Section', icon: 'utensils' },
-  { id: 'rooms', label: 'Rooms Section', icon: 'bed' },
-  { id: 'location', label: 'Location Section', icon: 'map' },
-  { id: 'event', label: 'Event Section', icon: 'calendar' },
+  { id: 'management', label: 'Content Management', icon: 'settings', group: true },
+  { id: 'hero', label: 'Hero Section', icon: 'star', subgroup: true },
+  { id: 'about', label: 'About Section', icon: 'info', subgroup: true },
+  { id: 'pool', label: 'Pool Section', icon: 'home', subgroup: true },
+  { id: 'contact', label: 'Contact Section', icon: 'mail', subgroup: true },
+  { id: 'dining', label: 'Dining Section', icon: 'utensils', subgroup: true },
+  { id: 'rooms', label: 'Rooms Section', icon: 'bed', subgroup: true },
+  { id: 'location', label: 'Location Section', icon: 'map', subgroup: true },
+  { id: 'event', label: 'Event Section', icon: 'calendar', subgroup: true },
   { id: 'settings', label: 'Settings', icon: 'settings' }
 ]
 

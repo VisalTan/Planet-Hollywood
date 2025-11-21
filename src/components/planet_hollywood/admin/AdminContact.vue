@@ -192,7 +192,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useContact, type ContactContent } from '~/composables/useContact'
+import { useContact, type ContactContent } from '~/composables/content/useContact'
 
 const { contactContent, loading, updateContactContent } = useContact()
 
