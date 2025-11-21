@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+  <div class="bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-700">
     <!-- Header -->
     <div class="bg-linear-to-r from-purple-600 to-indigo-700 px-8 py-6">
       <div class="flex items-center space-x-3">
@@ -22,7 +22,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Title -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
               </svg>
@@ -31,14 +31,14 @@
             <input
               v-model="roomsForm.title"
               type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
               placeholder="Enter an attention-grabbing title"
             />
           </div>
 
           <!-- Subtitle -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
@@ -47,21 +47,21 @@
             <input
               v-model="roomsForm.subtitle"
               type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
               placeholder="Add a compelling subtitle"
             />
           </div>
         </div>
 
         <!-- Rooms Section -->
-        <div class="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200">
+        <div class="bg-slate-50 dark:bg-slate-700 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600">
           <div class="flex items-center justify-between mb-6">
-            <label class="flex items-center text-lg font-semibold text-slate-700">
+            <label class="flex items-center text-lg font-semibold text-slate-700 dark:text-slate-300">
               <svg class="w-5 h-5 mr-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
               Luxury Rooms
-              <span class="ml-2 text-sm text-slate-500 font-normal">({{ roomsForm.rooms.length }} rooms)</span>
+              <span class="ml-2 text-sm text-slate-500 dark:text-slate-400 font-normal">({{ roomsForm.rooms.length }} rooms)</span>
             </label>
             <button
               type="button"
@@ -79,25 +79,25 @@
             <div
               v-for="(room, index) in roomsForm.rooms"
               :key="index"
-              class="bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              class="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-600 p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <!-- Room Header -->
-              <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200">
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
                 <div class="flex items-center space-x-3">
-                  <div class="w-10 h-10 bg-linear-to-br from-purple-100 to-indigo-100 rounded-lg flex items-center justify-center">
+                  <div class="w-10 h-10 bg-linear-to-br from-purple-100 to-indigo-100 dark:from-purple-900/20 dark:to-indigo-800/20 rounded-lg flex items-center justify-center">
                     <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
                   <div>
-                    <h4 class="text-lg font-bold text-slate-900">{{ room.name || `Room ${index + 1}` }}</h4>
-                    <p class="text-sm text-slate-500">Configure room details and amenities</p>
+                    <h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">{{ room.name || `Room ${index + 1}` }}</h4>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Configure room details and amenities</p>
                   </div>
                 </div>
                 <button
                   type="button"
                   @click="removeRoom(index)"
-                  class="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200"
+                  class="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-all duration-200"
                 >
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -109,44 +109,44 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Name -->
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-2">Room Name</label>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Room Name</label>
                   <input
                     v-model="room.name"
                     type="text"
-                    class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+                    class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
                     placeholder="e.g., Deluxe Suite, Presidential Suite"
                   />
                 </div>
 
                 <!-- Size -->
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-2">Room Size</label>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Room Size</label>
                   <input
                     v-model="room.size"
                     type="text"
-                    class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+                    class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
                     placeholder="e.g., 450 sq ft, 85 m²"
                   />
                 </div>
 
                 <!-- Description -->
                 <div class="md:col-span-2">
-                  <label class="block text-sm font-medium text-slate-700 mb-2">Description</label>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Description</label>
                   <textarea
                     v-model="room.description"
                     rows="3"
-                    class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 resize-none"
+                    class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 resize-none text-slate-900 dark:text-slate-100"
                     placeholder="Describe the room's features, amenities, and unique characteristics"
                   ></textarea>
                 </div>
 
                 <!-- Color Theme -->
                 <div>
-                  <label class="block text-sm font-medium text-slate-700 mb-2">Color Theme</label>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Color Theme</label>
                   <input
                     v-model="room.color"
                     type="text"
-                    class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+                    class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
                     placeholder="e.g., Gold & White, Ocean Blue"
                   />
                 </div>
@@ -164,13 +164,13 @@
 
           <!-- Empty State -->
           <div v-if="roomsForm.rooms.length === 0" class="text-center py-12">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-2xl mb-4">
-              <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-slate-100 dark:bg-slate-600 rounded-2xl mb-4">
+              <svg class="w-8 h-8 text-slate-400 dark:text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <h3 class="text-lg font-semibold text-slate-900 mb-2">No rooms added yet</h3>
-            <p class="text-slate-600 mb-6">Start building your rooms section by adding your first luxury accommodation</p>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">No rooms added yet</h3>
+            <p class="text-slate-600 dark:text-slate-400 mb-6">Start building your rooms section by adding your first luxury accommodation</p>
             <button
               type="button"
               @click="addRoom"
@@ -185,14 +185,14 @@
         </div>
 
         <!-- Stats Section -->
-        <div class="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200">
+        <div class="bg-slate-50 dark:bg-slate-700 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600">
           <div class="flex items-center justify-between mb-6">
-            <label class="flex items-center text-lg font-semibold text-slate-700">
+            <label class="flex items-center text-lg font-semibold text-slate-700 dark:text-slate-300">
               <svg class="w-5 h-5 mr-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
               Room Statistics
-              <span class="ml-2 text-sm text-slate-500 font-normal">({{ roomsForm.stats.length }} stats)</span>
+              <span class="ml-2 text-sm text-slate-500 dark:text-slate-400 font-normal">({{ roomsForm.stats.length }} stats)</span>
             </label>
             <button
               type="button"
@@ -210,14 +210,14 @@
             <div
               v-for="(stat, index) in roomsForm.stats"
               :key="index"
-              class="bg-white rounded-lg shadow-md border border-slate-200 p-4 hover:shadow-lg transition-all duration-200"
+              class="bg-white dark:bg-slate-800 rounded-lg shadow-md border border-slate-200 dark:border-slate-600 p-4 hover:shadow-lg transition-all duration-200"
             >
               <div class="flex items-center justify-between mb-3">
-                <h4 class="text-sm font-semibold text-slate-900">{{ stat.label || `Stat ${index + 1}` }}</h4>
+                <h4 class="text-sm font-semibold text-slate-900 dark:text-slate-100">{{ stat.label || `Stat ${index + 1}` }}</h4>
                 <button
                   type="button"
                   @click="removeStat(index)"
-                  class="w-6 h-6 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 rounded transition-all duration-200"
+                  class="w-6 h-6 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded transition-all duration-200"
                 >
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -226,29 +226,29 @@
               </div>
               <div class="space-y-3">
                 <div>
-                  <label class="block text-xs text-slate-600 mb-1">Count</label>
+                  <label class="block text-xs text-slate-600 dark:text-slate-400 mb-1">Count</label>
                   <input
                     v-model="stat.count"
                     type="text"
-                    class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500"
+                    class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500 text-slate-900 dark:text-slate-100"
                     placeholder="e.g., 25"
                   />
                 </div>
                 <div>
-                  <label class="block text-xs text-slate-600 mb-1">Label</label>
+                  <label class="block text-xs text-slate-600 dark:text-slate-400 mb-1">Label</label>
                   <input
                     v-model="stat.label"
                     type="text"
-                    class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500"
+                    class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500 text-slate-900 dark:text-slate-100"
                     placeholder="e.g., Total Rooms"
                   />
                 </div>
                 <div>
-                  <label class="block text-xs text-slate-600 mb-1">Color</label>
+                  <label class="block text-xs text-slate-600 dark:text-slate-400 mb-1">Color</label>
                   <input
                     v-model="stat.color"
                     type="text"
-                    class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500"
+                    class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded text-sm focus:ring-1 focus:ring-purple-500 focus:border-purple-500 text-slate-900 dark:text-slate-100"
                     placeholder="e.g., #8B5CF6"
                   />
                 </div>
@@ -258,33 +258,33 @@
         </div>
 
         <!-- Main Video Section -->
-        <div class="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200">
+        <div class="bg-slate-50 dark:bg-slate-700 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600">
           <div class="flex items-center mb-6">
             <svg class="w-6 h-6 mr-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
-            <h3 class="text-lg font-bold text-slate-900">Main Promotional Video</h3>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Main Promotional Video</h3>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Video Title -->
             <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Video Title</label>
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Video Title</label>
               <input
                 v-model="roomsForm.videoTitle"
                 type="text"
-                class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+                class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
                 placeholder="e.g., Experience Planet Hollywood"
               />
             </div>
 
             <!-- Video Description -->
             <div class="md:col-span-2">
-              <label class="block text-sm font-medium text-slate-700 mb-2">Video Description</label>
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Video Description</label>
               <textarea
                 v-model="roomsForm.videoDescription"
                 rows="3"
-                class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 resize-none"
+                class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 resize-none text-slate-900 dark:text-slate-100"
                 placeholder="Describe what this video showcases about your hotel experience"
               ></textarea>
             </div>
@@ -300,33 +300,33 @@
         </div>
 
         <!-- Penthouse Section -->
-        <div class="bg-linear-to-br from-purple-50 to-indigo-50 rounded-2xl p-6 border-2 border-purple-200">
+        <div class="bg-linear-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-800/20 rounded-2xl p-6 border-2 border-purple-200 dark:border-purple-600">
           <div class="flex items-center mb-6">
             <svg class="w-6 h-6 mr-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
-            <h3 class="text-lg font-bold text-slate-900">Penthouse Suite</h3>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Penthouse Suite</h3>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Penthouse Title -->
             <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Penthouse Title</label>
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Penthouse Title</label>
               <input
                 v-model="roomsForm.penthouseTitle"
                 type="text"
-                class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300"
+                class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
                 placeholder="e.g., Presidential Penthouse"
               />
             </div>
 
             <!-- Penthouse Description -->
             <div class="md:col-span-2">
-              <label class="block text-sm font-medium text-slate-700 mb-2">Penthouse Description</label>
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Penthouse Description</label>
               <textarea
                 v-model="roomsForm.penthouseDescription"
                 rows="4"
-                class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 resize-none"
+                class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 resize-none text-slate-900 dark:text-slate-100"
                 placeholder="Describe the exclusive penthouse suite features, amenities, and luxury experience"
               ></textarea>
             </div>
@@ -342,8 +342,8 @@
         </div>
 
         <!-- Save Button -->
-        <div class="flex items-center justify-between pt-6 border-t-2 border-slate-200">
-          <div class="flex items-center text-sm text-slate-500">
+        <div class="flex items-center justify-between pt-6 border-t-2 border-slate-200 dark:border-slate-700">
+          <div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>

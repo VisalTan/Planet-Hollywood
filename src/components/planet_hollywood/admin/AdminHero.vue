@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+  <div class="bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-700">
     <!-- Header -->
     <div class="bg-linear-to-r from-blue-600 to-indigo-700 px-8 py-6">
       <div class="flex items-center space-x-3">
@@ -20,51 +20,51 @@
       <form @submit.prevent="saveHeroContent" class="space-y-8">
         <!-- Title -->
         <div class="group">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+          <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
             <svg class="w-4 h-4 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
             </svg>
             Main Title
           </label>
-          <input 
-            v-model="heroForm.title" 
+          <input
+            v-model="heroForm.title"
             type="text"
-            class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300"
-            placeholder="Enter an attention-grabbing title" 
+            class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
+            placeholder="Enter an attention-grabbing title"
           />
         </div>
 
         <!-- Subtitle -->
         <div class="group">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+          <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
             <svg class="w-4 h-4 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
             Subtitle
           </label>
-          <input 
-            v-model="heroForm.subtitle" 
+          <input
+            v-model="heroForm.subtitle"
             type="text"
-            class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300"
-            placeholder="Add a compelling subtitle" 
+            class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
+            placeholder="Add a compelling subtitle"
           />
         </div>
 
         <!-- Description -->
         <div class="group">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+          <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
             <svg class="w-4 h-4 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             Description
           </label>
-          <textarea 
-            v-model="heroForm.description" 
+          <textarea
+            v-model="heroForm.description"
             rows="4"
-            class="w-full px-4 py-3 bg-white border-2 border-slate-200 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300 resize-none"
+            class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 resize-none text-slate-900 dark:text-slate-100"
             placeholder="Write a detailed description that captures your audience's attention"
           ></textarea>
-          <p class="text-xs text-slate-500 mt-2">{{ heroForm.description.length }} characters</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">{{ heroForm.description.length }} characters</p>
         </div>
 
         <!-- Video Upload -->
@@ -74,13 +74,13 @@
         />
 
         <!-- Tags -->
-        <div class="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-4">
+        <div class="bg-slate-50 dark:bg-slate-700 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600">
+          <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4">
             <svg class="w-4 h-4 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
             </svg>
             Tags
-            <span class="ml-2 text-xs text-slate-500 font-normal">({{ heroForm.tags.length }} tags)</span>
+            <span class="ml-2 text-xs text-slate-500 dark:text-slate-400 font-normal">({{ heroForm.tags.length }} tags)</span>
           </label>
           
           <div class="space-y-3">
@@ -90,17 +90,17 @@
               class="flex items-center space-x-3 group/tag"
             >
               <div class="flex-1 relative">
-                <input 
-                  v-model="heroForm.tags[index]" 
+                <input
+                  v-model="heroForm.tags[index]"
                   type="text"
-                  class="w-full px-4 py-2.5 bg-white border-2 border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300"
-                  placeholder="Enter tag name" 
+                  class="w-full px-4 py-2.5 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-500 text-slate-900 dark:text-slate-100"
+                  placeholder="Enter tag name"
                 />
               </div>
-              <button 
-                type="button" 
-                @click="removeTag(index)" 
-                class="shrink-0 w-10 h-10 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200 opacity-0 group-hover/tag:opacity-100"
+              <button
+                type="button"
+                @click="removeTag(index)"
+                class="shrink-0 w-10 h-10 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-all duration-200 opacity-0 group-hover/tag:opacity-100"
               >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -109,10 +109,10 @@
             </div>
           </div>
           
-          <button 
-            type="button" 
+          <button
+            type="button"
             @click="addTag"
-            class="mt-4 w-full inline-flex items-center justify-center px-4 py-3 border-2 border-dashed border-slate-300 rounded-lg text-sm font-medium text-slate-600 bg-white hover:bg-slate-50 hover:border-indigo-300 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200"
+            class="mt-4 w-full inline-flex items-center justify-center px-4 py-3 border-2 border-dashed border-slate-300 dark:border-slate-500 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-indigo-300 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200"
           >
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -122,8 +122,8 @@
         </div>
 
         <!-- Save Button -->
-        <div class="flex items-center justify-between pt-6 border-t-2 border-slate-200">
-          <div class="flex items-center text-sm text-slate-500">
+        <div class="flex items-center justify-between pt-6 border-t-2 border-slate-200 dark:border-slate-700">
+          <div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-linear-to-br from-rose-50 to-pink-100 rounded-2xl shadow-xl overflow-hidden border border-rose-200">
+  <div class="bg-linear-to-br from-rose-50 to-pink-100 dark:from-rose-900/20 dark:to-pink-800/20 rounded-2xl shadow-xl overflow-hidden border border-rose-200 dark:border-rose-700">
     <!-- Header -->
     <div class="bg-linear-to-r from-rose-600 to-pink-700 px-8 py-6">
       <div class="flex items-center space-x-3">
@@ -23,7 +23,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Title -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
@@ -31,38 +31,38 @@
               Section Title
             </label>
             <input v-model="contactForm.title" type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-rose-200 rounded-xl shadow-sm focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-200 hover:border-rose-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-rose-200 dark:border-rose-600 rounded-xl shadow-sm focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-200 hover:border-rose-300 dark:hover:border-rose-500 text-slate-900 dark:text-slate-100"
               placeholder="e.g., Get in Touch" />
           </div>
 
           <!-- Subtitle -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
               Subtitle
             </label>
             <input v-model="contactForm.subtitle" type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-rose-200 rounded-xl shadow-sm focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-200 hover:border-rose-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-rose-200 dark:border-rose-600 rounded-xl shadow-sm focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-200 hover:border-rose-300 dark:hover:border-rose-500 text-slate-900 dark:text-slate-100"
               placeholder="e.g., We'd love to hear from you" />
           </div>
         </div>
 
         <!-- Contact Information Section -->
-        <div class="bg-white rounded-2xl p-6 border-2 border-rose-200 shadow-sm">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-rose-200 dark:border-rose-600 shadow-sm">
           <div class="flex items-center mb-6">
             <svg class="w-5 h-5 mr-2 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <h3 class="text-lg font-bold text-slate-800">Contact Information</h3>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Contact Information</h3>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Email -->
             <div class="group">
-              <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+              <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 <svg class="w-4 h-4 mr-2 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
@@ -71,7 +71,7 @@
               </label>
               <div class="relative">
                 <input v-model="contactForm.email" type="email"
-                  class="w-full px-4 py-3 bg-linear-to-br from-blue-50 to-blue-100 border-2 border-blue-200 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300 pl-10"
+                  class="w-full px-4 py-3 bg-linear-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-2 border-blue-200 dark:border-blue-600 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300 dark:hover:border-blue-500 pl-10 text-slate-900 dark:text-slate-100"
                   placeholder="contact@example.com" />
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@
 
             <!-- Website -->
             <div class="group">
-              <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+              <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 <svg class="w-4 h-4 mr-2 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -93,7 +93,7 @@
               </label>
               <div class="relative">
                 <input v-model="contactForm.website" type="url"
-                  class="w-full px-4 py-3 bg-linear-to-br from-purple-50 to-purple-100 border-2 border-purple-200 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300 pl-10"
+                  class="w-full px-4 py-3 bg-linear-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border-2 border-purple-200 dark:border-purple-600 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300 dark:hover:border-purple-500 pl-10 text-slate-900 dark:text-slate-100"
                   placeholder="https://example.com" />
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,20 +107,20 @@
         </div>
 
         <!-- Social Media Section -->
-        <div class="bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border-2 border-slate-200 shadow-sm">
+        <div class="bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-700 dark:to-slate-600 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600 shadow-sm">
           <div class="flex items-center mb-6">
             <svg class="w-5 h-5 mr-2 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
             </svg>
-            <h3 class="text-lg font-bold text-slate-800">Social Media Links</h3>
-            <span class="ml-2 text-xs text-slate-500">Connect your social profiles</span>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Social Media Links</h3>
+            <span class="ml-2 text-xs text-slate-500 dark:text-slate-400">Connect your social profiles</span>
           </div>
 
           <div class="space-y-4">
             <!-- Instagram -->
             <div
-              class="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-pink-300 transition-all duration-200">
+              class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div
                   class="w-10 h-10 bg-linear-to-br from-purple-500 via-pink-500 to-orange-500 rounded-lg flex items-center justify-center">
@@ -130,18 +130,18 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <h4 class="text-sm font-bold text-slate-900">Instagram</h4>
-                  <p class="text-xs text-slate-500">Share your visual story</p>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Instagram</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Share your visual story</p>
                 </div>
               </div>
               <input v-model="contactForm.socialLinks.instagram" type="url"
-                class="w-full px-4 py-2.5 bg-linear-to-br from-pink-50 to-purple-50 border-2 border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all text-sm"
+                class="w-full px-4 py-2.5 bg-linear-to-br from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-800/20 border-2 border-pink-200 dark:border-pink-600 rounded-lg focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all text-sm text-slate-900 dark:text-slate-100"
                 placeholder="https://instagram.com/yourprofile" />
             </div>
 
             <!-- Facebook -->
             <div
-              class="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-blue-300 transition-all duration-200">
+              class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -150,20 +150,20 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <h4 class="text-sm font-bold text-slate-900">Facebook</h4>
-                  <p class="text-xs text-slate-500">Connect with your community</p>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Facebook</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Connect with your community</p>
                 </div>
               </div>
               <input v-model="contactForm.socialLinks.facebook" type="url"
-                class="w-full px-4 py-2.5 bg-linear-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-sm"
+                class="w-full px-4 py-2.5 bg-linear-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-800/20 border-2 border-blue-200 dark:border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all text-sm text-slate-900 dark:text-slate-100"
                 placeholder="https://facebook.com/yourpage" />
             </div>
           </div>
         </div>
 
         <!-- Save Button -->
-        <div class="flex items-center justify-between pt-6 border-t-2 border-rose-200">
-          <div class="flex items-center text-sm text-slate-500">
+        <div class="flex items-center justify-between pt-6 border-t-2 border-rose-200 dark:border-rose-700">
+          <div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

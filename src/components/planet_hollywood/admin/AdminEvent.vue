@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-linear-to-br from-purple-50 to-indigo-100 rounded-2xl shadow-xl overflow-hidden border border-purple-200">
+  <div class="bg-linear-to-br from-purple-50 to-indigo-100 dark:from-purple-900/20 dark:to-indigo-800/20 rounded-2xl shadow-xl overflow-hidden border border-purple-200 dark:border-purple-700">
     <!-- Header -->
     <div class="bg-linear-to-r from-purple-600 to-indigo-700 px-8 py-6">
       <div class="flex items-center space-x-3">
@@ -23,7 +23,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Title -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
@@ -31,20 +31,20 @@
               Section Title
             </label>
             <input v-model="eventForm.title" type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-purple-200 dark:border-purple-600 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300 dark:hover:border-purple-500 text-slate-900 dark:text-slate-100"
               placeholder="e.g., Where Every Event Deserves a Spotlight" />
           </div>
 
           <!-- Subtitle -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
               Subtitle
             </label>
             <input v-model="eventForm.subtitle" type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-purple-200 dark:border-purple-600 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300 dark:hover:border-purple-500 text-slate-900 dark:text-slate-100"
               placeholder="e.g., Over 900 square meters of dynamic event space" />
           </div>
         </div>
@@ -56,19 +56,19 @@
         />
 
         <!-- Hall Information -->
-        <div class="bg-white rounded-2xl p-6 border-2 border-purple-200 shadow-sm">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-purple-200 dark:border-purple-600 shadow-sm">
           <div class="flex items-center mb-6">
             <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
-            <h3 class="text-lg font-bold text-slate-800">Hall Information</h3>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Hall Information</h3>
           </div>
 
           <div class="space-y-4">
             <!-- Hall Name -->
             <div class="group">
-              <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+              <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -76,13 +76,13 @@
                 Hall Name
               </label>
               <input v-model="eventForm.hallName" type="text"
-                class="w-full px-4 py-3 bg-linear-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-indigo-300"
+                class="w-full px-4 py-3 bg-linear-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-800/20 border-2 border-indigo-200 dark:border-indigo-600 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 text-slate-900 dark:text-slate-100"
                 placeholder="e.g., The Hall of Phame" />
             </div>
 
             <!-- Description -->
             <div class="group">
-              <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+              <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -90,26 +90,26 @@
                 Description
               </label>
               <textarea v-model="eventForm.description" rows="4"
-                class="w-full px-4 py-3 bg-linear-to-br from-indigo-50 to-purple-50 border-2 border-indigo-200 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-indigo-300 resize-none"
+                class="w-full px-4 py-3 bg-linear-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-800/20 border-2 border-indigo-200 dark:border-indigo-600 rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-500 resize-none text-slate-900 dark:text-slate-100"
                 placeholder="Describe your event hall and its features..."></textarea>
             </div>
           </div>
         </div>
 
         <!-- Capacity Information -->
-        <div class="bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border-2 border-slate-200 shadow-sm">
+        <div class="bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-700 dark:to-slate-600 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600 shadow-sm">
           <div class="flex items-center mb-6">
             <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-            <h3 class="text-lg font-bold text-slate-800">Capacity Information</h3>
-            <span class="ml-2 text-xs text-slate-500">Set capacity for different event types</span>
+            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Capacity Information</h3>
+            <span class="ml-2 text-xs text-slate-500 dark:text-slate-400">Set capacity for different event types</span>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Banquet -->
-            <div class="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-pink-300 transition-all duration-200">
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-pink-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,22 +118,22 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <h4 class="text-sm font-bold text-slate-900">Banquet</h4>
-                  <p class="text-xs text-slate-500">Seated dining capacity</p>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Banquet</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Seated dining capacity</p>
                 </div>
               </div>
               <div class="space-y-2">
                 <input v-model="eventForm.capacities.banquet.count" type="text"
-                  class="w-full px-3 py-2 bg-pink-50 border-2 border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all text-sm font-semibold"
+                  class="w-full px-3 py-2 bg-pink-50 dark:bg-pink-900/20 border-2 border-pink-200 dark:border-pink-600 rounded-lg focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all text-sm font-semibold text-slate-900 dark:text-slate-100"
                   placeholder="180-210" />
                 <input v-model="eventForm.capacities.banquet.label" type="text"
-                  class="w-full px-3 py-2 bg-pink-50 border-2 border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all text-xs text-slate-600"
+                  class="w-full px-3 py-2 bg-pink-50 dark:bg-pink-900/20 border-2 border-pink-200 dark:border-pink-600 rounded-lg focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition-all text-xs text-slate-600 dark:text-slate-400"
                   placeholder="Banquet" readonly />
               </div>
             </div>
 
             <!-- Theatre -->
-            <div class="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-cyan-300 transition-all duration-200">
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-cyan-300 dark:hover:border-cyan-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,22 +142,22 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <h4 class="text-sm font-bold text-slate-900">Theatre</h4>
-                  <p class="text-xs text-slate-500">Presentation style seating</p>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Theatre</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Presentation style seating</p>
                 </div>
               </div>
               <div class="space-y-2">
                 <input v-model="eventForm.capacities.theatre.count" type="text"
-                  class="w-full px-3 py-2 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all text-sm font-semibold"
+                  class="w-full px-3 py-2 bg-cyan-50 dark:bg-cyan-900/20 border-2 border-cyan-200 dark:border-cyan-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all text-sm font-semibold text-slate-900 dark:text-slate-100"
                   placeholder="250-280" />
                 <input v-model="eventForm.capacities.theatre.label" type="text"
-                  class="w-full px-3 py-2 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all text-xs text-slate-600"
+                  class="w-full px-3 py-2 bg-cyan-50 dark:bg-cyan-900/20 border-2 border-cyan-200 dark:border-cyan-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all text-xs text-slate-600 dark:text-slate-400"
                   placeholder="Theatre" readonly />
               </div>
             </div>
 
             <!-- Classroom -->
-            <div class="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-purple-300 transition-all duration-200">
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,22 +166,22 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <h4 class="text-sm font-bold text-slate-900">Classroom</h4>
-                  <p class="text-xs text-slate-500">Table and chair setup</p>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Classroom</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Table and chair setup</p>
                 </div>
               </div>
               <div class="space-y-2">
                 <input v-model="eventForm.capacities.classroom.count" type="text"
-                  class="w-full px-3 py-2 bg-purple-50 border-2 border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 transition-all text-sm font-semibold"
+                  class="w-full px-3 py-2 bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-200 dark:border-purple-600 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 transition-all text-sm font-semibold text-slate-900 dark:text-slate-100"
                   placeholder="120-140" />
                 <input v-model="eventForm.capacities.classroom.label" type="text"
-                  class="w-full px-3 py-2 bg-purple-50 border-2 border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 transition-all text-xs text-slate-600"
+                  class="w-full px-3 py-2 bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-200 dark:border-purple-600 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-400 transition-all text-xs text-slate-600 dark:text-slate-400"
                   placeholder="Classroom" readonly />
               </div>
             </div>
 
             <!-- Boardroom -->
-            <div class="bg-white rounded-xl p-5 border-2 border-slate-200 hover:border-yellow-300 transition-all duration-200">
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-yellow-300 dark:hover:border-yellow-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,16 +190,16 @@
                   </svg>
                 </div>
                 <div class="ml-3">
-                  <h4 class="text-sm font-bold text-slate-900">Boardroom</h4>
-                  <p class="text-xs text-slate-500">Executive meeting setup</p>
+                  <h4 class="text-sm font-bold text-slate-900 dark:text-slate-100">Boardroom</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Executive meeting setup</p>
                 </div>
               </div>
               <div class="space-y-2">
                 <input v-model="eventForm.capacities.boardroom.count" type="text"
-                  class="w-full px-3 py-2 bg-yellow-50 border-2 border-yellow-200 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all text-sm font-semibold"
+                  class="w-full px-3 py-2 bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-200 dark:border-yellow-600 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all text-sm font-semibold text-slate-900 dark:text-slate-100"
                   placeholder="40-50" />
                 <input v-model="eventForm.capacities.boardroom.label" type="text"
-                  class="w-full px-3 py-2 bg-yellow-50 border-2 border-yellow-200 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all text-xs text-slate-600"
+                  class="w-full px-3 py-2 bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-200 dark:border-yellow-600 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all text-xs text-slate-600 dark:text-slate-400"
                   placeholder="Boardroom" readonly />
               </div>
             </div>
@@ -208,7 +208,7 @@
 
         <!-- Features -->
         <div class="group">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+          <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
             <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -216,13 +216,13 @@
             Features & Amenities
           </label>
           <input v-model="eventForm.features" type="text"
-            class="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300"
+            class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-purple-200 dark:border-purple-600 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-purple-300 dark:hover:border-purple-500 text-slate-900 dark:text-slate-100"
             placeholder="e.g., Equipped with state-of-the-art AV systems & high-speed Wi-Fi" />
         </div>
 
         <!-- Save Button -->
-        <div class="flex items-center justify-between pt-6 border-t-2 border-purple-200">
-          <div class="flex items-center text-sm text-slate-500">
+        <div class="flex items-center justify-between pt-6 border-t-2 border-purple-200 dark:border-purple-700">
+          <div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

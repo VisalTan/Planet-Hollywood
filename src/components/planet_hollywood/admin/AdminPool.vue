@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-linear-to-br from-cyan-50 to-blue-100 rounded-2xl shadow-xl overflow-hidden border border-cyan-200">
+  <div class="bg-linear-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-800/20 rounded-2xl shadow-xl overflow-hidden border border-cyan-200 dark:border-cyan-700">
     <!-- Header -->
     <div class="bg-linear-to-r from-cyan-600 to-blue-700 px-8 py-6">
       <div class="flex items-center space-x-3">
@@ -29,7 +29,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Title -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
@@ -37,27 +37,27 @@
               Section Title
             </label>
             <input v-model="poolForm.title" type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-cyan-200 rounded-xl shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-cyan-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-cyan-200 dark:border-cyan-600 rounded-xl shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-cyan-300 dark:hover:border-cyan-500 text-slate-900 dark:text-slate-100"
               placeholder="e.g., The Cliff Pool" />
           </div>
 
           <!-- Subtitle -->
           <div class="group">
-            <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+            <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               <svg class="w-4 h-4 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
               Subtitle
             </label>
             <input v-model="poolForm.subtitle" type="text"
-              class="w-full px-4 py-3 bg-white border-2 border-cyan-200 rounded-xl shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-cyan-300"
+              class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-cyan-200 dark:border-cyan-600 rounded-xl shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-cyan-300 dark:hover:border-cyan-500 text-slate-900 dark:text-slate-100"
               placeholder="e.g., Float among the clouds with panoramic skyline views" />
           </div>
         </div>
 
         <!-- Description -->
         <div class="group">
-          <label class="flex items-center text-sm font-semibold text-slate-700 mb-2">
+          <label class="flex items-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
             <svg class="w-4 h-4 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -65,13 +65,13 @@
             Description
           </label>
           <textarea v-model="poolForm.description" rows="4"
-            class="w-full px-4 py-3 bg-white border-2 border-cyan-200 rounded-xl shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-cyan-300 resize-none"
+            class="w-full px-4 py-3 bg-white dark:bg-slate-800 border-2 border-cyan-200 dark:border-cyan-600 rounded-xl shadow-sm focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-cyan-300 dark:hover:border-cyan-500 resize-none text-slate-900 dark:text-slate-100"
             placeholder="Describe your pool area and its features..."></textarea>
         </div>
 
         <!-- Save Button -->
-        <div class="flex items-center justify-between pt-6 border-t-2 border-cyan-200">
-          <div class="flex items-center text-sm text-slate-500">
+        <div class="flex items-center justify-between pt-6 border-t-2 border-cyan-200 dark:border-cyan-700">
+          <div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

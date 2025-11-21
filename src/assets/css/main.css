@@ -26,7 +26,7 @@
 }
 
 /* Dark theme - E-commerce Optimized */
-[data-theme="dark"] {
+.dark {
     --color-primary: #3b82f6;        /* Brighter blue for dark mode */
     --color-secondary: #a78bfa;      /* Lighter purple for visibility */
     --color-accent: #fbbf24;         /* Vibrant amber for deals */

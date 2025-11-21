@@ -1,10 +1,10 @@
 <template>
-  <div class="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-indigo-50">
+  <div class="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
     <!-- Sidebar -->
     <aside :class="[
       'fixed top-0 left-0 z-40 h-screen transition-transform duration-300 ease-in-out',
       sidebarOpen ? 'translate-x-0' : '-translate-x-full',
-      'w-72 bg-linear-to-b from-slate-900 via-slate-800 to-slate-900 shadow-2xl'
+      'w-72 bg-linear-to-b from-slate-900 via-slate-800 to-slate-900 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-2xl'
     ]">
       <div class="h-full flex flex-col">
         <!-- Logo -->
@@ -79,7 +79,7 @@
     <!-- Main Content -->
     <div :class="['transition-all duration-300', sidebarOpen ? 'ml-72' : 'ml-0']">
       <!-- Header -->
-      <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-xl shadow-sm border-b border-slate-200">
+      <header class="sticky top-0 z-30 bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl shadow-sm border-b border-slate-200 dark:border-slate-700">
         <div class="flex items-center justify-between px-6 py-4">
           <div class="flex items-center space-x-4">
             <button 
@@ -91,10 +91,10 @@
               </svg>
             </button>
             <div>
-              <h1 class="text-2xl font-bold bg-linear-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h1 class="text-2xl font-bold bg-linear-to-r from-slate-800 to-slate-600 dark:from-slate-200 dark:to-slate-400 bg-clip-text text-transparent">
                 {{ pageTitle }}
               </h1>
-              <p class="text-sm text-slate-500 mt-0.5">Manage your content and reservations</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Manage your content and reservations</p>
             </div>
           </div>
           <div class="flex items-center space-x-3">
@@ -111,15 +111,15 @@
         <div v-if="activeMenu === 'dashboard'" class="space-y-6">
           <!-- Stats Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div 
-              v-for="stat in dynamicStats" 
-              :key="stat.label" 
-              class="bg-white rounded-2xl shadow-lg p-6 border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+            <div
+              v-for="stat in dynamicStats"
+              :key="stat.label"
+              class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
             >
               <div class="flex items-start justify-between">
                 <div class="flex-1">
-                  <p class="text-sm font-medium text-slate-600 mb-1">{{ stat.label }}</p>
-                  <p class="text-3xl font-bold text-slate-900 mb-2">{{ stat.value }}</p>
+                  <p class="text-sm font-medium text-slate-600 dark:text-slate-400 mb-1">{{ stat.label }}</p>
+                  <p class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">{{ stat.value }}</p>
                   <p :class="['text-sm font-medium', stat.changeColor]">{{ stat.change }}</p>
                 </div>
                 <div :class="['p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform', stat.bgColor]">
@@ -133,9 +133,9 @@
 
           <!-- Quick Actions -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <button 
+            <button
               @click="activeMenu = 'reservations'"
-              class="bg-linear-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg p-6 text-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group"
+              class="bg-linear-to-br from-blue-500 to-indigo-600 dark:from-blue-600 dark:to-indigo-700 rounded-2xl shadow-lg p-6 text-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group"
             >
               <div class="flex items-center justify-between mb-4">
                 <div class="p-3 bg-white/20 rounded-xl">
@@ -151,9 +151,9 @@
               <p class="text-blue-100 text-sm">Manage and track all bookings</p>
             </button>
 
-            <button 
+            <button
               @click="activeMenu = 'hero'"
-              class="bg-linear-to-br from-purple-500 to-pink-600 rounded-2xl shadow-lg p-6 text-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group"
+              class="bg-linear-to-br from-purple-500 to-pink-600 dark:from-purple-600 dark:to-pink-700 rounded-2xl shadow-lg p-6 text-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group"
             >
               <div class="flex items-center justify-between mb-4">
                 <div class="p-3 bg-white/20 rounded-xl">
@@ -169,9 +169,9 @@
               <p class="text-purple-100 text-sm">Update website sections</p>
             </button>
 
-            <button 
+            <button
               @click="activeMenu = 'analytics'"
-              class="bg-linear-to-br from-emerald-500 to-teal-600 rounded-2xl shadow-lg p-6 text-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group"
+              class="bg-linear-to-br from-emerald-500 to-teal-600 dark:from-emerald-600 dark:to-teal-700 rounded-2xl shadow-lg p-6 text-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-left group"
             >
               <div class="flex items-center justify-between mb-4">
                 <div class="p-3 bg-white/20 rounded-xl">
@@ -191,12 +191,12 @@
 
         <!-- Reservations -->
         <div v-if="activeMenu === 'reservations'" class="space-y-6">
-          <div class="bg-white rounded-2xl shadow-xl border border-slate-200">
-            <div class="px-8 py-6 border-b border-slate-200 bg-linear-to-r from-slate-50 to-blue-50">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700">
+            <div class="px-8 py-6 border-b border-slate-200 dark:border-slate-700 bg-linear-to-r from-slate-50 to-blue-50 dark:from-slate-700 dark:to-slate-600">
               <div class="flex items-center justify-between">
                 <div>
-                  <h2 class="text-2xl font-bold text-slate-900">Reservations</h2>
-                  <p class="text-sm text-slate-600 mt-1">Manage all customer bookings</p>
+                  <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Reservations</h2>
+                  <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Manage all customer bookings</p>
                 </div>
                 <div class="px-4 py-2 bg-blue-100 rounded-xl">
                   <span class="text-sm font-semibold text-blue-700">{{ reservations.length }} Total</span>
@@ -227,28 +227,28 @@
                 <p class="text-slate-600 font-medium">No reservations found</p>
                 <p class="text-slate-500 text-sm mt-2">New reservations will appear here</p>
               </div>
-              <div v-else class="overflow-x-auto rounded-xl border border-slate-200">
-                <table class="min-w-full divide-y divide-slate-200">
-                  <thead class="bg-slate-50">
+              <div v-else class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+                <table class="min-w-full divide-y divide-slate-200 dark:divide-slate-700">
+                  <thead class="bg-slate-50 dark:bg-slate-700">
                     <tr>
-                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Name</th>
-                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Email</th>
-                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Date</th>
-                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Time</th>
-                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Guests</th>
-                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Status</th>
-                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Actions</th>
+                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Name</th>
+                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Email</th>
+                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Date</th>
+                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Time</th>
+                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Guests</th>
+                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Status</th>
+                      <th class="px-6 py-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Actions</th>
                     </tr>
                   </thead>
-                  <tbody class="bg-white divide-y divide-slate-100">
-                    <tr v-for="reservation in reservations" :key="reservation.id" class="hover:bg-slate-50 transition-colors">
+                  <tbody class="bg-white dark:bg-slate-800 divide-y divide-slate-100 dark:divide-slate-700">
+                    <tr v-for="reservation in reservations" :key="reservation.id" class="hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
                       <td class="px-6 py-4 whitespace-nowrap">
-                        <div class="font-semibold text-slate-900">{{ reservation.name }}</div>
+                        <div class="font-semibold text-slate-900 dark:text-slate-100">{{ reservation.name }}</div>
                       </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">{{ reservation.email }}</td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">{{ reservation.date }}</td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">{{ reservation.time }}</td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">{{ reservation.guests }}</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600 dark:text-slate-400">{{ reservation.email }}</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600 dark:text-slate-400">{{ reservation.date }}</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600 dark:text-slate-400">{{ reservation.time }}</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600 dark:text-slate-400">{{ reservation.guests }}</td>
                       <td class="px-6 py-4 whitespace-nowrap">
                         <span :class="[
                           'inline-flex px-3 py-1 text-xs font-bold rounded-full',
@@ -261,23 +261,23 @@
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm">
                         <div class="flex items-center space-x-3">
-                          <button 
+                          <button
                             @click="updateStatus(reservation.id, 'confirmed')"
                             :disabled="reservation.status === 'confirmed'"
-                            class="text-green-600 hover:text-green-800 font-medium disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                            class="text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-300 font-medium disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                           >
                             Confirm
                           </button>
-                          <button 
+                          <button
                             @click="updateStatus(reservation.id, 'cancelled')"
                             :disabled="reservation.status === 'cancelled'"
-                            class="text-red-600 hover:text-red-800 font-medium disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                            class="text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300 font-medium disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                           >
                             Cancel
                           </button>
-                          <button 
-                            @click="deleteReservation(reservation.id)" 
-                            class="text-slate-600 hover:text-slate-900 font-medium transition-colors"
+                          <button
+                            @click="deleteReservation(reservation.id)"
+                            class="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 font-medium transition-colors"
                           >
                             Delete
                           </button>
@@ -292,34 +292,61 @@
         </div>
 
         <!-- Analytics Placeholder -->
-        <div v-if="activeMenu === 'analytics'" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
+        <div v-if="activeMenu === 'analytics'" class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8">
           <div class="text-center py-16">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-emerald-100 to-teal-100 rounded-2xl mb-6">
               <svg class="w-10 h-10 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Analytics Dashboard</h2>
-            <p class="text-slate-600">Advanced analytics features coming soon...</p>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Analytics Dashboard</h2>
+            <p class="text-slate-600 dark:text-slate-400">Advanced analytics features coming soon...</p>
           </div>
         </div>
 
-        <!-- Settings Placeholder -->
-        <div v-if="activeMenu === 'settings'" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
-          <div class="text-center py-16">
-            <div class="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-slate-100 to-slate-200 rounded-2xl mb-6">
-              <svg class="w-10 h-10 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+        <!-- Settings -->
+        <div v-if="activeMenu === 'settings'" class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8">
+          <div class="max-w-2xl mx-auto">
+            <div class="flex items-center mb-8">
+              <div class="inline-flex items-center justify-center w-12 h-12 bg-linear-to-br from-slate-100 to-slate-200 rounded-xl mr-4">
+                <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Settings</h2>
+                <p class="text-slate-600 dark:text-slate-400">Configure your admin preferences</p>
+              </div>
             </div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Settings</h2>
-            <p class="text-slate-600">Configuration options coming soon...</p>
+
+            <!-- Theme Settings -->
+            <div class="space-y-6">
+              <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">Appearance</h3>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="font-medium text-slate-900 dark:text-slate-100">Dark Mode</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Toggle between light and dark themes</p>
+                  </div>
+                  <button
+                    @click="toggleTheme"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    :class="isDark ? 'bg-blue-600' : 'bg-slate-200'"
+                  >
+                    <span
+                      class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform"
+                      :class="isDark ? 'translate-x-6' : 'translate-x-1'"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Content Sections -->
-        <div v-if="activeMenu === 'management'" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
+        <div v-if="activeMenu === 'management'" class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-8">
           <div class="text-center py-16">
             <div class="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-blue-100 to-indigo-100 rounded-2xl mb-6">
               <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -327,8 +354,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Content Management</h2>
-            <p class="text-slate-600">Select a section from the sidebar to manage your website content</p>
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Content Management</h2>
+            <p class="text-slate-600 dark:text-slate-400">Select a section from the sidebar to manage your website content</p>
           </div>
         </div>
 
@@ -349,6 +376,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useReservations } from '~/composables/api/useReservation'
 import { useAdminAuth } from '~/composables/auth/useAdminAuth'
+import { useTheme } from '~/composables/useTheme'
 import AdminHero from '~/components/planet_hollywood/admin/AdminHero.vue'
 import AdminAbout from '~/components/planet_hollywood/admin/AdminAbout.vue'
 import AdminPool from '~/components/planet_hollywood/admin/AdminPool.vue'
@@ -359,6 +387,7 @@ import AdminLocation from '~/components/planet_hollywood/admin/AdminLocation.vue
 import AdminEvent from '~/components/planet_hollywood/admin/AdminEvent.vue'
 
 const { isAuthenticated, logout } = useAdminAuth()
+const { toggleTheme, isDark } = useTheme()
 
 // Redirect to login if not authenticated
 if (!isAuthenticated.value) {
