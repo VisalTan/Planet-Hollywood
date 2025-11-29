@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-black text-white">
+  <div class="min-h-screen bg-black text-white mt-22">
     <!-- Hero Section -->
     <section class="relative py-5 bg-linear-to-b from-black via-cyan-900/10 to-black">
       <div class="absolute inset-0 opacity-20">
@@ -25,97 +25,56 @@
             <div class="grid lg:grid-cols-2 gap-6 mb-6">
               <div class="text-left">
                 <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Name *</label>
-                <input
-                  id="name"
-                  v-model="form.name"
-                  type="text"
-                  required
-                  placeholder="Your full name"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"
-                />
+                <input id="name" v-model="form.name" type="text" required placeholder="Your full name"
+                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
               </div>
 
               <div class="text-left">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email *</label>
-                <input
-                  id="email"
-                  v-model="form.email"
-                  type="email"
-                  required
-                  placeholder="your@email.com"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"
-                />
+                <input id="email" v-model="form.email" type="email" required placeholder="your@email.com"
+                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
               </div>
             </div>
 
             <div class="mb-6 text-left">
               <label for="phone" class="block mb-2 text-sm font-medium text-gray-300">Phone *</label>
-              <input
-                id="phone"
-                v-model="form.phone"
-                type="tel"
-                required
-                placeholder="+1234567890"
-                class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"
-              />
+              <input id="phone" v-model="form.phone" type="tel" required placeholder="+1234567890"
+                class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
             </div>
 
             <div class="grid lg:grid-cols-2 gap-6 mb-6">
               <div class="text-left">
                 <label for="checkin" class="block mb-2 text-sm font-medium text-gray-300">Check-in Date *</label>
-                <input
-                  id="checkin"
-                  v-model="form.checkin"
-                  type="date"
-                  required
-                  :min="minDate"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"
-                />
+                <input id="checkin" v-model="form.checkin" type="date" required :min="minDate"
+                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
               </div>
 
               <div class="text-left">
                 <label for="checkout" class="block mb-2 text-sm font-medium text-gray-300">Check-out Date *</label>
-                <input
-                  id="checkout"
-                  v-model="form.checkout"
-                  type="date"
-                  required
-                  :min="form.checkin || minDate"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"
-                />
+                <input id="checkout" v-model="form.checkout" type="date" required :min="form.checkin || minDate"
+                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
               </div>
             </div>
 
             <div class="mb-6 text-left">
               <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Message (Optional)</label>
-              <textarea
-                id="message"
-                v-model="form.message"
-                rows="4"
-                placeholder="Any special requests or notes..."
-                class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"
-              ></textarea>
+              <textarea id="message" v-model="form.message" rows="4" placeholder="Any special requests or notes..."
+                class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"></textarea>
             </div>
 
             <div class="text-center">
-              <button
-                type="submit"
-                :disabled="loading"
-                class="neon-button bg-linear-to-r from-pink-500 via-purple-500 to-cyan-500 text-white px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none w-full md:w-auto"
-              >
+              <button type="submit" :disabled="loading"
+                class="neon-button bg-linear-to-r from-pink-500 via-purple-500 to-cyan-500 text-white px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none w-full md:w-auto">
                 {{ loading ? 'Sending...' : 'Book Now' }}
               </button>
             </div>
 
-            <div
-              v-if="status.message"
-              :class="[
-                'mt-6 p-4 rounded-lg text-center',
-                status.type === 'success'
-                  ? 'bg-green-500/20 border border-green-500/50 text-green-400'
-                  : 'bg-red-500/20 border border-red-500/50 text-red-400'
-              ]"
-            >
+            <div v-if="status.message" :class="[
+              'mt-6 p-4 rounded-lg text-center',
+              status.type === 'success'
+                ? 'bg-green-500/20 border border-green-500/50 text-green-400'
+                : 'bg-red-500/20 border border-red-500/50 text-red-400'
+            ]">
               {{ status.message }}
             </div>
           </form>
@@ -123,11 +82,14 @@
       </div>
     </section>
   </div>
-  <planet-hollywood-footer/>
 </template>
 
 <script setup lang="ts">
 import { useReservations } from '~/composables/api/useReservation'
+
+definePageMeta({
+  layout: 'hollywood'
+})
 
 const { addReservation } = useReservations()
 

@@ -1,183 +1,168 @@
 <template>
-  <div class="min-h-screen bg-black text-white overflow-x-hidden">
- 
-    <!-- Mobile Sidebar -->
-    <div v-show="sidebarOpen" class="fixed inset-0 z-50 lg:hidden">
-      <div @click="sidebarOpen = false" class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div :class="[
-        'absolute left-0 top-0 h-full w-80 bg-black shadow-lg transform transition-transform duration-300 ease-in-out',
-        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-      ]">
-        <div class="p-6">
-          <button @click="sidebarOpen = false" class="absolute top-4 right-4 text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-          <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-8">
-            Planet Hollywood
-          </div>
-          <nav class="space-y-4">
-            <NuxtLink to="/" class="block text-white hover:text-purple-400 transition-colors py-2">Home</NuxtLink>
-            <NuxtLink to="/rooms" class="block text-white hover:text-purple-400 transition-colors py-2">Rooms & Suites</NuxtLink>
-            <NuxtLink to="/dining" class="block text-white hover:text-purple-400 transition-colors py-2">Dining</NuxtLink>
-            <NuxtLink to="/amenities" class="block text-white hover:text-purple-400 transition-colors py-2">Amenities</NuxtLink>
-            <NuxtLink to="/gallery" class="block text-white hover:text-purple-400 transition-colors py-2">Gallery</NuxtLink>
-            <NuxtLink to="/contact" class="block text-purple-400 font-semibold transition-colors py-2">Contact Us</NuxtLink>
-            <NuxtLink to="/booking" class="block text-white hover:text-purple-400 transition-colors py-2">Book Now</NuxtLink>
-          </nav>
-        </div>
+  <div class="min-h-screen bg-black text-white">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute inset-0 bg-linear-to-r from-pink-500/5 via-purple-500/5 to-cyan-500/5"></div>
+      <div class="absolute top-20 left-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute top-40 right-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+      <div class="absolute bottom-20 left-1/3 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+          <span class="bg-linear-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+            Let's Connect
+          </span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto font-light">
+          Experience luxury hospitality at its finest. We're here to make your stay unforgettable.
+        </p>
       </div>
     </div>
 
-    <!-- Main Content -->
-    <main class="pt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col gap-12 md:gap-16 py-12 md:py-20">
-        <!-- Header Section -->
-        <div class="flex flex-wrap justify-between gap-6">
-          <div class="flex max-w-lg flex-col gap-3">
-            <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight">
-              Get in Touch
-            </h1>
-            <p class="text-purple-300 text-base leading-relaxed">
-              We'd love to hear from you. Reach out with any questions or inquiries, and our team will get back to you shortly.
-            </p>
+    <!-- Contact Cards -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <!-- Email Card -->
+        <a href="mailto:reservations@planethollywoodphnompenh.com" 
+           class="group bg-linear-to-br from-pink-500/10 to-purple-500/10 backdrop-blur-xl border border-pink-500/30 rounded-2xl p-8 hover:border-pink-400/50 hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300 hover:transform hover:scale-105">
+          <div class="w-14 h-14 bg-linear-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform shadow-lg shadow-pink-500/50">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
           </div>
-        </div>
+          <h3 class="text-sm font-semibold text-pink-400 uppercase tracking-wider mb-2">Email</h3>
+          <p class="text-white font-medium break-all">reservations@planethollywoodphnompenh.com</p>
+        </a>
 
-        <!-- Contact Information -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-purple-900/30 pt-8">
-          <div class="flex flex-col gap-2">
-            <p class="text-purple-300 text-sm font-medium uppercase tracking-wider">Email</p>
-            <a href="mailto:reservations@planethollywoodphnompenh.com" class="text-white hover:text-purple-400 transition-colors">
-              reservations@planethollywoodphnompenh.com
-            </a>
+        <!-- Phone Card -->
+        <a href="tel:+85523999888" 
+           class="group bg-linear-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 hover:transform hover:scale-105">
+          <div class="w-14 h-14 bg-linear-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform shadow-lg shadow-cyan-500/50">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
           </div>
-          <div class="flex flex-col gap-2">
-            <p class="text-purple-300 text-sm font-medium uppercase tracking-wider">Phone</p>
-            <a href="tel:+85523999888" class="text-white hover:text-purple-400 transition-colors">
-              +855 23 999 888
-            </a>
-          </div>
-          <div class="flex flex-col gap-2">
-            <p class="text-purple-300 text-sm font-medium uppercase tracking-wider">Address</p>
-            <p class="text-white">
-              123 Cinema Boulevard, Phnom Penh, Cambodia
-            </p>
-          </div>
-        </div>
+          <h3 class="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Phone</h3>
+          <p class="text-white font-medium text-2xl">+855 23 999 888</p>
+        </a>
 
-        <!-- Contact Form and Map -->
-        <div class="flex flex-col lg:flex-row gap-12 lg:gap-8">
-          <!-- Contact Form -->
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
-            <form @submit.prevent="handleSubmit" class="flex flex-col gap-6">
-              <div class="flex flex-col sm:flex-row gap-6">
-                <label class="flex flex-col flex-1">
-                  <span class="text-white text-base font-medium mb-2">Full Name</span>
-                  <input 
-                    v-model="form.fullName"
-                    type="text"
-                    class="w-full rounded-lg text-white bg-purple-950/30 border border-purple-900/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 h-14 px-4 placeholder:text-purple-300/50 transition-all outline-none"
-                    placeholder="Enter your full name"
-                    required
-                  />
-                </label>
-                <label class="flex flex-col flex-1">
-                  <span class="text-white text-base font-medium mb-2">Email Address</span>
-                  <input 
-                    v-model="form.email"
-                    type="email"
-                    class="w-full rounded-lg text-white bg-purple-950/30 border border-purple-900/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 h-14 px-4 placeholder:text-purple-300/50 transition-all outline-none"
-                    placeholder="Enter your email address"
-                    required
-                  />
-                </label>
-              </div>
-              <label class="flex flex-col">
-                <span class="text-white text-base font-medium mb-2">Subject</span>
-                <input 
-                  v-model="form.subject"
+        <!-- Address Card -->
+        <div class="group bg-linear-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-8 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:transform hover:scale-105">
+          <div class="w-14 h-14 bg-linear-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform shadow-lg shadow-purple-500/50">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-2">Location</h3>
+          <p class="text-white font-medium">123 Cinema Boulevard<br>Phnom Penh, Cambodia</p>
+        </div>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-3">
+            <span class="bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">
+              Send a Message
+            </span>
+          </h2>
+          <p class="text-gray-400 mb-8">Fill out the form below and we'll respond within 24 hours.</p>
+          
+          <div class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold text-gray-300 mb-2">Full Name</label>
+                <input
+                  v-model="form.fullName"
                   type="text"
-                  class="w-full rounded-lg text-white bg-purple-950/30 border border-purple-900/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 h-14 px-4 placeholder:text-purple-300/50 transition-all outline-none"
-                  placeholder="What is your message about?"
-                  required
+                  class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3.5 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none transition-all"
+                  placeholder="John Doe"
                 />
-              </label>
-              <label class="flex flex-col">
-                <span class="text-white text-base font-medium mb-2">Message</span>
-                <textarea 
-                  v-model="form.message"
-                  class="w-full min-h-36 rounded-lg text-white bg-purple-950/30 border border-purple-900/50 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 px-4 py-3 placeholder:text-purple-300/50 transition-all outline-none resize-y"
-                  placeholder="Write your message here..."
-                  required
-                ></textarea>
-              </label>
-              <button 
-                type="submit"
-                class="self-start bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-lg font-bold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-300 mb-2">Email Address</label>
+                <input
+                  v-model="form.email"
+                  type="email"
+                  class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3.5 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none transition-all"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
 
-          <!-- Map and Social Media -->
-          <div class="flex-1 lg:pl-8">
-            <h2 class="text-2xl font-bold mb-6">Our Location</h2>
-            <div class="aspect-video w-full rounded-lg overflow-hidden bg-purple-950/30">
-              <img 
-                class="h-full w-full object-cover" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXO9e_WQakRYaPF34dwKz6W9G_ybbeH5K0k0FkBUGsqEQiVk5T-h_jcVNn7OiMqBtCK7U14oTJzofDno9oR0wt9WSA5eWDkRaiq-7STvh2SxD2kPOPPoYlaNuFXXWemfS7pMAuh2KwpyCnw4VxPPL7Ir0kPiXjmlRR_Ayiu17F_gTN_ZP0IvWMqIxKlhoG-Z6RRjPqDrK_17gnFqc97st6xmJJyLhOBsX0RywJThXOc4pdnG1zH__69lx5Ug95izUmO8AWVZn0NCAQ"
-                alt="Map showing Planet Hollywood Hotel location in Phnom Penh"
+            <div>
+              <label class="block text-sm font-semibold text-gray-300 mb-2">Subject</label>
+              <input
+                v-model="form.subject"
+                type="text"
+                class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3.5 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none transition-all"
+                placeholder="What can we help you with?"
               />
             </div>
-            
-            <div class="mt-8">
-              <h3 class="text-lg font-bold mb-4">Follow Us</h3>
-              <div class="flex items-center gap-4">
-                <a href="#" class="text-purple-300 hover:text-white transition-colors" aria-label="Instagram">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                    <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                  </svg>
-                </a>
-                <a href="#" class="text-purple-300 hover:text-white transition-colors" aria-label="Facebook">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                  </svg>
-                </a>
-                <a href="#" class="text-purple-300 hover:text-white transition-colors" aria-label="Twitter">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                  </svg>
-                </a>
-                <a href="#" class="text-purple-300 hover:text-white transition-colors" aria-label="LinkedIn">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect height="12" width="4" x="2" y="9"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                  </svg>
-                </a>
-              </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-gray-300 mb-2">Message</label>
+              <textarea
+                v-model="form.message"
+                rows="5"
+                class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3.5 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none transition-all resize-none"
+                placeholder="Tell us more about your inquiry..."
+              ></textarea>
+            </div>
+
+            <button
+              @click="handleSubmit"
+              :disabled="submitted"
+              class="w-full sm:w-auto bg-linear-to-r from-pink-500 to-cyan-500 hover:from-pink-600 hover:to-cyan-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            >
+              <span v-if="!submitted">Send Message</span>
+              <span v-else>Message Sent!</span>
+              <svg v-if="!submitted" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+              </svg>
+              <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Map & Social -->
+        <div class="space-y-8">
+          <!-- Map -->
+          <div class="bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-3xl overflow-hidden shadow-2xl">
+            <div class="p-6 border-b border-gray-800">
+              <h2 class="text-2xl font-bold mb-2">
+                <span class="bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  Visit Us
+                </span>
+              </h2>
+              <p class="text-gray-400">Find us in the heart of Phnom Penh</p>
+            </div>
+            <div class="relative h-80 overflow-hidden">
+              <img
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXO9e_WQakRYaPF34dwKz6W9G_ybbeH5K0k0FkBUGsqEQiVk5T-h_jcVNn7OiMqBtCK7U14oTJzofDno9oR0wt9WSA5eWDkRaiq-7STvh2SxD2kPOPPoYlaNuFXXWemfS7pMAuh2KwpyCnw4VxPPL7Ir0kPiXjmlRR_Ayiu17F_gTN_ZP0IvWMqIxKlhoG-Z6RRjPqDrK_17gnFqc97st6xmJJyLhOBsX0RywJThXOc4pdnG1zH__69lx5Ug95izUmO8AWVZn0NCAQ"
+                alt="Planet Hollywood Hotel Phnom Penh Location"
+              />
             </div>
           </div>
         </div>
       </div>
-    </main>
-
-    <!-- Footer -->
-    <planet-hollywood-footer />
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+definePageMeta({
+  layout: 'hollywood'
+})
 
-const scrolled = ref(false)
-const sidebarOpen = ref(false)
 const form = ref({
   fullName: '',
   email: '',
@@ -185,36 +170,29 @@ const form = ref({
   message: ''
 })
 
-const handleScroll = () => {
-  scrolled.value = window.scrollY > 50
-}
+const submitted = ref(false)
 
 const handleSubmit = () => {
-  // Handle form submission
-  console.log('Form submitted:', form.value)
-  // Add your form submission logic here
-  alert('Thank you for your message! We will get back to you soon.')
+  submitted.value = true
   
-  // Reset form
-  form.value = {
-    fullName: '',
-    email: '',
-    subject: '',
-    message: ''
-  }
+  setTimeout(() => {
+    form.value = {
+      fullName: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
+    submitted.value = false
+  }, 3000)
 }
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>
 
 <style scoped>
-html {
-  scroll-behavior: smooth;
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
 }
 </style>

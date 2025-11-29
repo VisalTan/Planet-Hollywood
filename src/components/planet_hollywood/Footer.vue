@@ -73,24 +73,6 @@
           </div>
         </div>
 
-        <!-- Newsletter Section -->
-        <div class="border-t border-gray-800 pt-8 mb-8">
-          <div class="max-w-2xl mx-auto text-center">
-            <h3 class="text-white font-semibold mb-3">Subscribe to Our Newsletter</h3>
-            <p class="text-gray-400 text-sm mb-4">Get exclusive deals and updates delivered to your inbox</p>
-            <div class="flex gap-2 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                class="flex-1 px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors"
-              >
-              <button class="px-6 py-2 bg-linear-to-r from-pink-500 to-cyan-500 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/50 transition-all text-white">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-
         <!-- Bottom Bar -->
         <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-600 text-xs text-center md:text-left">
