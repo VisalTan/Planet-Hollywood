@@ -7,9 +7,8 @@
       <div class="max-w-7xl mx-auto px-6 py-4">
         <div class="flex items-center">
           <!-- Logo/Brand -->
-          <div class="text-2xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Planet Hollywood
-          </div>
+      
+          <img src="/images/PH_Logo.png" alt="Planet Hollywood Logo" class="h-15" />
 
           <!-- Navigation Links -->
           <div class="hidden md:flex items-center space-x-8 ml-8">
@@ -73,6 +72,7 @@
           <div class="text-2xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-8">
             Planet Hollywood
           </div>
+          <img src="/images/PH_Logo.png" alt="Planet Hollywood Logo" class="mb-8" />
           <!-- Navigation Links -->
           <nav class="space-y-4">
             <button @click="scrollToSection('rooms')"
@@ -206,4 +206,5 @@ html {
   scroll-behavior: smooth;
 }
 </style>
+
 

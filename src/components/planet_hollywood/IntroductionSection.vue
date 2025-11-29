@@ -23,7 +23,7 @@
                     </p>
 
                     <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
+                    <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-6">
                         <div
                             class="border-2 border-pink-500 rounded-2xl p-6 text-center bg-black/40 backdrop-blur-sm hover:border-pink-400 transition-colors duration-300">
                             <p class="text-5xl font-black text-white mb-2">148</p>
@@ -47,7 +47,7 @@
                             </div>
                             <p class="text-sm text-gray-400">Facilities</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Right Image & Location -->

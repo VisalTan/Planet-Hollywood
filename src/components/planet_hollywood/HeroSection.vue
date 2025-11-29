@@ -29,7 +29,7 @@
       </p>
 
       <!-- Tags -->
-      <div class="flex flex-wrap justify-center gap-3 sm:gap-4 pt-4">
+      <!-- <div class="flex flex-wrap justify-center gap-3 sm:gap-4 pt-4">
         <span v-for="(tag, index) in heroContent?.tags || ['Phamous', 'Phantastic', 'Phabulous', 'Phun']" :key="tag"
           :class="[
             'px-5 py-2.5 sm:px-6 sm:py-3 backdrop-blur-md rounded-full border text-sm sm:text-base font-medium hover:scale-105 transition-all duration-300 cursor-pointer',
@@ -37,7 +37,7 @@
           ]">
           {{ tag }}
         </span>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
