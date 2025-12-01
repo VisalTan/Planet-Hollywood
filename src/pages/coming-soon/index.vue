@@ -9,7 +9,7 @@
           transform: `translateY(${scrollY * 0.2}px)`
         }"
       ></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black z-10"></div>
+      <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-black z-10"></div>
       
       <div class="relative z-20 text-center px-6 max-w-5xl mx-auto py-16">
         <!-- Star Icon -->
@@ -17,7 +17,7 @@
         </div>
 
         <!-- Main Heading -->
-        <h1 class="text-6xl md:text-8xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 animate-gradient">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 text-transparent bg-clip-text bg-linear-to-r from-yellow-400 via-red-500 to-pink-500 animate-gradient">
           COMING SOON
         </h1>
 
@@ -60,7 +60,7 @@
 
         <!-- Features -->
         <div class="grid md:grid-cols-3 gap-6 mb-10 max-w-4xl mx-auto">
-          <div class="bg-gradient-to-br from-yellow-600/20 to-red-900/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/30">
+          <div class="bg-linear-to-br from-yellow-600/20 to-red-900/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/30">
             <img 
               src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400" 
               alt="Luxury Rooms"
@@ -72,7 +72,7 @@
             </p>
           </div>
 
-          <div class="bg-gradient-to-br from-red-600/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 border border-red-500/30">
+          <div class="bg-linear-to-br from-red-600/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-6 border border-red-500/30">
             <img 
               src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" 
               alt="Dining"
@@ -84,7 +84,7 @@
             </p>
           </div>
 
-          <div class="bg-gradient-to-br from-pink-600/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-6 border border-pink-500/30">
+          <div class="bg-linear-to-br from-pink-600/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-6 border border-pink-500/30">
             <img 
               src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=400" 
               alt="Pool"
@@ -110,7 +110,7 @@
             />
             <button 
               type="submit"
-              class="bg-gradient-to-r from-yellow-500 to-red-600 hover:from-yellow-600 hover:to-red-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-xl"
+              class="bg-linear-to-r from-yellow-500 to-red-600 hover:from-yellow-600 hover:to-red-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-xl"
             >
               Subscribe
             </button>
