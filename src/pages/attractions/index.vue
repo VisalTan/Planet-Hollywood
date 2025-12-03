@@ -37,7 +37,7 @@
                     <h3 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">
                       {{ attraction.title }}
                     </h3>
-                    <p class="text-[#b790cb] text-base font-normal leading-relaxed grow">
+                    <p class="text-gray-400 text-base font-normal leading-relaxed grow">
                       {{ attraction.description }}
                     </p>
                     <p class="text-white/60 text-sm font-normal leading-normal flex items-center gap-2 pt-2">
@@ -60,11 +60,11 @@
                 <h3 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">
                   Plan Your Perfect Excursion
                 </h3>
-                <p class="text-[#b790cb] text-base font-normal leading-relaxed max-w-xl">
+                <p class="text-gray-400 text-base font-normal leading-relaxed max-w-xl">
                   Our dedicated concierge team is here to help you arrange private tours, secure transportation, and provide expert recommendations to make your exploration unforgettable.
                 </p>
               </div>
-              <button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+              <button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-linear-to-r from-purple-600 to-pink-600 text-white text-base font-bold leading-normal tracking-[0.015em] hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
                 <span class="truncate">Contact Concierge</span>
               </button>
             </section>
@@ -145,6 +145,13 @@ useHead({
 <style scoped>
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #06b6d4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 body {

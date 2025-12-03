@@ -16,28 +16,28 @@
               </p>
               <div class="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-8 sm:grid-cols-2">
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">restaurant_menu</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">restaurant_menu</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Cuisine</h3>
                     <p class="font-medium text-white">International / All-Day</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">schedule</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Hours</h3>
                     <p class="font-medium text-white">7:00 AM - 11:00 PM</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">groups</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">groups</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Capacity</h3>
                     <p class="font-medium text-white">120 Guests</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">phone</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">phone</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Reservations</h3>
                     <p class="font-medium text-white">(123) 456-7890</p>
@@ -69,28 +69,28 @@
               </p>
               <div class="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-8 sm:grid-cols-2">
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">local_bar</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">local_bar</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Cuisine</h3>
                     <p class="font-medium text-white">Bar Bites / Cocktails</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">schedule</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Hours</h3>
                     <p class="font-medium text-white">4:00 PM - 2:00 AM</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">groups</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">groups</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Capacity</h3>
                     <p class="font-medium text-white">80 Guests</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">phone</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">phone</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Reservations</h3>
                     <p class="font-medium text-white">(123) 456-7891</p>
@@ -110,28 +110,28 @@
               </p>
               <div class="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-8 sm:grid-cols-2">
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">lunch_dining</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">lunch_dining</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Cuisine</h3>
                     <p class="font-medium text-white">Gourmet Burgers</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">schedule</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Hours</h3>
                     <p class="font-medium text-white">11:00 AM - 12:00 AM</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">groups</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">groups</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Capacity</h3>
                     <p class="font-medium text-white">150 Guests</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-2xl">phone</span>
+                  <span class="material-symbols-outlined neon-text-purple text-2xl">phone</span>
                   <div>
                     <h3 class="text-sm font-semibold text-white/70">Reservations</h3>
                     <p class="font-medium text-white">(123) 456-7892</p>
@@ -185,5 +185,17 @@ useHead({
 <style scoped>
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #06b6d4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.neon-text-purple {
+  color: #a855f7;
+  text-shadow: 0 0 10px #a855f7;
 }
 </style>

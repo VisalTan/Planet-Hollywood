@@ -14,10 +14,8 @@
     <!-- Hero Section -->
     <div class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-          <span class="bg-linear-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
-            Let's Connect
-          </span>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight text-white">
+          Let's Connect
         </h1>
         <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto font-light">
           Experience luxury hospitality at its finest. We're here to make your stay unforgettable.
@@ -38,7 +36,7 @@
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 class="text-sm font-semibold text-pink-400 uppercase tracking-wider mb-2">Email</h3>
+          <h3 class="text-sm font-semibold neon-text-pink uppercase tracking-wider mb-2">Email</h3>
           <p class="text-white font-medium break-all">reservations@planethollywoodphnompenh.com</p>
         </a>
 
@@ -52,7 +50,7 @@
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
           </div>
-          <h3 class="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Phone</h3>
+          <h3 class="text-sm font-semibold neon-text-cyan uppercase tracking-wider mb-2">Phone</h3>
           <p class="text-white font-medium text-2xl">+855 23 999 888</p>
         </a>
 
@@ -67,7 +65,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-2">Location</h3>
+          <h3 class="text-sm font-semibold neon-text-purple uppercase tracking-wider mb-2">Location</h3>
           <p class="text-white font-medium">123 Cinema Boulevard<br>Phnom Penh, Cambodia</p>
         </div>
       </div>
@@ -76,10 +74,8 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Contact Form -->
         <div class="bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">
-            <span class="bg-linear-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">
-              Send a Message
-            </span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-3 text-white">
+            Send a Message
           </h2>
           <p class="text-gray-400 mb-8">Fill out the form below and we'll respond within 24 hours.</p>
 
@@ -126,10 +122,8 @@
           <!-- Map -->
           <div class="bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-3xl overflow-hidden shadow-2xl">
             <div class="p-6 border-b border-gray-800">
-              <h2 class="text-2xl font-bold mb-2">
-                <span class="bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  Visit Us
-                </span>
+              <h2 class="text-2xl font-bold mb-2 text-white">
+                Visit Us
               </h2>
               <p class="text-gray-400">Find us in the heart of Phnom Penh</p>
             </div>
@@ -181,5 +175,20 @@ const handleSubmit = () => {
 
 .delay-1000 {
   animation-delay: 1s;
+}
+
+.neon-text-pink {
+  color: #ec4899;
+  text-shadow: 0 0 10px #ec4899;
+}
+
+.neon-text-cyan {
+  color: #06b6d4;
+  text-shadow: 0 0 10px #06b6d4;
+}
+
+.neon-text-purple {
+  color: #a855f7;
+  text-shadow: 0 0 10px #a855f7;
 }
 </style>

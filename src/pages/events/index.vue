@@ -18,7 +18,7 @@
                   celebration.</h2>
               </div>
               <button
-                class="mt-4 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 sm:h-14 px-6 sm:px-8 bg-primary text-white text-base sm:text-lg font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                class="mt-4 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 sm:h-14 px-6 sm:px-8 bg-linear-to-r from-purple-600 to-pink-600 text-white text-base sm:text-lg font-bold leading-normal tracking-[0.015em] hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 href="#contact">
                 <span class="truncate">Enquire Now</span>
               </button>
@@ -197,7 +197,7 @@
                     class="w-full h-28 p-4 rounded-lg bg-surface border border-white/10 text-white placeholder:text-white/50 focus:border-primary focus:ring-primary/50 focus:outline-none"
                     placeholder="Your Message"></textarea>
                   <button @click="handleSubmit"
-                    class="flex w-full md:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                    class="flex w-full md:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-linear-to-r from-purple-600 to-pink-600 text-white text-base font-bold leading-normal tracking-[0.015em] hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
                     <span class="truncate">Submit Enquiry</span>
                   </button>
                 </div>

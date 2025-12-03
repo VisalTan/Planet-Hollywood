@@ -25,12 +25,12 @@
                                     </div>
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 border-t border-white/10">
                                         <div class="flex flex-col gap-2">
-                                            <p class="text-primary text-sm font-bold tracking-wider uppercase">Operating
+                                            <p class="neon-text-purple text-sm font-bold tracking-wider uppercase">Operating
                                                 Hours</p>
                                             <p class="text-white text-lg">{{ amenities.cliffPool.hours }}</p>
                                         </div>
                                         <div class="flex flex-col gap-2">
-                                            <p class="text-primary text-sm font-bold tracking-wider uppercase">Guest
+                                            <p class="neon-text-purple text-sm font-bold tracking-wider uppercase">Guest
                                                 Benefits</p>
                                             <p class="text-white text-lg">{{ amenities.cliffPool.benefits }}</p>
                                         </div>
@@ -50,12 +50,12 @@
                                     </div>
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 border-t border-white/10">
                                         <div class="flex flex-col gap-2">
-                                            <p class="text-primary text-sm font-bold tracking-wider uppercase">Operating
+                                            <p class="neon-text-purple text-sm font-bold tracking-wider uppercase">Operating
                                                 Hours</p>
                                             <p class="text-white text-lg">{{ amenities.observatory.hours }}</p>
                                         </div>
                                         <div class="flex flex-col gap-2">
-                                            <p class="text-primary text-sm font-bold tracking-wider uppercase">Guest
+                                            <p class="neon-text-purple text-sm font-bold tracking-wider uppercase">Guest
                                                 Benefits</p>
                                             <p class="text-white text-lg">{{ amenities.observatory.benefits }}</p>
                                         </div>
@@ -149,5 +149,17 @@ useHead({
 <style scoped>
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #06b6d4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.neon-text-purple {
+  color: #a855f7;
+  text-shadow: 0 0 10px #a855f7;
 }
 </style>
