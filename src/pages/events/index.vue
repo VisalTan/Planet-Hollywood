@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-black font-sans">
     <div class="layout-container flex h-full grow flex-col">
-      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
         <main class="flex flex-col">
           <!-- Hero Section -->
           <section class="py-12 sm:py-16 lg:py-24">

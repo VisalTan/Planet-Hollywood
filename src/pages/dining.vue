@@ -3,7 +3,7 @@
 
     <!-- Main Content -->
     <main class="flex flex-1 flex-col items-center">
-      <div class="w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-10">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
         <!-- Restaurant Sections -->
         <div class="mt-24 flex flex-col gap-24 lg:mt-32 lg:gap-32">
           <!-- Café Hollywood -->
