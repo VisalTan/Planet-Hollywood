@@ -9,10 +9,10 @@
   <PlanetHollywoodDiningSection />
 
   <!-- Amenities Section -->
-  <planet-hollywood-pool-section />
+  <!-- <planet-hollywood-pool-section /> -->
 
   <!-- Events Section -->
-  <PlanetHollywoodEventSection />
+  <!-- <PlanetHollywoodEventSection /> -->
 
   <!-- Sustainability Section -->
   <!-- <planet-hollywood-sustainability /> -->
