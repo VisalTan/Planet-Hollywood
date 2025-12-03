@@ -5,14 +5,16 @@
             <div class="w-full max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-20">
                 <main class="flex flex-col py-16 md:py-20">
                     <!-- Hero Section -->
-                    <section class="py-12 sm:py-4 lg:py-20">
+                    <section class="py-12 sm:py-4 lg:py-8">
                         <div class="flex min-h-[480px] sm:min-h-[520px] lg:min-h-[600px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl sm:rounded-2xl items-center justify-center px-6 sm:px-8 lg:px-12 py-12 sm:py-16"
                             style="background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsIPeYZ9umrx9HlDV_IIPO7mmBNJKm9pY4Bvq2z8Kvs9fVTllig2CdJb9N05567k2VhNnIV7fzy2nWXz4ONgandrs-O3rm2_8LzsDwyRx18IS335eMHsVsFP4n8eQ4U_5_cjLX-_frFA1MnOwMH-RCwncDBoPc-SU5fX0sTTUjZQeue1coqwY5A5IFRvJyfkXJF6bQpyDiuZDgX94ZAs0ANWgcTE8twKdvmNOh5TL-NSbsjypAtLz7yvQYhAIqGcRpQrt-uP_lB1A');">
                             <div class="flex flex-col gap-4 sm:gap-6 text-center max-w-3xl">
-                                <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+                                <h1
+                                    class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
                                     Experience Our Collection of Phamous Rooms
                                 </h1>
-                                <h2 class="text-white text-base sm:text-lg lg:text-xl font-normal leading-relaxed opacity-90">
+                                <h2
+                                    class="text-white text-base sm:text-lg lg:text-xl font-normal leading-relaxed opacity-90">
                                     Discover unparalleled luxury and unique design across our themed accommodations,
                                     crafted for an unforgettable stay.
                                 </h2>
@@ -27,28 +29,34 @@
                     <!-- Room Types Grid -->
                     <section class="py-12 sm:py-16 lg:py-20">
                         <div class="mb-8 sm:mb-12">
-                            <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-[-0.015em]">
+                            <h2
+                                class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-[-0.015em]">
                                 Choose Your Scene
                             </h2>
                             <p class="text-neutral-400 text-base sm:text-lg mt-3">
                                 From cozy to spacious, find the perfect room for your stay
                             </p>
                         </div>
-                        
+
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                            <div v-for="room in rooms" :key="room.name" class="flex flex-col gap-4 group cursor-pointer">
-                                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl overflow-hidden shadow-lg">
+                            <div v-for="room in rooms" :key="room.name"
+                                class="flex flex-col gap-4 group cursor-pointer">
+                                <div
+                                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl overflow-hidden shadow-lg">
                                     <div class="w-full h-full bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-110"
                                         :style="`background-image: url('${room.image}');`"></div>
                                 </div>
                                 <div class="px-1">
                                     <p class="text-white text-xl font-semibold leading-normal mb-1">{{ room.name }}</p>
-                                    <p class="text-[#b790cb] text-sm font-normal leading-normal mb-2">{{ room.size }}</p>
+                                    <p class="text-[#b790cb] text-sm font-normal leading-normal mb-2">{{ room.size }}
+                                    </p>
                                     <a class="text-[#af25f4] text-sm font-medium leading-normal hover:text-[#8f1fd4] hover:underline inline-flex items-center gap-1 transition-colors"
                                         href="#">
-                                        View Details 
-                                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        View Details
+                                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
                                         </svg>
                                     </a>
                                 </div>
@@ -59,14 +67,15 @@
                     <!-- Theme Table -->
                     <section class="py-12 sm:py-16 lg:py-20">
                         <div class="mb-8 sm:mb-12">
-                            <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-[-0.015em]">
+                            <h2
+                                class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-[-0.015em]">
                                 Find Your Vibe: Rooms by Floor Theme
                             </h2>
                             <p class="text-neutral-400 text-base sm:text-lg mt-3">
                                 Each floor brings its own unique atmosphere and style
                             </p>
                         </div>
-                        
+
                         <div class="overflow-x-auto rounded-xl shadow-2xl">
                             <table class="w-full text-left text-sm sm:text-base text-neutral-300 min-w-[800px]">
                                 <thead class="bg-[#af25f4]/20 text-white border-b-2 border-[#af25f4]/30">
@@ -77,7 +86,8 @@
                                         <th class="p-4 sm:p-6 font-bold text-center" scope="col">Premier Deluxe</th>
                                         <th class="p-4 sm:p-6 font-bold text-center" scope="col">Executive</th>
                                         <th class="p-4 sm:p-6 font-bold text-center" scope="col">Premier Executive</th>
-                                        <th class="p-4 sm:p-6 rounded-tr-xl font-bold text-center" scope="col">Penthouse</th>
+                                        <th class="p-4 sm:p-6 rounded-tr-xl font-bold text-center" scope="col">Penthouse
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white/5">

@@ -5,7 +5,7 @@
     <main class="flex flex-1 flex-col items-center">
       <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
         <!-- Restaurant Sections -->
-        <div class="mt-24 flex flex-col gap-24 lg:mt-32 lg:gap-32">
+        <div class="mt-24 mb-24 flex flex-col gap-24 lg:mt-32 lg:gap-32">
           <!-- Café Hollywood -->
           <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16" id="cafe-hollywood">
             <div class="order-2 lg:order-1">
