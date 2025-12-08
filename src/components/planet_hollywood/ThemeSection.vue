@@ -1,5 +1,17 @@
 <template>
-  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden hollywood-gradient">
+  <div
+    class="relative flex h-auto min-h-screen w-full flex-col font-display text-white overflow-hidden bg-background-dark">
+    <!-- Background gradients -->
+    <div
+      class="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-primary/10 via-background-dark to-background-dark pointer-events-none">
+    </div>
+    <div
+      class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none opacity-50">
+    </div>
+    <div
+      class="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none opacity-50">
+    </div>
+
     <!-- Section Container -->
     <div class="layout-container flex h-full grow flex-col justify-center py-16 md:py-24">
       <!-- Header Content -->
@@ -7,11 +19,13 @@
         <div class="layout-content-container flex flex-col max-w-[960px] w-full items-center text-center">
           <!-- Subtle Star Icon -->
           <!-- <span class="material-symbols-outlined text-accent text-4xl mb-4 opacity-80">star</span> -->
-          <h1 class="text-white font-serif tracking-tight text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4 pb-4 text-glow">
+          <h1
+            class="text-white font-serif tracking-tight text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4 pb-4">
             Star-Studded Stays
           </h1>
           <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl px-4">
-            Discover our four unique room themes, each designed to offer a distinct Planet Hollywood experience. Choose your scene.
+            Discover our four unique room themes, each designed to offer a distinct Planet Hollywood experience. Choose
+            your scene.
           </p>
         </div>
       </div>
@@ -21,27 +35,22 @@
         <div class="layout-content-container flex flex-col max-w-[1280px] w-full">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
             <!-- Room Cards -->
-            <div
-              v-for="room in rooms"
-              :key="room.id"
-              class="group relative flex flex-col gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-300 hover:bg-white/10 hover:-translate-y-1"
-            >
+            <div v-for="room in rooms" :key="room.id"
+              class="group relative flex flex-col gap-4 p-4 rounded-2xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
               <div class="relative w-full overflow-hidden rounded-xl aspect-[3/4]">
                 <div
                   class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-700 group-hover:scale-110"
-                  :style="{ backgroundImage: `url('${room.image}')` }"
-                  :aria-label="room.alt"
-                ></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-                <div class="absolute bottom-4 left-4">
-                  <span class="material-symbols-outlined text-white text-2xl">{{ room.icon }}</span>
+                  :style="{ backgroundImage: `url('${room.image}')` }" :aria-label="room.alt"></div>
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-background-dark via-background-dark/90 to-transparent">
                 </div>
               </div>
               <div class="flex flex-col gap-1">
-                <h3 class="text-white text-2xl font-serif font-medium leading-normal group-hover:text-primary transition-colors">
+                <h3
+                  class="text-white text-2xl font-serif font-medium leading-normal group-hover:text-primary transition-colors">
                   {{ room.title }}
                 </h3>
-                <p class="text-purple-400 text-sm font-normal leading-relaxed">
+                <p class="text-gray-300 text-sm font-normal leading-relaxed">
                   {{ room.description }}
                 </p>
               </div>
@@ -51,19 +60,19 @@
       </div>
 
       <!-- CTA Button -->
-      <div class="px-4 md:px-10 flex w-full justify-center mt-12">
+      <!-- <div class="px-4 md:px-10 flex w-full justify-center mt-12">
         <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
           <div class="flex px-4 py-3 justify-center">
             <button
               class="group flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-wide transition-all shadow-[0_0_20px_rgba(175,37,244,0.4)] hover:shadow-[0_0_30px_rgba(175,37,244,0.6)] border border-white/10"
-              @click="exploreRooms"
-            >
+              @click="exploreRooms">
               <span class="truncate mr-2">Explore All Rooms</span>
-              <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+              <span
+                class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -109,14 +118,3 @@ const exploreRooms = () => {
   console.log('Exploring rooms...')
 }
 </script>
-
-<style scoped>
-/* Custom gradient for that "Hollywood" feel */
-.hollywood-gradient {
-  background: radial-gradient(circle at 50% 0%, #3e1c52 0%, #1c1022 60%);
-}
-
-.text-glow {
-  text-shadow: 0 0 20px rgba(175, 37, 244, 0.3);
-}
-</style>

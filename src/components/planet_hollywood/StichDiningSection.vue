@@ -21,7 +21,7 @@
       </div>
 
       <!-- Restaurant cards -->
-      <div class="pb-24 sm:pb-6">
+      <div class="pb-24 sm:pb-20">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
           <!-- Café Hollywood -->
           <div class="group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
@@ -170,24 +170,22 @@
       </div>
 
       <!-- CTA section -->
-      <div class="py-16 sm:py-24">
-        <div class="flex flex-col items-center gap-8 rounded-xl bg-gradient-to-br from-primary/10 via-background-dark/0 to-primary/10 p-8 text-center sm:p-16">
-          <h3 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Experience the Flavor of Fame
-          </h3>
-          <p class="max-w-xl text-lg leading-8 text-gray-300">
-            Book your table today and indulge in world-class dining. Whether it's a casual bite or a night out, we have the perfect seat waiting for you.
-          </p>
-          <button class="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-base font-bold text-background-dark shadow-lg shadow-primary/30 transition-transform hover:scale-105">
-            <span class="truncate">Book a Table</span>
-          </button>
+       <!-- <div class="px-4 md:px-10 flex w-full justify-center mt-12">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="flex px-4 py-3 justify-center">
+            <button
+              class="group flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-wide transition-all shadow-[0_0_20px_rgba(175,37,244,0.4)] hover:shadow-[0_0_30px_rgba(175,37,244,0.6)] border border-white/10"
+              @click="bookATable">
+              <span class="truncate mr-2">Book A Table</span>
+            </button>
+          </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="css">
 .aspect-w-4 {
   position: relative;
   padding-bottom: 125%;
@@ -203,3 +201,10 @@
   bottom: 0;
 }
 </style>
+
+<script setup lang="ts">
+const bookATable = () => {
+  // Add your navigation logic here
+  console.log('Booking a table...')
+}
+</script>

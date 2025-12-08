@@ -44,7 +44,7 @@
                         <!-- Book Us Button - Hidden on small mobile -->
                         <NuxtLink to="/booking"
                             class="hidden sm:block bg-linear-to-r from-purple-600 to-pink-600 px-4 md:px-6 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 text-sm md:text-base whitespace-nowrap">
-                            Book Us
+                            Book Your Stay
                         </NuxtLink>
 
                         <!-- Hamburger Menu Button -->

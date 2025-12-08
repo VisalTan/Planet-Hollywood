@@ -1,8 +1,11 @@
 <template>
   <!-- Hero Section -->
-  <PlanetHollywoodHeroSection />
+  <!-- <PlanetHollywoodHeroSection /> -->
 
-  <planet-hollywood-introduction-section />
+  <!-- <planet-hollywood-introduction-section /> -->
+  <PlanetHollywoodStichHeroSection/>
+
+  <StichIntroductionSection/>
 
   <PlanetHollywoodThemeSection />
 
@@ -32,5 +35,6 @@ definePageMeta({
 })
 
 import { PlanetHollywoodDiningSection, PlanetHollywoodEventSection, PlanetHollywoodHeroSection, PlanetHollywoodRoomSection, } from '#components'
+import StichIntroductionSection from '~/components/planet_hollywood/StichIntroductionSection.vue';
 </script>
 
