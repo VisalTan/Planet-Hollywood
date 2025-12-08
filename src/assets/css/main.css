@@ -126,6 +126,11 @@ body {
   animation: fade-in-up 1s ease-out;
 }
 
+/* Material Symbols Outlined */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

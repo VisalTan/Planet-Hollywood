@@ -4,9 +4,11 @@
 
   <planet-hollywood-introduction-section />
 
-  <PlanetHollywoodRoomSection />
+  <PlanetHollywoodThemeSection />
 
-  <PlanetHollywoodDiningSection />
+  <PlanetHollywoodStichDiningSection/>
+
+  <!-- <PlanetHollywoodDiningSection /> -->
 
   <!-- Amenities Section -->
   <!-- <planet-hollywood-pool-section /> -->
@@ -18,7 +20,7 @@
   <!-- <planet-hollywood-sustainability /> -->
 
   <!-- Location Section -->
-  <planet-hollywood-location-section />
+  <!-- <planet-hollywood-location-section /> -->
 
   <!-- CTA Section -->
   <!-- <planet-hollywood-contact-section /> -->

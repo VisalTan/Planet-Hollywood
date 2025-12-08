@@ -13,6 +13,16 @@ export default defineNuxtConfig({
     firebaseMessagingSenderId: process.env.NUXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
     firebaseAppId: process.env.NUXT_PUBLIC_FIREBASE_APP_ID
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
+        }
+      ]
+    }
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/ui', '@nuxt/image', '@pinia/nuxt', '@nuxtjs/color-mode'],
