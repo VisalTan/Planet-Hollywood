@@ -18,7 +18,7 @@
         </div>
 
         <!-- Booking Engine Card -->
-        <div class="w-full max-w-5xl bg-[#2b1834]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+        <div class="w-full max-w-5xl bg-[#2b1834]/50 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
           <!-- Booking Tabs -->
           <div class="flex border-b border-white/10">
             <button 
@@ -27,8 +27,8 @@
               @click="activeTab = index"
               :class="[
                 'flex-1 py-4 text-center text-sm font-bold transition-colors',
-                activeTab === index 
-                  ? 'text-white bg-primary/20 border-b-2 border-primary' 
+                activeTab === index
+                  ? 'text-white bg-purple-600/20 border-b-2 border-purple-600'
                   : 'text-gray-400 hover:bg-white/5'
               ]"
             >
@@ -46,12 +46,12 @@
                 </label>
                 <div class="relative group">
                   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <span class="material-symbols-outlined text-primary">location_on</span>
+                    <span class="material-symbols-outlined text-purple-600">location_on</span>
                   </div>
-                  <input 
+                  <input
                     v-model="destination"
-                    class="block w-full pl-10 pr-3 py-3 bg-[#1d1023] border border-[#3c2249] rounded-lg text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent cursor-default" 
-                    readonly 
+                    class="block w-full pl-10 pr-3 py-3 bg-[#1c1022] border border-white/10 rounded-lg text-white font-medium focus:ring-2 focus:ring-purple-600 focus:border-transparent cursor-default"
+                    readonly
                     type="text"
                   />
                 </div>
@@ -67,9 +67,9 @@
                   @click="toggleDatePicker"
                 >
                   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <span class="material-symbols-outlined text-primary">calendar_month</span>
+                    <span class="material-symbols-outlined text-purple-600">calendar_month</span>
                   </div>
-                  <div class="block w-full pl-10 pr-3 py-3 bg-[#1d1023] border border-primary ring-1 ring-primary rounded-lg text-white font-medium flex items-center justify-between">
+                  <div class="block w-full pl-10 pr-3 py-3 bg-[#1c1022] border border-purple-600 ring-1 ring-purple-600 rounded-lg text-white font-medium flex items-center justify-between">
                     <span>{{ formattedDateRange }}</span>
                     <span class="text-xs text-gray-400">{{ nightCount }} Nights</span>
                   </div>
@@ -83,11 +83,11 @@
                 </label>
                 <div class="relative">
                   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <span class="material-symbols-outlined text-primary">group</span>
+                    <span class="material-symbols-outlined text-purple-600">group</span>
                   </div>
-                  <select 
+                  <select
                     v-model="guests"
-                    class="block w-full pl-10 pr-8 py-3 bg-[#1d1023] border border-[#3c2249] rounded-lg text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent appearance-none"
+                    class="block w-full pl-10 pr-8 py-3 bg-[#1c1022] border border-white/10 rounded-lg text-white font-medium focus:ring-2 focus:ring-purple-600 focus:border-transparent appearance-none"
                   >
                     <option value="1">1 Adult</option>
                     <option value="2">2 Adults</option>
@@ -102,9 +102,9 @@
 
               <!-- Search Button -->
               <div class="md:col-span-2 flex items-end">
-                <button 
+                <button
                   @click="handleSearch"
-                  class="w-full h-[50px] bg-gradient-to-r from-primary to-[#9c27b0] hover:from-[#9c27b0] hover:to-primary text-white font-bold rounded-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02]"
+                  class="w-full h-[50px] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-lg shadow-lg shadow-purple-600/30 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02]"
                 >
                   <span>Search</span>
                   <!-- <span class="material-symbols-outlined text-[20px]">arrow_forward</span> -->
@@ -113,7 +113,7 @@
             </div>
 
             <!-- Date Picker -->
-            <div v-if="showDatePicker" class="bg-[#1d1023] rounded-xl border border-[#3c2249] p-6 animate-fade-in-up">
+            <div v-if="showDatePicker" class="bg-[#1c1022] rounded-xl border border-white/10 p-6 animate-fade-in-up">
               <div class="flex items-center justify-between mb-4 border-b border-white/5 pb-4">
                 <h3 class="text-white font-bold text-lg">Select Dates</h3>
                 <div class="flex gap-2">
@@ -145,7 +145,7 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="hidden lg:block w-px bg-[#3c2249]"></div>
+                <div class="hidden lg:block w-px bg-white/10"></div>
 
                 <!-- Month 2 -->
                 <div class="flex-1">
@@ -175,9 +175,9 @@
         <div class="w-full max-w-5xl mt-12">
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-2xl font-bold text-white">Featured Accommodations</h2>
-            <NuxtLink 
+            <NuxtLink
               to="/rooms"
-              class="text-primary hover:text-white transition-colors text-sm font-bold flex items-center gap-1"
+              class="text-purple-600 hover:text-white transition-colors text-sm font-bold flex items-center gap-1"
             >
               View All
               <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
@@ -200,7 +200,7 @@
             :key="signal.title"
             class="flex items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
           >
-            <span class="material-symbols-outlined text-primary text-3xl">{{ signal.icon }}</span>
+            <span class="material-symbols-outlined text-purple-600 text-3xl">{{ signal.icon }}</span>
             <div class="flex flex-col">
               <span class="text-sm font-bold text-white">{{ signal.title }}</span>
               <span class="text-xs text-gray-400">{{ signal.description }}</span>
