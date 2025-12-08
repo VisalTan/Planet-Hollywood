@@ -19,10 +19,10 @@
                                     crafted for an unforgettable stay.
                                 </h2>
                             </div>
-                            <button
+                            <!-- <button
                                 class="mt-4 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 sm:h-14 px-6 sm:px-8 bg-[#af25f4] text-white text-base sm:text-lg font-bold leading-normal tracking-[0.015em] hover:bg-[#8f1fd4] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                                 <span class="truncate">Explore Rooms</span>
-                            </button>
+                            </button> -->
                         </div>
                     </section>
 
