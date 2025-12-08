@@ -1,169 +1,406 @@
 <template>
-  <div class="min-h-screen bg-black text-white mt-22">
-    <!-- Hero Section -->
-    <section class="relative py-5 bg-linear-to-b from-black via-cyan-900/10 to-black">
-      <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
-      </div>
+  <div>
+    <!-- Main Content -->
+    <main class="relative flex flex-col min-h-screen pt-16">
+      <!-- Hero Background -->
+      <div class="fixed inset-0 z-0 bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed"></div>
+      
+      <!-- Content Container -->
+      <div class="relative z-10 flex flex-col items-center w-full px-4 md:px-8 py-12 lg:py-20">
+        <!-- Hero Text -->
+        <div class="text-center max-w-4xl mx-auto mb-12 animate-fade-in">
+          <h1 class="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight mb-4 drop-shadow-2xl">
+            Your Scene Awaits
+          </h1>
+          <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-md">
+            Secure your premiere stay at Asia's first Planet Hollywood destination.
+          </p>
+        </div>
 
-      <div class="container mx-auto px-6 relative z-10 text-center">
-        <h1 class="text-6xl font-bold mb-6 text-white">
-          Book Your Stay
-        </h1>
-        <p class="text-gray-400 text-xl mb-12">Experience the spotlight at Asia's first Planet Hollywood Hotel</p>
-      </div>
-    </section>
+        <!-- Booking Engine Card -->
+        <div class="w-full max-w-5xl bg-[#2b1834]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
+          <!-- Booking Tabs -->
+          <div class="flex border-b border-white/10">
+            <button 
+              v-for="(tab, index) in tabs" 
+              :key="tab"
+              @click="activeTab = index"
+              :class="[
+                'flex-1 py-4 text-center text-sm font-bold transition-colors',
+                activeTab === index 
+                  ? 'text-white bg-primary/20 border-b-2 border-primary' 
+                  : 'text-gray-400 hover:bg-white/5'
+              ]"
+            >
+              {{ tab }}
+            </button>
+          </div>
 
-    <!-- Booking Form Section -->
-    <section class="py-10 bg-black">
-      <div class="container mx-auto px-6">
-        <div class="max-w-2xl mx-auto bg-black/50 p-8 rounded-lg border-2 border-pink-400/50 backdrop-blur-sm">
-          <h2 class="text-3xl font-bold mb-6 text-white text-center">Make Your Reservation</h2>
-
-          <form @submit.prevent="handleSubmit">
-            <div class="grid lg:grid-cols-2 gap-6 mb-6">
-              <div class="text-left">
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Name *</label>
-                <input id="name" v-model="form.name" type="text" required placeholder="Your full name"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
+          <div class="p-6 md:p-8">
+            <!-- Input Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-8">
+              <!-- Location -->
+              <div class="md:col-span-3">
+                <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1.5 ml-1">
+                  Destination
+                </label>
+                <div class="relative group">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-primary">location_on</span>
+                  </div>
+                  <input 
+                    v-model="destination"
+                    class="block w-full pl-10 pr-3 py-3 bg-[#1d1023] border border-[#3c2249] rounded-lg text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent cursor-default" 
+                    readonly 
+                    type="text"
+                  />
+                </div>
               </div>
 
-              <div class="text-left">
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email *</label>
-                <input id="email" v-model="form.email" type="email" required placeholder="your@email.com"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
+              <!-- Dates -->
+              <div class="md:col-span-4">
+                <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1.5 ml-1">
+                  Dates
+                </label>
+                <div 
+                  class="relative cursor-pointer"
+                  @click="toggleDatePicker"
+                >
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-primary">calendar_month</span>
+                  </div>
+                  <div class="block w-full pl-10 pr-3 py-3 bg-[#1d1023] border border-primary ring-1 ring-primary rounded-lg text-white font-medium flex items-center justify-between">
+                    <span>{{ formattedDateRange }}</span>
+                    <span class="text-xs text-gray-400">{{ nightCount }} Nights</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Guests -->
+              <div class="md:col-span-3">
+                <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1.5 ml-1">
+                  Guests
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-primary">group</span>
+                  </div>
+                  <select 
+                    v-model="guests"
+                    class="block w-full pl-10 pr-8 py-3 bg-[#1d1023] border border-[#3c2249] rounded-lg text-white font-medium focus:ring-2 focus:ring-primary focus:border-transparent appearance-none"
+                  >
+                    <option value="1">1 Adult</option>
+                    <option value="2">2 Adults</option>
+                    <option value="2-1">2 Adults, 1 Child</option>
+                    <option value="4+">Family (4+)</option>
+                  </select>
+                  <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none text-gray-400">
+                    <span class="material-symbols-outlined">expand_more</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Search Button -->
+              <div class="md:col-span-2 flex items-end">
+                <button 
+                  @click="handleSearch"
+                  class="w-full h-[50px] bg-gradient-to-r from-primary to-[#9c27b0] hover:from-[#9c27b0] hover:to-primary text-white font-bold rounded-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02]"
+                >
+                  <span>Search</span>
+                  <!-- <span class="material-symbols-outlined text-[20px]">arrow_forward</span> -->
+                </button>
               </div>
             </div>
 
-            <div class="mb-6 text-left">
-              <label for="phone" class="block mb-2 text-sm font-medium text-gray-300">Phone *</label>
-              <input id="phone" v-model="form.phone" type="tel" required placeholder="+1234567890"
-                class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-6 mb-6">
-              <div class="text-left">
-                <label for="checkin" class="block mb-2 text-sm font-medium text-gray-300">Check-in Date *</label>
-                <input id="checkin" v-model="form.checkin" type="date" required :min="minDate"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
+            <!-- Date Picker -->
+            <div v-if="showDatePicker" class="bg-[#1d1023] rounded-xl border border-[#3c2249] p-6 animate-fade-in-up">
+              <div class="flex items-center justify-between mb-4 border-b border-white/5 pb-4">
+                <h3 class="text-white font-bold text-lg">Select Dates</h3>
+                <div class="flex gap-2">
+                  <span class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400">Flexible dates</span>
+                  <span class="px-2 py-1 bg-white/5 rounded text-xs text-gray-400">Compare rates</span>
+                </div>
               </div>
 
-              <div class="text-left">
-                <label for="checkout" class="block mb-2 text-sm font-medium text-gray-300">Check-out Date *</label>
-                <input id="checkout" v-model="form.checkout" type="date" required :min="form.checkin || minDate"
-                  class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white" />
+              <!-- Dual Calendar -->
+              <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Month 1 -->
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-4">
+                    <button 
+                      @click="previousMonth"
+                      class="p-1 hover:bg-white/10 rounded-full text-white"
+                    >
+                      <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <span class="text-white font-bold">{{ currentMonthLabel }}</span>
+                    <div class="w-8"></div>
+                  </div>
+                  <CalendarMonth 
+                    :month="currentMonth" 
+                    :year="currentYear"
+                    :selected-range="selectedDateRange"
+                    @select-date="selectDate"
+                  />
+                </div>
+
+                <!-- Divider -->
+                <div class="hidden lg:block w-px bg-[#3c2249]"></div>
+
+                <!-- Month 2 -->
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-8"></div>
+                    <span class="text-white font-bold">{{ nextMonthLabel }}</span>
+                    <button 
+                      @click="nextMonth"
+                      class="p-1 hover:bg-white/10 rounded-full text-white"
+                    >
+                      <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                  </div>
+                  <CalendarMonth 
+                    :month="nextMonthValue" 
+                    :year="nextYearValue"
+                    :selected-range="selectedDateRange"
+                    @select-date="selectDate"
+                  />
+                </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="mb-6 text-left">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Message (Optional)</label>
-              <textarea id="message" v-model="form.message" rows="4" placeholder="Any special requests or notes..."
-                class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white"></textarea>
-            </div>
+        <!-- Featured Rooms -->
+        <div class="w-full max-w-5xl mt-12">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-white">Featured Accommodations</h2>
+            <NuxtLink 
+              to="/rooms"
+              class="text-primary hover:text-white transition-colors text-sm font-bold flex items-center gap-1"
+            >
+              View All
+              <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+            </NuxtLink>
+          </div>
 
-            <div class="text-center">
-              <button type="submit" :disabled="loading"
-                class="neon-button bg-linear-to-r from-pink-500 via-purple-500 to-cyan-500 text-white px-12 py-4 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none w-full md:w-auto">
-                {{ loading ? 'Sending...' : 'Book Now' }}
-              </button>
-            </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <RoomCard 
+              v-for="room in featuredRooms" 
+              :key="room.id"
+              :room="room"
+            />
+          </div>
+        </div>
 
-            <div v-if="status.message" :class="[
-              'mt-6 p-4 rounded-lg text-center',
-              status.type === 'success'
-                ? 'bg-green-500/20 border border-green-500/50 text-green-400'
-                : 'bg-red-500/20 border border-red-500/50 text-red-400'
-            ]">
-              {{ status.message }}
+        <!-- Trust Signals -->
+        <div class="w-full max-w-5xl mt-16 py-8 border-t border-white/10 flex flex-wrap justify-center gap-8 md:gap-16">
+          <div 
+            v-for="signal in trustSignals" 
+            :key="signal.title"
+            class="flex items-center gap-3 opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <span class="material-symbols-outlined text-primary text-3xl">{{ signal.icon }}</span>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-white">{{ signal.title }}</span>
+              <span class="text-xs text-gray-400">{{ signal.description }}</span>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useReservations } from '~/composables/api/useReservation'
+import CalendarMonth from '~/components/booking/CalendarMonth.vue'
+import RoomCard from '~/components/booking/RoomCard.vue'
 
 definePageMeta({
   layout: 'hollywood'
 })
 
-const { addReservation } = useReservations()
+const tabs = ['Book a Room', 'Dining Reservations', 'Events']
+const activeTab = ref(0)
 
-const form = ref({
-  name: '',
-  email: '',
-  phone: '',
-  checkin: '',
-  checkout: '',
-  message: ''
+const destination = ref('Planet Hollywood Asia')
+const guests = ref('2')
+const showDatePicker = ref(true)
+
+const currentMonth = ref(9) // October (0-indexed)
+const currentYear = ref(2023)
+
+const selectedDateRange = ref<{
+  start: Date | null
+  end: Date | null
+}>({
+  start: new Date(2023, 9, 24),
+  end: new Date(2023, 9, 28)
 })
 
-const loading = ref(false)
-const status = ref({ message: '', type: '' })
-
-const minDate = computed(() => {
-  return new Date().toISOString().split('T')[0]
-})
-
-const handleSubmit = async () => {
-  loading.value = true
-  status.value = { message: '', type: '' }
-
-  try {
-    // Send to Telegram API
-    await $fetch('/api/booking', {
-      method: 'POST',
-      body: form.value
-    })
-
-    // Also save to Firestore as reservation
-    await addReservation({
-      name: form.value.name,
-      email: form.value.email,
-      phone: form.value.phone,
-      date: form.value.checkin,
-      time: `Check-out: ${form.value.checkout}`,
-      guests: 1, // Default guests for hotel booking
-      status: 'pending'
-    })
-
-    status.value = {
-      message: 'Booking request sent successfully! We will contact you soon.',
-      type: 'success'
-    }
-
-    // Reset form
-    form.value = {
-      name: '',
-      email: '',
-      phone: '',
-      checkin: '',
-      checkout: '',
-      message: ''
-    }
-  } catch (error) {
-    console.error('Booking error:', error)
-    status.value = {
-      message: 'Failed to send booking request. Please try again.',
-      type: 'error'
-    }
-  } finally {
-    loading.value = false
+const formattedDateRange = computed(() => {
+  const start = selectedDateRange.value.start
+  const end = selectedDateRange.value.end
+  
+  if (!start || !end) {
+    return 'Select dates'
   }
+  
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+  }
+  return `${formatDate(start)} - ${formatDate(end)}`
+})
+
+const nightCount = computed(() => {
+  const start = selectedDateRange.value.start
+  const end = selectedDateRange.value.end
+  
+  if (!start || !end) {
+    return 0
+  }
+  
+  const diff = end.getTime() - start.getTime()
+  return Math.ceil(diff / (1000 * 60 * 60 * 24))
+})
+
+const currentMonthLabel = computed(() => {
+  const date = new Date(currentYear.value, currentMonth.value)
+  return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+})
+
+const nextMonthValue = computed(() => {
+  return currentMonth.value === 11 ? 0 : currentMonth.value + 1
+})
+
+const nextYearValue = computed(() => {
+  return currentMonth.value === 11 ? currentYear.value + 1 : currentYear.value
+})
+
+const nextMonthLabel = computed(() => {
+  const date = new Date(nextYearValue.value, nextMonthValue.value)
+  return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+})
+
+const featuredRooms = [
+  {
+    id: 1,
+    name: 'Star Class Room',
+    details: 'King Bed • City View • 45m²',
+    price: 350,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2VkISO6ZyHPg_Pof_0SoE81x55oNjN3QD_m2VoX7gH5pb-Cnpgj3sXPFcv6FmE9FDVsiVkTh8wJ8hIwe3M-_iJDlokF36EY7fP74siQXiWdRnRdl7vcCjv0P5xIRAj0G8qrHg-EcT0wHO2uMs_Vps9HjAEbSy8i0oaKLy8lPFFnhoN1PxcTPAbnQQgfK5ogsR6Ja5nNj7TsFC0p1bs-wuS142bcYvODsvlf6DPaqyqd77-BzJfjE0SPlV-UNbU-r4lATtIBaL0VU',
+    amenities: ['Free Wifi', 'Breakfast'],
+    popular: false
+  },
+  {
+    id: 2,
+    name: "Director's Suite",
+    details: 'Suite • Ocean View • 65m²',
+    price: 550,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCdhMxl1dQQptY-wtvcXad3E37z3SeqSSg53AWhHQpawfHD1aemwOh8FQ1ogrdc3wsYd9O7n6z4uIDA9wRk256gq6CsXnH_Nj5xQxiLEEfMxBDcKQcaFpoVLRD4YZt9rgSFuteB8CtFAeQQ044pP7o4Mp1RDNAvCgkS2FIZJK3Igq7QrlUc-vyDCNexDW1NkIVM3u2Y2WymJJPWg5-yJ96-SmG4zAre-R7nwVe6TMN17ryamBJdyxI77eSetNGtkjqnSblrnUeaysM',
+    amenities: ['Bathtub', 'Lounge Access'],
+    popular: true
+  },
+  {
+    id: 3,
+    name: 'Panorama Penthouse',
+    details: '2 Bedroom • 360 View • 120m²',
+    price: 1200,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDGnX32_vRXqtPjtU5kac2qRf_-9UxoDWYBXjTS7u6hgkOIyfmo9qDHVp64bnvJD0CwvDi2ExotCf8ejSHbR61yPrhdKogXZkQ6dlMUgDYeAzB_lX1t0Ch9AEVh_dRFK6VMLCHuu8cwOhZ3PKHUmovLl-F5whUw2sWjUMpm1cECtJCoZ2m9F6E8OiS5M1XBxTYTgb67YWrgxYDr9q59RGVIU3K1RGEuQBL2dMgczZls4RnTbYOqN4nt3Tre6zY6Q2F3FofQ9VgVO-I',
+    amenities: ['Butler Service', 'Private Bar'],
+    popular: false
+  }
+]
+
+const trustSignals = [
+  {
+    icon: 'verified_user',
+    title: 'Best Rate Guarantee',
+    description: 'Book direct for the best prices'
+  },
+  {
+    icon: 'diamond',
+    title: 'Exclusive Perks',
+    description: 'Members earn points on every stay'
+  },
+  {
+    icon: 'event_available',
+    title: 'Flexible Cancellation',
+    description: 'Plans change, we understand'
+  }
+]
+
+const toggleDatePicker = () => {
+  showDatePicker.value = !showDatePicker.value
+}
+
+const selectDate = (date: Date) => {
+  // Simple date selection logic - you can enhance this
+  if (!selectedDateRange.value.start || selectedDateRange.value.end) {
+    selectedDateRange.value = { start: date, end: null }
+  } else {
+    selectedDateRange.value.end = date
+  }
+}
+
+const previousMonth = () => {
+  if (currentMonth.value === 0) {
+    currentMonth.value = 11
+    currentYear.value--
+  } else {
+    currentMonth.value--
+  }
+}
+
+const nextMonth = () => {
+  if (currentMonth.value === 11) {
+    currentMonth.value = 0
+    currentYear.value++
+  } else {
+    currentMonth.value++
+  }
+}
+
+const handleSearch = () => {
+  console.log('Searching...', {
+    destination: destination.value,
+    dates: selectedDateRange.value,
+    guests: guests.value
+  })
 }
 </script>
 
 <style scoped>
-.neon-button {
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
-  transition: all 0.3s ease;
+.bg-hero-pattern {
+  background-image: linear-gradient(rgba(29, 16, 35, 0.3), rgba(29, 16, 35, 0.9)), 
+                    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop');
 }
 
-.neon-button:hover {
-  box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
