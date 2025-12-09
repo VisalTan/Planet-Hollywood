@@ -82,7 +82,7 @@
                             <div class="flex items-center justify-between mb-6 sm:mb-8">
                                 <img src="/images/PH_Logo.png" alt="Planet Hollywood Logo" class="h-10 sm:h-12" />
                                 <button @click="sidebarOpen = false"
-                                    class="text-white focus:outline-none p-2 hover:bg-white/10 rounded-lg transition-colors flex-shrink-0"
+                                    class="text-white focus:outline-none p-2 hover:bg-white/10 rounded-lg transition-colors shrink-0"
                                     aria-label="Close menu">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

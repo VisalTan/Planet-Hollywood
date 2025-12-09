@@ -24,7 +24,7 @@
               </div>
               <div class="z-10 mt-4 flex gap-4">
                 <button
-                  class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                  class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-linear-to-r from-purple-600 to-pink-600 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                   <span class="truncate">Make a Reservation</span>
                 </button>
               </div>
@@ -38,7 +38,7 @@
     <div class="relative px-4 lg:px-40 flex flex-1 justify-center pb-20">
       <!-- Background gradients -->
       <div
-        class="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-purple-600/10 via-black to-black pointer-events-none">
+        class="absolute top-0 left-0 w-full h-[600px] bg-linear-to-b from-purple-600/10 via-black to-black pointer-events-none">
       </div>
       <div
         class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none opacity-50">
@@ -206,7 +206,7 @@
                 </div>
 
                 <button
-                  class="w-full text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:ring-4 focus:ring-purple-600/30 font-bold rounded-lg text-sm px-5 py-4 mr-2 mb-2 focus:outline-none transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                  class="w-full text-white bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:ring-4 focus:ring-purple-600/30 font-bold rounded-lg text-sm px-5 py-4 mr-2 mb-2 focus:outline-none transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                   type="submit">
                   Send Message
                 </button>

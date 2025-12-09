@@ -11,6 +11,8 @@
 
   <PlanetHollywoodStichDiningSection/>
 
+  <PlanetHollywoodStichTestimonial/>
+
   <!-- <PlanetHollywoodDiningSection /> -->
 
   <!-- Amenities Section -->
