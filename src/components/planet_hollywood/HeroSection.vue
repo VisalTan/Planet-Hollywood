@@ -29,7 +29,7 @@
       </p>
 
       <!-- Tags -->
-      <div class="flex flex-wrap justify-center gap-3 sm:gap-4 pt-4">
+      <!-- <div class="flex flex-wrap justify-center gap-3 sm:gap-4 pt-4">
         <span v-for="(tag, index) in heroContent?.tags || ['Phamous', 'Phantastic', 'Phabulous', 'Phun']" :key="tag"
           :class="[
             'px-5 py-2.5 sm:px-6 sm:py-3 backdrop-blur-md rounded-full border text-sm sm:text-base font-medium hover:scale-105 transition-all duration-300 cursor-pointer',
@@ -37,7 +37,7 @@
           ]">
           {{ tag }}
         </span>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -47,15 +47,6 @@ import { useHero } from '~/composables/content/useHero'
 
 const { heroContent } = useHero()
 
-const getTagClasses = (index: number) => {
-  const colors = [
-    'bg-pink-500/20 border-pink-400/50 text-pink-100 hover:bg-pink-500/30 hover:border-pink-400',
-    'bg-yellow-500/20 border-yellow-400/50 text-yellow-100 hover:bg-yellow-500/30 hover:border-yellow-400',
-    'bg-purple-500/20 border-purple-400/50 text-purple-100 hover:bg-purple-500/30 hover:border-purple-400',
-    'bg-cyan-500/20 border-cyan-400/50 text-cyan-100 hover:bg-cyan-500/30 hover:border-cyan-400'
-  ]
-  return colors[index % colors.length]
-}
 </script>
 
 <style scoped>

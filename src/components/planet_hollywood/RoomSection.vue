@@ -79,22 +79,9 @@
             </div>
           </div>
         </div>
-
-
       </div>
 
-      <!-- Stats Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-20">
-        <div v-for="(stat, index) in stats" :key="index"
-          class="neon-card bg-black/50 p-6 rounded-lg border transition-all duration-300 hover:scale-105"
-          :class="`border-${stat.color}-400/50 hover:border-${stat.color}-400`">
-          <div class="text-2xl font-bold mb-2" :class="`neon-text-${stat.color}`">
-            {{ stat.count }}
-          </div>
-          <div class="text-sm text-gray-400">{{ stat.label }}</div>
-        </div>
-      </div>
-
+      <template v-if="false">
       <!-- Penthouse Showcase Video Section -->
       <div class="relative">
         <!-- Decorative top line -->
@@ -180,6 +167,7 @@
           class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-64 h-px bg-linear-to-r from-transparent via-cyan-500 to-transparent">
         </div>
       </div>
+      </template>
     </div>
 
   </section>

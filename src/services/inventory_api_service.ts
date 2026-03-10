@@ -1,4 +1,4 @@
-import { api } from "@/composables/useHttp";
+import { api } from "~/composables/api";
 import type { ApiResponse } from "~/types/base_response";
 import type { ProductInventory } from "~/types/product";
 

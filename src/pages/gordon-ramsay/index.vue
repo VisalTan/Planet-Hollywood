@@ -28,7 +28,7 @@
       <!-- Hero Content -->
       <div class="relative z-20 text-center px-4 max-w-6xl mx-auto">
         <h1 class="text-7xl md:text-9xl font-black mb-6 tracking-tight">
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 animate-pulse">
+          <span class="block text-transparent bg-clip-text bg-linear-to-r from-red-500 via-orange-500 to-yellow-500 animate-pulse">
             GORDON RAMSAY
           </span>
           <span class="block text-white drop-shadow-2xl">BURGER</span>
@@ -39,9 +39,9 @@
         <p class="text-xl md:text-2xl text-gray-300 mb-12 font-light">
           📍 Phnom Penh, Cambodia
         </p>
-        <button class="group relative px-12 py-5 text-xl font-bold text-white bg-gradient-to-r from-red-600 to-orange-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/50">
+        <button class="group relative px-12 py-5 text-xl font-bold text-white bg-linear-to-r from-red-600 to-orange-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/50">
           <span class="relative z-10">RESERVE YOUR TABLE NOW</span>
-          <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute inset-0 bg-linear-to-r from-yellow-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </button>
       </div>
 
@@ -54,11 +54,11 @@
     </section>
 
     <!-- Gordon Ramsay Feature Section -->
-    <section class="relative py-32 px-4 bg-gradient-to-b from-black via-red-950/30 to-black">
+    <section class="relative py-32 px-4 bg-linear-to-b from-black via-red-950/30 to-black">
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-16 items-center">
           <div class="relative group order-2 md:order-1">
-            <div class="absolute -inset-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute -inset-4 bg-linear-to-r from-red-600 to-orange-600 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity"></div>
             <img 
               src="https://news3lv.com/resources/media/49f33ff3-910d-49dc-afc4-bb3d5bd4b525-GordonRamsayBurgeratFlamingoLasVegas_GrandOpening_GordonRamsay_DSC_1392.JPG" 
               alt="Gordon Ramsay with Burger"
@@ -71,7 +71,7 @@
           <div class="order-1 md:order-2">
             <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
               <span class="text-white">MEET THE</span>
-              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">LEGENDARY CHEF</span>
+              <span class="block text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500">LEGENDARY CHEF</span>
             </h2>
             <p class="text-2xl text-gray-300 mb-6 leading-relaxed font-light">
               Gordon Ramsay, the world's most celebrated chef with <span class="text-red-500 font-bold">7 Michelin stars</span> and over <span class="text-red-500 font-bold">35 restaurants worldwide</span>, brings his burger mastery to Phnom Penh.
@@ -102,7 +102,7 @@
     <section class="relative py-32 px-4">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-20">
-          <h2 class="text-6xl md:text-7xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500">
+          <h2 class="text-6xl md:text-7xl font-black mb-6 text-transparent bg-clip-text bg-linear-to-r from-yellow-500 via-red-500 to-orange-500">
             THE BURGER STORY
           </h2>
           <p class="text-2xl text-gray-300 max-w-3xl mx-auto">
@@ -112,8 +112,8 @@
 
         <div class="grid md:grid-cols-3 gap-10 mb-20">
           <div class="relative group">
-            <div class="absolute -inset-2 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
-            <div class="relative bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border-2 border-red-500/30 h-full">
+            <div class="absolute -inset-2 bg-linear-to-r from-red-600 to-orange-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+            <div class="relative bg-linear-to-b from-gray-900 to-black p-8 rounded-2xl border-2 border-red-500/30 h-full">
               <div class="text-6xl mb-6">🥩</div>
               <h3 class="text-3xl font-black mb-4 text-red-500">PREMIUM INGREDIENTS</h3>
               <p class="text-gray-400 leading-relaxed">
@@ -123,8 +123,8 @@
           </div>
 
           <div class="relative group">
-            <div class="absolute -inset-2 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
-            <div class="relative bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border-2 border-orange-500/30 h-full">
+            <div class="absolute -inset-2 bg-linear-to-r from-orange-600 to-yellow-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+            <div class="relative bg-linear-to-b from-gray-900 to-black p-8 rounded-2xl border-2 border-orange-500/30 h-full">
               <div class="text-6xl mb-6">🔥</div>
               <h3 class="text-3xl font-black mb-4 text-orange-500">CHEF'S TECHNIQUE</h3>
               <p class="text-gray-400 leading-relaxed">
@@ -134,8 +134,8 @@
           </div>
 
           <div class="relative group">
-            <div class="absolute -inset-2 bg-gradient-to-r from-yellow-600 to-red-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
-            <div class="relative bg-gradient-to-b from-gray-900 to-black p-8 rounded-2xl border-2 border-yellow-500/30 h-full">
+            <div class="absolute -inset-2 bg-linear-to-r from-yellow-600 to-red-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+            <div class="relative bg-linear-to-b from-gray-900 to-black p-8 rounded-2xl border-2 border-yellow-500/30 h-full">
               <div class="text-6xl mb-6">⭐</div>
               <h3 class="text-3xl font-black mb-4 text-yellow-500">SIGNATURE FLAVOR</h3>
               <p class="text-gray-400 leading-relaxed">
@@ -148,9 +148,9 @@
     </section>
 
     <!-- Menu Highlights - Extended -->
-    <section class="relative py-32 px-4 bg-gradient-to-b from-black via-orange-950/20 to-black">
+    <section class="relative py-32 px-4 bg-linear-to-b from-black via-orange-950/20 to-black">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-6xl md:text-7xl font-black text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500">
+        <h2 class="text-6xl md:text-7xl font-black text-center mb-8 text-transparent bg-clip-text bg-linear-to-r from-yellow-500 via-red-500 to-orange-500">
           SIGNATURE BURGERS
         </h2>
         <p class="text-2xl text-gray-300 text-center mb-20 max-w-3xl mx-auto">
@@ -159,7 +159,7 @@
         
         <div class="grid md:grid-cols-3 gap-10 mb-16">
           <!-- Burger 1 -->
-          <div class="group relative bg-gradient-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-red-500/30 hover:border-red-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50">
+          <div class="group relative bg-linear-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-red-500/30 hover:border-red-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50">
             <div class="absolute top-4 right-4 z-10 bg-red-600 text-white px-4 py-2 rounded-full font-black text-sm shadow-xl">
               BEST SELLER
             </div>
@@ -169,7 +169,7 @@
                 alt="Hell's Kitchen Burger"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent"></div>
             </div>
             <div class="p-8">
               <h3 class="text-3xl font-black mb-3 text-red-500">HELL'S KITCHEN BURGER</h3>
@@ -184,7 +184,7 @@
           </div>
 
           <!-- Burger 2 -->
-          <div class="group relative bg-gradient-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-orange-500/30 hover:border-orange-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
+          <div class="group relative bg-linear-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-orange-500/30 hover:border-orange-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
             <div class="absolute top-4 right-4 z-10 bg-orange-600 text-white px-4 py-2 rounded-full font-black text-sm shadow-xl">
               PREMIUM
             </div>
@@ -194,7 +194,7 @@
                 alt="Truffle Burger"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent"></div>
             </div>
             <div class="p-8">
               <h3 class="text-3xl font-black mb-3 text-orange-500">TRUFFLE ROYALE</h3>
@@ -209,7 +209,7 @@
           </div>
 
           <!-- Burger 3 -->
-          <div class="group relative bg-gradient-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-yellow-500/30 hover:border-yellow-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50">
+          <div class="group relative bg-linear-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-yellow-500/30 hover:border-yellow-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50">
             <div class="absolute top-4 right-4 z-10 bg-yellow-600 text-black px-4 py-2 rounded-full font-black text-sm shadow-xl">
               CLASSIC
             </div>
@@ -219,7 +219,7 @@
                 alt="American Burger"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent"></div>
             </div>
             <div class="p-8">
               <h3 class="text-3xl font-black mb-3 text-yellow-500">AMERICAN CLASSIC</h3>
@@ -237,14 +237,14 @@
         <!-- Second Row -->
         <div class="grid md:grid-cols-3 gap-10">
           <!-- Burger 4 -->
-          <div class="group relative bg-gradient-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-purple-500/30 hover:border-purple-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
+          <div class="group relative bg-linear-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-purple-500/30 hover:border-purple-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
             <div class="relative h-72 overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" 
                 alt="BBQ Burger"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent"></div>
             </div>
             <div class="p-8">
               <h3 class="text-3xl font-black mb-3 text-purple-500">SMOKEY BBQ BEAST</h3>
@@ -259,14 +259,14 @@
           </div>
 
           <!-- Burger 5 -->
-          <div class="group relative bg-gradient-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-blue-500/30 hover:border-blue-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50">
+          <div class="group relative bg-linear-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-blue-500/30 hover:border-blue-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50">
             <div class="relative h-72 overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&q=80" 
                 alt="Blue Cheese Burger"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent"></div>
             </div>
             <div class="p-8">
               <h3 class="text-3xl font-black mb-3 text-blue-500">BLUE CHEESE DELUXE</h3>
@@ -281,7 +281,7 @@
           </div>
 
           <!-- Burger 6 -->
-          <div class="group relative bg-gradient-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-green-500/30 hover:border-green-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50">
+          <div class="group relative bg-linear-to-b from-gray-900 to-black rounded-3xl overflow-hidden border-2 border-green-500/30 hover:border-green-500 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50">
             <div class="absolute top-4 right-4 z-10 bg-green-600 text-white px-4 py-2 rounded-full font-black text-sm shadow-xl">
               PLANT-BASED
             </div>
@@ -291,7 +291,7 @@
                 alt="Veggie Burger"
                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent"></div>
             </div>
             <div class="p-8">
               <h3 class="text-3xl font-black mb-3 text-green-500">PLANT POWER</h3>
@@ -312,7 +312,7 @@
     <section class="relative py-32 px-4">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-6xl md:text-7xl font-black text-center mb-20 text-white">
-          SIDES & <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">BEVERAGES</span>
+          SIDES & <span class="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500">BEVERAGES</span>
         </h2>
 
         <div class="grid md:grid-cols-2 gap-16 mb-20">
@@ -323,28 +323,28 @@
               SIGNATURE SIDES
             </h3>
             <div class="space-y-6">
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-red-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-red-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Hell's Kitchen Fries</h4>
                   <p class="text-xl font-black text-red-500">$6.99</p>
                 </div>
                 <p class="text-gray-400">Triple-cooked, seasoned with Gordon's special blend</p>
               </div>
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-orange-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-orange-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Truffle Parmesan Fries</h4>
                   <p class="text-xl font-black text-orange-500">$8.99</p>
                 </div>
                 <p class="text-gray-400">Topped with truffle oil and fresh parmesan</p>
               </div>
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-yellow-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-yellow-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Sweet Potato Fries</h4>
                   <p class="text-xl font-black text-yellow-500">$7.99</p>
                 </div>
                 <p class="text-gray-400">Crispy sweet potato with chipotle mayo</p>
               </div>
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-purple-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-purple-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Onion Rings</h4>
                   <p class="text-xl font-black text-purple-500">$7.99</p>
@@ -361,28 +361,28 @@
               PREMIUM DRINKS
             </h3>
             <div class="space-y-6">
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-red-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-red-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Hell's Kitchen Shake</h4>
                   <p class="text-xl font-black text-red-500">$9.99</p>
                 </div>
                 <p class="text-gray-400">Vanilla, chocolate, or strawberry with whipped cream</p>
               </div>
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-orange-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-orange-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Craft Sodas</h4>
                   <p class="text-xl font-black text-orange-500">$4.99</p>
                 </div>
                 <p class="text-gray-400">Root beer, ginger ale, cream soda</p>
               </div>
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-yellow-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-yellow-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Fresh Lemonade</h4>
                   <p class="text-xl font-black text-yellow-500">$5.99</p>
                 </div>
                 <p class="text-gray-400">House-made with real lemons</p>
               </div>
-              <div class="bg-gradient-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-blue-500">
+              <div class="bg-linear-to-r from-gray-900 to-black p-6 rounded-2xl border-l-4 border-blue-500">
                 <div class="flex justify-between items-start mb-2">
                   <h4 class="text-2xl font-bold text-white">Iced Coffee</h4>
                   <p class="text-xl font-black text-blue-500">$5.99</p>
@@ -396,10 +396,10 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="relative py-32 px-4 bg-gradient-to-b from-black via-orange-950/20 to-black">
+    <section class="relative py-32 px-4 bg-linear-to-b from-black via-orange-950/20 to-black">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-6xl md:text-7xl font-black text-center mb-20 text-white">
-          FOOD <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">GALLERY</span>
+          FOOD <span class="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500">GALLERY</span>
         </h2>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
@@ -409,7 +409,7 @@
               alt="Burger close-up"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-red-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-red-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Perfect Patty</p>
             </div>
           </div>
@@ -419,7 +419,7 @@
               alt="Fries"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-orange-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-orange-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Crispy Fries</p>
             </div>
           </div>
@@ -429,7 +429,7 @@
               alt="Milkshake"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-yellow-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-yellow-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Thick Shakes</p>
             </div>
           </div>
@@ -439,7 +439,7 @@
               alt="Restaurant interior"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-red-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-red-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Dining Experience</p>
             </div>
           </div>
@@ -452,7 +452,7 @@
               alt="Bacon Burger"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-purple-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-purple-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Loaded Burgers</p>
             </div>
           </div>
@@ -462,7 +462,7 @@
               alt="Kitchen"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-blue-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-blue-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Open Kitchen</p>
             </div>
           </div>
@@ -472,7 +472,7 @@
               alt="Premium ingredients"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-green-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-green-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Fresh Daily</p>
             </div>
           </div>
@@ -482,7 +482,7 @@
               alt="Chef cooking"
               class="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-pink-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+            <div class="absolute inset-0 bg-linear-to-t from-pink-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
               <p class="text-white font-black text-xl">Master Chefs</p>
             </div>
           </div>
@@ -494,12 +494,12 @@
     <section class="relative py-32 px-4">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-6xl md:text-7xl font-black text-center mb-8 text-white">
-          WHAT PEOPLE <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">ARE SAYING</span>
+          WHAT PEOPLE <span class="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500">ARE SAYING</span>
         </h2>
         <p class="text-2xl text-gray-300 text-center mb-20">Rated 4.9/5 by over 10,000+ burger lovers</p>
 
         <div class="grid md:grid-cols-3 gap-10">
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-3xl border-2 border-red-500/30 hover:border-red-500 transition-all duration-300 hover:scale-105">
+          <div class="bg-linear-to-b from-gray-900 to-black p-8 rounded-3xl border-2 border-red-500/30 hover:border-red-500 transition-all duration-300 hover:scale-105">
             <div class="flex gap-2 mb-6">
               <span class="text-3xl">⭐</span>
               <span class="text-3xl">⭐</span>
@@ -511,7 +511,7 @@
               "Absolutely mind-blowing! The Hell's Kitchen burger is fire - literally and figuratively. Best burger I've ever had in Southeast Asia!"
             </p>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-2xl font-black">
+              <div class="w-12 h-12 bg-linear-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-2xl font-black">
                 S
               </div>
               <div>
@@ -521,7 +521,7 @@
             </div>
           </div>
 
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-3xl border-2 border-orange-500/30 hover:border-orange-500 transition-all duration-300 hover:scale-105">
+          <div class="bg-linear-to-b from-gray-900 to-black p-8 rounded-3xl border-2 border-orange-500/30 hover:border-orange-500 transition-all duration-300 hover:scale-105">
             <div class="flex gap-2 mb-6">
               <span class="text-3xl">⭐</span>
               <span class="text-3xl">⭐</span>
@@ -533,7 +533,7 @@
               "Gordon Ramsay's standards are evident in every bite. The quality is unmatched. Worth every penny and then some!"
             </p>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center text-2xl font-black">
+              <div class="w-12 h-12 bg-linear-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center text-2xl font-black">
                 M
               </div>
               <div>
@@ -543,7 +543,7 @@
             </div>
           </div>
 
-          <div class="bg-gradient-to-b from-gray-900 to-black p-8 rounded-3xl border-2 border-yellow-500/30 hover:border-yellow-500 transition-all duration-300 hover:scale-105">
+          <div class="bg-linear-to-b from-gray-900 to-black p-8 rounded-3xl border-2 border-yellow-500/30 hover:border-yellow-500 transition-all duration-300 hover:scale-105">
             <div class="flex gap-2 mb-6">
               <span class="text-3xl">⭐</span>
               <span class="text-3xl">⭐</span>
@@ -555,7 +555,7 @@
               "Finally, world-class burgers in Phnom Penh! The ambiance, service, and most importantly the food - all exceptional!"
             </p>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-red-500 rounded-full flex items-center justify-center text-2xl font-black">
+              <div class="w-12 h-12 bg-linear-to-r from-yellow-500 to-red-500 rounded-full flex items-center justify-center text-2xl font-black">
                 L
               </div>
               <div>
@@ -635,7 +635,7 @@
             </button>
           </div>
           <div class="relative group order-1 md:order-2">
-            <div class="absolute -inset-4 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+            <div class="absolute -inset-4 bg-linear-to-r from-orange-600 to-yellow-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
             <img 
               src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80" 
               alt="Private dining"
@@ -651,7 +651,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-5xl md:text-6xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">
+            <h2 class="text-5xl md:text-6xl font-black mb-8 text-transparent bg-clip-text bg-linear-to-r from-red-500 to-yellow-500">
               FIND US IN PHNOM PENH
             </h2>
             <div class="space-y-6 text-xl text-gray-300 mb-10">
@@ -687,7 +687,7 @@
             </div>
           </div>
           <div class="relative group">
-            <div class="absolute -inset-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+            <div class="absolute -inset-4 bg-linear-to-r from-orange-600 to-red-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
             <img 
               src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" 
               alt="Restaurant location"
@@ -699,15 +699,15 @@
     </section>
 
     <!-- Special Offers Section -->
-    <section class="relative py-32 px-4 bg-gradient-to-b from-black via-orange-950/30 to-black">
+    <section class="relative py-32 px-4 bg-linear-to-b from-black via-orange-950/30 to-black">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-6xl md:text-7xl font-black text-center mb-20 text-white">
-          SPECIAL <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">OFFERS</span>
+          SPECIAL <span class="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500">OFFERS</span>
         </h2>
 
         <div class="grid md:grid-cols-2 gap-10">
           <div class="relative group overflow-hidden rounded-3xl">
-            <div class="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 opacity-90"></div>
+            <div class="absolute inset-0 bg-linear-to-r from-red-600 to-orange-600 opacity-90"></div>
             <div class="relative p-12">
               <div class="text-6xl mb-6">🍔</div>
               <h3 class="text-4xl font-black mb-4 text-white">LUNCH SPECIAL</h3>
@@ -722,7 +722,7 @@
           </div>
 
           <div class="relative group overflow-hidden rounded-3xl">
-            <div class="absolute inset-0 bg-gradient-to-r from-yellow-600 to-red-600 opacity-90"></div>
+            <div class="absolute inset-0 bg-linear-to-r from-yellow-600 to-red-600 opacity-90"></div>
             <div class="relative p-12">
               <div class="text-6xl mb-6">🎉</div>
               <h3 class="text-4xl font-black mb-4 text-white">HAPPY HOUR</h3>
@@ -744,15 +744,15 @@
       <div class="max-w-4xl mx-auto text-center">
         <div class="text-8xl mb-8">🔥</div>
         <h2 class="text-6xl md:text-7xl font-black mb-8 text-white">
-          READY TO <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">IGNITE</span> YOUR TASTE BUDS?
+          READY TO <span class="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500">IGNITE</span> YOUR TASTE BUDS?
         </h2>
         <p class="text-2xl text-gray-300 mb-12 leading-relaxed">
           Don't just take our word for it. Experience the legendary Gordon Ramsay burger perfection yourself. Book your table now!
         </p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button class="group relative px-16 py-6 text-2xl font-bold text-white bg-gradient-to-r from-red-600 to-orange-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/50">
+          <button class="group relative px-16 py-6 text-2xl font-bold text-white bg-linear-to-r from-red-600 to-orange-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/50">
             <span class="relative z-10">BOOK YOUR TABLE</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 bg-linear-to-r from-yellow-500 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
           <button class="px-16 py-6 text-2xl font-bold text-white border-4 border-white rounded-full hover:bg-white hover:text-black transition-all duration-300">
             VIEW FULL MENU
