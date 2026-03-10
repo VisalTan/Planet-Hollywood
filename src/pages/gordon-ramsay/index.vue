@@ -659,13 +659,13 @@
                 <span class="text-4xl">📍</span>
                 <span>Planet Hollywood, Street 130, Phnom Penh, Cambodia</span>
               </p>
-              <p class="flex items-center gap-4">
+              <div class="flex items-center gap-4">
                 <span class="text-4xl">🕐</span>
                 <div>
                   <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
                   <p>Friday - Sunday: 11:00 AM - 11:00 PM</p>
                 </div>
-              </p>
+              </div>
               <p class="flex items-center gap-4">
                 <span class="text-4xl">📞</span>
                 <span>+855 23 456 789</span>
