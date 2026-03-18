@@ -3,71 +3,10 @@
     <div class="layout-container flex h-full grow flex-col">
       <div class="flex flex-1 justify-center px-4 sm:px-8 md:px-12 lg:px-20 py-5">
         <div class="layout-content-container flex w-full max-w-[1200px] flex-1 flex-col">
-          <!-- Main Content -->
           <main class="flex flex-col gap-16 md:gap-24">
-            
-            <!-- Hero Section -->
-            <div class="mt-16 md:mt-24 text-center">
-              <div class="flex flex-col gap-4 items-center">
-                <h1 class="text-white text-5xl md:text-6xl font-black leading-tight tracking-tighter max-w-4xl">
-                  Explore the Heart of the City
-                </h1>
-                <h2 class="text-white/80 text-lg md:text-xl font-normal leading-normal max-w-2xl">
-                  Discover iconic landmarks and cultural treasures, just moments from the unparalleled luxury of Planet Hollywood.
-                </h2>
-              </div>
-            </div>
-
-            <!-- Attractions Grid -->
-            <section class="flex flex-col gap-12">
-              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div 
-                  v-for="attraction in attractions" 
-                  :key="attraction.id"
-                  class="attraction-card flex flex-col bg-card-dark rounded-xl overflow-hidden border border-white/10"
-                >
-                  <div class="overflow-hidden">
-                    <div 
-                      class="attraction-image w-full bg-center bg-no-repeat aspect-video bg-cover" 
-                      :style="{ backgroundImage: `url(${attraction.image})` }"
-                      :aria-label="attraction.alt"
-                    />
-                  </div>
-                  <div class="flex flex-col gap-3 p-6 grow">
-                    <h3 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">
-                      {{ attraction.title }}
-                    </h3>
-                    <p class="text-gray-400 text-base font-normal leading-relaxed grow">
-                      {{ attraction.description }}
-                    </p>
-                    <p class="text-white/60 text-sm font-normal leading-normal flex items-center gap-2 pt-2">
-                      <span class="material-symbols-outlined text-base">directions_car</span>
-                      {{ attraction.distance }} | {{ attraction.duration }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Concierge CTA Section -->
-            <section class="flex flex-col items-center gap-6 p-10 rounded-xl bg-card-dark border border-white/10 text-center">
-              <div class="text-primary">
-                <span class="material-symbols-outlined" style="font-size: 40px; font-variation-settings: 'wght' 200;">
-                  concierge
-                </span>
-              </div>
-              <div class="flex flex-col gap-3">
-                <h3 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">
-                  Plan Your Perfect Excursion
-                </h3>
-                <p class="text-gray-400 text-base font-normal leading-relaxed max-w-xl">
-                  Our dedicated concierge team is here to help you arrange private tours, secure transportation, and provide expert recommendations to make your exploration unforgettable.
-                </p>
-              </div>
-              <button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-linear-to-r from-purple-600 to-pink-600 text-white text-base font-bold leading-normal tracking-[0.015em] hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
-                <span class="truncate">Contact Concierge</span>
-              </button>
-            </section>
+            <HeroSection />
+            <AttractionsGrid :attractions="attractions" />
+            <ConciergeCTA />
           </main>
         </div>
       </div>
@@ -76,6 +15,9 @@
 </template>
 
 <script setup lang="ts">
+import HeroSection from './view/components/HeroSection.vue'
+import AttractionsGrid from './view/components/AttractionsGrid.vue'
+import ConciergeCTA from './view/components/ConciergeCTA.vue'
 
 definePageMeta({
   layout: 'hollywood'
