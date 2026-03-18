@@ -61,6 +61,8 @@
 </template>
 
 <script setup lang="ts">
+import BookingWidget from './BookingWidget.vue'
+
 const openYouTube = () => {
   window.open('https://www.youtube.com/watch?v=DwM9Nm6MMR4&t=13s', '_blank');
 };
