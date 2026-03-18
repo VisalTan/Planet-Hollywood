@@ -123,9 +123,9 @@
           <div class="group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
             <div class="aspect-w-4 aspect-h-5 relative overflow-hidden">
               <img 
-                alt="Juicy gourmet burger from Gordon Ramsay Burger restaurant" 
+                alt="Chef Gordon Ramsay - The face of Gordon Ramsay Burger" 
                 class="h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-50" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9lgA-tqGKj9D45jf9ZSemT5irmSt2RzJsGFdZG8IhClbTBahKIi11jyLAaHP7F2c8DlibH9YJiLC4sheuuq_EKW81yZlG4hTmFL6UNh_3WQ85GiU3Rfdbv6AreZu9OlbPRmyHFNATnR3B3-fc_rL3S9jqWYF1CPz45GP6v2hBFX661hwX8kLKXhSCV0bwJN96ZWLVcbpFo-mAZAbJ6PzmtRMU8NerKo3Sy4Ez7ISYVil6HL7reVuSntA5mvuAUDbL7GKgskalZI4"
+                src="/images/gordon_ramsay.png"
               />
             </div>
             
