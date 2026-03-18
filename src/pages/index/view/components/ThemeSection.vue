@@ -15,7 +15,7 @@
     <!-- Section Container -->
     <div class="layout-container flex h-full grow flex-col justify-center py-16 md:py-24">
       <!-- Header Content -->
-      <div class="px-4 md:px-10 flex w-full justify-center mb-16">
+      <div class="theme-header px-4 md:px-10 flex w-full justify-center mb-16">
         <div class="layout-content-container flex flex-col max-w-[960px] w-full items-center text-center">
           <h1
             class="text-white font-serif tracking-tight text-4xl md:text-5xl lg:text-7xl font-bold leading-tight px-4 pb-4 uppercase">
@@ -31,10 +31,10 @@
       <!-- Room Grid -->
       <div class="px-4 md:px-10 flex w-full justify-center">
         <div class="layout-content-container flex flex-col max-w-[1200px] w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 p-4">
+          <div class="room-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 p-4">
             <!-- Room Cards -->
             <NuxtLink v-for="room in rooms" :key="room.id" :to="`/rooms/theme/${room.title.toLowerCase()}`"
-              class="group relative flex flex-col items-center text-center gap-6 transition-all duration-500 cursor-pointer">
+              class="room-card group relative flex flex-col items-center text-center gap-6 transition-all duration-500 cursor-pointer">
               <div class="flex flex-col gap-2 order-1">
                 <h3
                   class="text-white text-3xl font-serif font-bold group-hover:text-primary transition-colors">
@@ -55,7 +55,7 @@
           </div>
 
           <!-- Footer Paragraph -->
-          <div class="mt-20 flex justify-center px-4">
+          <div class="theme-footer mt-20 flex justify-center px-4">
             <p class="text-gray-300 text-xl md:text-2xl font-serif italic text-center max-w-4xl leading-relaxed border-t border-white/10 pt-12">
               Together, they create an experience that is bold, cinematic, and unmistakably Planet Hollywood Phnom Penh.
             </p>
@@ -70,6 +70,54 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+onMounted(() => {
+  // Reveal header
+  gsap.from('.theme-header > *', {
+    scrollTrigger: {
+      trigger: '.theme-header',
+      start: 'top 85%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: 'power3.out'
+  })
+
+  // Stagger room cards
+  gsap.from('.room-card', {
+    scrollTrigger: {
+      trigger: '.room-grid',
+      start: 'top 80%',
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.15,
+    ease: 'power3.out'
+  })
+
+  // Reveal footer
+  gsap.from('.theme-footer', {
+    scrollTrigger: {
+      trigger: '.theme-footer',
+      start: 'top 90%',
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1.2,
+    ease: 'power2.out'
+  })
+})
+
 const rooms = [
   {
     id: 1,

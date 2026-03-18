@@ -8,7 +8,7 @@
     <!-- Main content -->
     <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Header section -->
-      <div class="py-24 sm:py-32">
+      <div class="dining-header py-24 sm:py-32">
         <div class="flex flex-col items-center text-center">
           <span class="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-4">Taste the Fame</span>
           <h2 class="text-4xl font-extrabold tracking-tighter text-white sm:text-6xl">
@@ -22,9 +22,9 @@
 
       <!-- Restaurant cards -->
       <div class="pb-24 sm:pb-20">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+        <div class="dining-grid grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
           <!-- Café Hollywood -->
-          <div class="group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+          <div class="dining-card group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
             <div class="aspect-w-4 aspect-h-5 relative overflow-hidden">
               <img 
                 alt="Interior view of Café Hollywood featuring elegant seating and warm lighting" 
@@ -72,7 +72,7 @@
           </div>
 
           <!-- The Marquee Bar -->
-          <div class="group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+          <div class="dining-card group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
             <div class="aspect-w-4 aspect-h-5 relative overflow-hidden">
               <img 
                 alt="Dark moody atmosphere of The Marquee Bar with neon lights" 
@@ -120,7 +120,7 @@
           </div>
 
           <!-- Gordon Ramsay Burger -->
-          <div class="group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+          <div class="dining-card group relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
             <div class="aspect-w-4 aspect-h-5 relative overflow-hidden">
               <img 
                 alt="Chef Gordon Ramsay - The face of Gordon Ramsay Burger" 
@@ -203,6 +203,42 @@
 </style>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+onMounted(() => {
+  // Reveal header
+  gsap.from('.dining-header > *', {
+    scrollTrigger: {
+      trigger: '.dining-header',
+      start: 'top 85%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: 'power3.out'
+  })
+
+  // Stagger dining cards
+  gsap.from('.dining-card', {
+    scrollTrigger: {
+      trigger: '.dining-grid',
+      start: 'top 80%',
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: 'power3.out'
+  })
+})
+
 const bookATable = () => {
   // Add your navigation logic here
   console.log('Booking a table...')

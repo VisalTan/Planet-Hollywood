@@ -177,6 +177,20 @@ onMounted(() => {
     stagger: 0.1,
     ease: 'power3.out'
   })
+
+  // Parallax effect for gallery images
+  gsap.utils.toArray('.gallery-item img').forEach((img: any) => {
+    gsap.to(img, {
+      scrollTrigger: {
+        trigger: img.parentElement,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      },
+      y: 40,
+      ease: 'none'
+    })
+  })
 })
 
 useHead({
