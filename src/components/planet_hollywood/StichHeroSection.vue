@@ -5,8 +5,8 @@
       <video autoplay loop muted playsinline
         poster="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?q=80&w=2070&auto=format&fit=crop"
         class="absolute inset-0 h-full w-full object-cover"
+        :src="'/videos/ph-hero.mp4'"
         data-alt="Cinematic view of a luxury hotel pool at night with purple ambient lighting">
-        <source src='/videos/ph-hero.mp4' type="video/mp4" />
       </video>
       <!-- Cinematic Overlay -->
       <div class="hero-overlay absolute inset-0 z-10"></div>
