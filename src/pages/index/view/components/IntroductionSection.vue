@@ -13,7 +13,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-background-dark py-16 sm:py-20 lg:py-24">
+    <section class="relative overflow-hidden bg-background-dark py-10 sm:py-20 lg:py-24">
       <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center intro-text">
           <span class="inline-block text-xs sm:text-sm tracking-[0.3em] text-primary uppercase mb-6 opacity-0 animate-reveal">Welcome to the Limelight</span>
@@ -27,44 +27,44 @@
           </p>
         </div>
 
-        <div class="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16 pt-16 border-t border-white/5 info-grid">
-          <div class="info-card group">
-            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
+        <div class="mt-8 sm:mt-16 grid grid-cols-1 gap-4 sm:gap-12 lg:grid-cols-3 lg:gap-16 pt-8 sm:pt-16 border-t border-white/5 info-grid">
+          <div class="info-card group flex flex-col">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
               <span class="material-symbols-outlined text-primary text-2xl font-light">hotel_class</span>
             </div>
             <h3 class="text-2xl font-bold text-white mb-4">The Hollywood Legacy</h3>
             <p class="text-gray-400 leading-relaxed font-light mb-6">
               Founded by icons, redefined for the elite. We offer an immersive escape where every guest is treated like a star.
             </p>
-            <a class="group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
+            <a class="mt-auto group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
               <span class="border-b border-primary/30 pb-1 group-hover/link:border-primary group-hover/link:text-white transition-all">Our Story</span>
               <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
             </a>
           </div>
 
-          <div class="info-card group">
-            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
+          <div class="info-card group flex flex-col">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
               <span class="material-symbols-outlined text-primary text-2xl font-light">location_on</span>
             </div>
             <h3 class="text-2xl font-bold text-white mb-4">BKK1 District</h3>
             <p class="text-gray-400 leading-relaxed font-light mb-6">
               Residing in the iconic JS Tower, we place you at the epicenter of the city's most vibrant cultural enclave.
             </p>
-            <a class="group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
+            <a class="mt-auto group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
               <span class="border-b border-primary/30 pb-1 group-hover/link:border-primary group-hover/link:text-white transition-all">Explore BKK1</span>
               <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
             </a>
           </div>
 
-          <div class="info-card group">
-            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
+          <div class="info-card group flex flex-col">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
               <span class="material-symbols-outlined text-primary text-2xl font-light">sensor_door</span>
             </div>
             <h3 class="text-2xl font-bold text-white mb-4">Curated Arrival</h3>
             <p class="text-gray-400 leading-relaxed font-light mb-6">
-              Just 9km from PNH International, your star-studded journey begins with seamless luxury transfers.
+              Just 20km from Techo Takhmao International Airport, your star-studded journey begins with seamless luxury transfers.
             </p>
-            <a class="group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
+            <a class="mt-auto group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
               <span class="border-b border-primary/30 pb-1 group-hover/link:border-primary group-hover/link:text-white transition-all">Book Transfer</span>
               <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
             </a>
@@ -90,7 +90,7 @@
             <div
               class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <div class="absolute bottom-8 left-8 right-8">
               <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Social</span>
               <span class="text-2xl text-white font-bold">Fine Dining</span>
             </div>
@@ -101,7 +101,7 @@
             <div
               class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <div class="absolute bottom-8 left-8 right-8">
               <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Entertainment</span>
               <span class="text-2xl text-white font-bold">Elite Events</span>
             </div>
@@ -112,7 +112,7 @@
             <div
               class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <div class="absolute bottom-8 left-8 right-8">
               <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Rest</span>
               <span class="text-2xl text-white font-bold">Cinematic Stays</span>
             </div>
@@ -123,7 +123,7 @@
             <div
               class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <div class="absolute bottom-8 left-8 right-8">
               <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Nightlife</span>
               <span class="text-2xl text-white font-bold">Midnight Mixology</span>
             </div>

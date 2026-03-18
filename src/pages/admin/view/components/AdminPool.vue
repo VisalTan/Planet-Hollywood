@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-linear-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-800/20 rounded-2xl shadow-xl overflow-hidden border border-cyan-200 dark:border-cyan-700">
+  <div
+    class="bg-linear-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-800/20 rounded-2xl shadow-xl overflow-hidden border border-cyan-200 dark:border-cyan-700">
     <!-- Header -->
     <div class="bg-linear-to-r from-cyan-600 to-blue-700 px-8 py-6">
       <div class="flex items-center space-x-3">
@@ -20,10 +21,7 @@
     <div class="p-8">
       <form @submit.prevent="savePoolContent" class="space-y-8">
         <!-- Image Upload -->
-        <ImageUpload
-          v-model="poolForm.image"
-          label="Pool Image"
-        />
+        <ImageUpload v-model="poolForm.image" label="Pool Image" />
 
         <!-- Title & Subtitle Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -101,7 +99,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { usePool, type PoolContent } from '~/composables/content/usePool'
-import ImageUpload from '~/components/admin/ImageUpload.vue'
+import ImageUpload from './ImageUpload.vue'
 
 const { poolContent, loading, updatePoolContent } = usePool()
 

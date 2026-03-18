@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-linear-to-br from-purple-50 to-indigo-100 dark:from-purple-900/20 dark:to-indigo-800/20 rounded-2xl shadow-xl overflow-hidden border border-purple-200 dark:border-purple-700">
+  <div
+    class="bg-linear-to-br from-purple-50 to-indigo-100 dark:from-purple-900/20 dark:to-indigo-800/20 rounded-2xl shadow-xl overflow-hidden border border-purple-200 dark:border-purple-700">
     <!-- Header -->
     <div class="bg-linear-to-r from-purple-600 to-indigo-700 px-8 py-6">
       <div class="flex items-center space-x-3">
@@ -50,13 +51,11 @@
         </div>
 
         <!-- Image Upload -->
-        <ImageUpload
-          v-model="eventForm.image"
-          label="Event Image"
-        />
+        <ImageUpload v-model="eventForm.image" label="Event Image" />
 
         <!-- Hall Information -->
-        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-purple-200 dark:border-purple-600 shadow-sm">
+        <div
+          class="bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-purple-200 dark:border-purple-600 shadow-sm">
           <div class="flex items-center mb-6">
             <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -97,7 +96,8 @@
         </div>
 
         <!-- Capacity Information -->
-        <div class="bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-700 dark:to-slate-600 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600 shadow-sm">
+        <div
+          class="bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-700 dark:to-slate-600 rounded-2xl p-6 border-2 border-slate-200 dark:border-slate-600 shadow-sm">
           <div class="flex items-center mb-6">
             <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -109,7 +109,8 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Banquet -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-200">
+            <div
+              class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-pink-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -133,7 +134,8 @@
             </div>
 
             <!-- Theatre -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-cyan-300 dark:hover:border-cyan-500 transition-all duration-200">
+            <div
+              class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-cyan-300 dark:hover:border-cyan-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,7 +159,8 @@
             </div>
 
             <!-- Classroom -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200">
+            <div
+              class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,7 +184,8 @@
             </div>
 
             <!-- Boardroom -->
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-yellow-300 dark:hover:border-yellow-500 transition-all duration-200">
+            <div
+              class="bg-white dark:bg-slate-800 rounded-xl p-5 border-2 border-slate-200 dark:border-slate-600 hover:border-yellow-300 dark:hover:border-yellow-500 transition-all duration-200">
               <div class="flex items-center mb-3">
                 <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -252,7 +256,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useEvent, type EventContent } from '~/composables/content/useEvent'
-import ImageUpload from '~/components/admin/ImageUpload.vue'
+import ImageUpload from './ImageUpload.vue'
 
 const { eventContent, loading, updateEventContent } = useEvent()
 

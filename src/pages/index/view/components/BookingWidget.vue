@@ -73,8 +73,16 @@
 <script setup>
 import { ref } from 'vue'
 
-const checkIn = ref('Oct 28, 2024')
-const checkOut = ref('Nov 02, 2024')
+const formatDate = (date) => {
+  return date.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })
+}
+
+const today = new Date()
+const tomorrow = new Date(today)
+tomorrow.setDate(tomorrow.getDate() + 1)
+
+const checkIn = ref(formatDate(today))
+const checkOut = ref(formatDate(tomorrow))
 const guests = ref('2 Adults, 1 Room')
 
 const handleSearch = () => {

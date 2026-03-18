@@ -39,6 +39,23 @@ export default defineNuxtConfig({
     },
     domains: ['images.unsplash.com'],
   },
+  hooks: {
+    'pages:extend'(pages) {
+      // Remove routes generated from view/components directories
+      // These are components, not pages, but Nuxt picks them up as routes
+      function removeComponentRoutes(routes: typeof pages) {
+        for (let i = routes.length - 1; i >= 0; i--) {
+          const route = routes[i]!
+          if (route.path.includes('/view/')) {
+            routes.splice(i, 1)
+          } else if (route.children) {
+            removeComponentRoutes(route.children)
+          }
+        }
+      }
+      removeComponentRoutes(pages)
+    }
+  },
   srcDir: 'src/',
   css: ['~/assets/css/main.css'],
   vite: {
