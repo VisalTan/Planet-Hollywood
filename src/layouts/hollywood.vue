@@ -136,7 +136,7 @@
         <slot />
 
         <!-- Footer -->
-        <planet-hollywood-footer />
+        <LayoutFooter />
     </div>
 </template>
 

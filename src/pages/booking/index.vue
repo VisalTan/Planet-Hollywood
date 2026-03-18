@@ -213,8 +213,8 @@
 </template>
 
 <script setup lang="ts">
-import CalendarMonth from '~/components/booking/CalendarMonth.vue'
-import RoomCard from '~/components/booking/RoomCard.vue'
+import CalendarMonth from './view/components/CalendarMonth.vue'
+import RoomCard from './view/components/RoomCard.vue'
 
 definePageMeta({
   layout: 'hollywood'

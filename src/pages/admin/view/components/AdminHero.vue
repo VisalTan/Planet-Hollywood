@@ -153,7 +153,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useHero, type HeroContent } from '~/composables/content/useHero'
-import VideoUpload from '~/components/admin/VideoUpload.vue'
+import VideoUpload from './VideoUpload.vue'
 
 const { heroContent, loading, updateHeroContent } = useHero()
 
