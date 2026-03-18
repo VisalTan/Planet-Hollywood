@@ -82,7 +82,7 @@
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               alt="Fine dining restaurant interior"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWEYQW5IiDgeVFyTPKR1ggHmrUFlhctWgMjSF7D_9WEYHYpROcT710NXWY7k_MqKUGZfGP2rETuVdILRKvjxhWpQEtdNOj4hOjq2Y_5JNDrCvlPqewOHpAeMJyDk-nDG6FkidCkEzp6NMK5O1GP_r6rIzMT0e3pkcqzdRADfyOIw6ncoJIAgt4g8yiGglPhTwnZuB4NAOlvjaj4usEuS0Gpy0RC2FL_ko72f4WTety1D2EinlWKYgewuSH9ufZcId40uBkdvKTPz0" />
+              src="/vibe/image 9.png" />
             <div
               class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
@@ -92,7 +92,7 @@
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               alt="Concert stage with purple lights"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRFR2UqbKaFGjlnL9LcQ07jGGpyOwgN9EHsadsr8QSfgTVIxIqUXLzXDcU1RdDigJkA3qeM5ZoRNa9r4CFmSIbfLHem8QfD2k0M8-2hjIGEn8qZDbTbEqol5qKh7QoHFI5dTdTgcoyJTltVCuUyUVYqewTOs-a8jffSgL8PMPj4n3aG8YrtRedQlI5SFzGLvuea0yafZmRjWC_Rt7ko5mLXvTne4Ge4OPT-5WB1VrPMedSYjd-CqawDPYFc5GReS7jRxHqUFmYpZ4" />
+              src="/vibe/image 10.png" />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
@@ -102,7 +102,7 @@
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               alt="Luxury hotel room interior"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaIS15eZPnYXdWtIKQP0phvgfWQ-iHGxa6n2GoqtK_GltQfJqIYLhBFwWGWNaWSK7jfijInerzRt7IRd4nwP3JAVBP60wR4RUxMZPm2HfMBseEdXstMHB967RIunhszN7EKixqSBkDR13wK2xJ1yO8nhObgbdCoW4Qqp2HZOlDgLtxYaQU-7f98YvF_MFnHS_0VNnF2TlZIxllgrcvCV02wB7f8q_-QDRzPoa9nF6uWKDCVTrLUazPSjuaBxaL8LH_U8PQRnwB2d8" />
+              src="/vibe/image 11.png" />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
@@ -112,7 +112,7 @@
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               alt="Cocktail bar details"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPjFlFAgZMGlpPuGpVfT2squ03MSy4amgOKC6kkgCF1DFOlaO4856oz3-bFSQWVvD0Ak3VjlGciO7Yonx0iKpeHp3NjsTPWT2kwi8fMWgIZ-_3WW4GsyyaFaOjxRw1M12902P92NL232-gTrpExCJKDlpc6YY0H-3HY01iKhDMKS_FX7WxE50v9W7btbbYQIf0BAkJ1PDXtShkipkSS0AdP_ldevIAJsZH6WynTFxE2RrxDnlvHOVPn8hdNwrkJJoeVE0VYD5XBMs" />
+              src="/vibe/image 12.png" />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
