@@ -8,9 +8,9 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-24 text-center">
+    <div class="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 pt-32 pb-24 text-center">
       <NuxtLink to="/"
-        class="absolute top-24 left-6 md:left-12 flex items-center gap-2 text-white/70 hover:text-white transition-colors group mb-12">
+        class="absolute top-8 left-6 md:top-24 md:left-12 flex items-center gap-2 text-white/70 hover:text-white transition-colors group">
         <span
           class="material-symbols-outlined transform group-hover:-translate-x-1 transition-transform">arrow_back</span>
         <span class="font-sans uppercase tracking-[0.2em] text-xs font-bold">Back to Home</span>
@@ -19,10 +19,10 @@
       <div class="max-w-[1000px] w-full flex flex-col items-center gap-12" ref="contentRef">
         <header class="flex flex-col items-center">
           <span
-            class="font-sans uppercase tracking-[0.5em] text-primary text-sm font-black mb-4 animate-reveal-bottom">THEME
+            class="font-sans uppercase tracking-[0.3em] sm:tracking-[0.5em] text-white/60 text-xs sm:text-sm font-black mb-4 animate-reveal-bottom">THEME
             REVEALED</span>
           <h1
-            class="text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tight animate-reveal-bottom stagger-1">
+            class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tight animate-reveal-bottom stagger-1">
             <span class="text-primary">PH</span>{{ themeData?.name.substring(2) }}
           </h1>
           <div class="w-24 h-px bg-primary/50 mt-8 animate-reveal-width"></div>
