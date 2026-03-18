@@ -33,8 +33,8 @@
         <div class="layout-content-container flex flex-col max-w-[1200px] w-full">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 p-4">
             <!-- Room Cards -->
-            <div v-for="room in rooms" :key="room.id"
-              class="group relative flex flex-col items-center text-center gap-6 transition-all duration-500">
+            <NuxtLink v-for="room in rooms" :key="room.id" :to="`/rooms/theme/${room.title.toLowerCase()}`"
+              class="group relative flex flex-col items-center text-center gap-6 transition-all duration-500 cursor-pointer">
               <div class="flex flex-col gap-2 order-1">
                 <h3
                   class="text-white text-3xl font-serif font-bold group-hover:text-primary transition-colors">
@@ -51,7 +51,7 @@
                   {{ room.description }}
                 </p>
               </div>
-            </div>
+            </NuxtLink>
           </div>
 
           <!-- Footer Paragraph -->

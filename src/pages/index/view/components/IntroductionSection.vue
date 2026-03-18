@@ -2,18 +2,26 @@
   <div
     class="relative flex h-auto min-h-screen w-full flex-col font-display text-white overflow-hidden bg-background-dark">
     <!-- Background gradients -->
-    <div class="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-primary/10 via-background-dark to-background-dark pointer-events-none"></div>
-    <div class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none opacity-50"></div>
-    <div class="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none opacity-50"></div>
+    <div
+      class="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-primary/10 via-background-dark to-background-dark pointer-events-none">
+    </div>
+    <div
+      class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full pointer-events-none opacity-50">
+    </div>
+    <div
+      class="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none opacity-50">
+    </div>
 
     <!-- Hero Section -->
     <section class="relative overflow-hidden bg-background-dark py-16 sm:py-20 lg:py-32 xl:py-24">
       <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12">
         <div class="text-center">
           <span class="text-sm sm:text-base lg:text-lg tracking-wider text-primary">WELCOME TO THE LIMELIGHT</span>
-          <h1 class="mt-3 sm:mt-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white">The Legend Arrives in
+          <h1 class="mt-3 sm:mt-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white">The
+            Legend Arrives in
             Asia</h1>
-          <p class="mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8 text-gray-300 px-4 sm:px-0">
+          <p
+            class="mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8 text-gray-300 px-4 sm:px-0">
             For the first time, the glamour of Hollywood lands in the heart of Phnom Penh. Planet Hollywood invites you
             to a five-star experience where cinematic history meets contemporary luxury.
           </p>
@@ -26,7 +34,8 @@
               <span class="material-symbols-outlined text-primary text-3xl">hotel_class</span>
             </div>
             <h3 class="text-xl sm:text-2xl font-bold text-white">Planet Hollywood Hotels</h3>
-            <p class="text-sm sm:text-base text-gray-400">Founded in 1991 with the backing of superstars, Planet Hollywood redefined themed
+            <p class="text-sm sm:text-base text-gray-400">Founded in 1991 with the backing of superstars, Planet
+              Hollywood redefined themed
               entertainment. We extend this legacy to luxury hospitality, offering an immersive escape into the world of
               film and fame.</p>
             <a class="group inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-white"
@@ -42,7 +51,8 @@
               <span class="material-symbols-outlined text-primary text-3xl">pin_drop</span>
             </div>
             <h3 class="text-xl sm:text-2xl font-bold text-white">Phnom Penh, Cambodia</h3>
-            <p class="text-sm sm:text-base text-gray-400">Discover our landmark location in the iconic JS Tower, BKK1 District. Steps away
+            <p class="text-sm sm:text-base text-gray-400">Discover our landmark location in the iconic JS Tower, BKK1
+              District. Steps away
               from the Independence Monument, we place you at the epicenter of the city's vibrant culture, dining, and
               nightlife.</p>
             <a class="group inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-white"
@@ -58,7 +68,8 @@
               <span class="material-symbols-outlined text-primary text-3xl">flight</span>
             </div>
             <h3 class="text-xl sm:text-2xl font-bold text-white">Getting Here</h3>
-            <p class="text-sm sm:text-base text-gray-400">Conveniently located just 9 kilometers from Phnom Penh International Airport (PNH).
+            <p class="text-sm sm:text-base text-gray-400">Conveniently located just 9 kilometers from Phnom Penh
+              International Airport (PNH).
               Our concierge can arrange seamless luxury transfers, ensuring your star-studded arrival begins the moment
               you land.</p>
             <a class="group inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-white"
@@ -81,8 +92,7 @@
         <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 lg:gap-6 xl:gap-8">
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              alt="Fine dining restaurant interior"
-              src="/vibe/image 9.png" />
+              alt="Fine dining restaurant interior" src="/vibe/vibe1.png" />
             <div
               class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
@@ -91,8 +101,7 @@
           </div>
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              alt="Concert stage with purple lights"
-              src="/vibe/image 10.png" />
+              alt="Concert stage with purple lights" src="/vibe/vibe2.png" />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
@@ -101,8 +110,7 @@
           </div>
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              alt="Luxury hotel room interior"
-              src="/vibe/image 11.png" />
+              alt="Luxury hotel room interior" src="/vibe/vibe3.png" />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
@@ -111,8 +119,7 @@
           </div>
           <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
             <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              alt="Cocktail bar details"
-              src="/vibe/image 12.png" />
+              alt="Cocktail bar details" src="/vibe/vibe4.png" />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
             </div>
