@@ -13,70 +13,60 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-background-dark py-16 sm:py-20 lg:py-32 xl:py-24">
-      <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div class="text-center">
-          <span class="text-sm sm:text-base lg:text-lg tracking-wider text-primary">WELCOME TO THE LIMELIGHT</span>
-          <h1 class="mt-3 sm:mt-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white">The
-            Legend Arrives in
-            Asia</h1>
+    <section class="relative overflow-hidden bg-background-dark py-16 sm:py-20 lg:py-24">
+      <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center intro-text">
+          <span class="inline-block text-xs sm:text-sm tracking-[0.3em] text-primary uppercase mb-6 opacity-0 animate-reveal">Welcome to the Limelight</span>
+          <h1 class="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1] opacity-0 animate-reveal" style="animation-delay: 200ms;">
+            The Legend <br class="hidden sm:block" />
+            <span class="text-transparent bg-clip-text bg-linear-to-r from-primary via-white to-primary/50">Arrives in Asia</span>
+          </h1>
           <p
-            class="mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8 text-gray-300 px-4 sm:px-0">
-            For the first time, the glamour of Hollywood lands in the heart of Phnom Penh. Planet Hollywood invites you
-            to a five-star experience where cinematic history meets contemporary luxury.
+            class="mt-8 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed text-gray-400 font-light opacity-0 animate-reveal" style="animation-delay: 400ms;">
+            Experience the glamorous fusion of cinematic heritage and contemporary luxury in the heart of Phnom Penh.
           </p>
         </div>
-        <div
-          class="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 gap-6 sm:gap-8 border-t border-white/10 pt-12 sm:pt-16 lg:pt-20 lg:grid-cols-3 lg:gap-10 xl:gap-12">
-          <div class="flex flex-col items-start gap-3 sm:gap-4 px-2 sm:px-0">
-            <div
-              class="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-highlight ring-1 ring-white/10">
-              <span class="material-symbols-outlined text-primary text-3xl">hotel_class</span>
+
+        <div class="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16 pt-16 border-t border-white/5 info-grid">
+          <div class="info-card group">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
+              <span class="material-symbols-outlined text-primary text-2xl font-light">hotel_class</span>
             </div>
-            <h3 class="text-xl sm:text-2xl font-bold text-white">Planet Hollywood Hotels</h3>
-            <p class="text-sm sm:text-base text-gray-400">Founded in 1991 with the backing of superstars, Planet
-              Hollywood redefined themed
-              entertainment. We extend this legacy to luxury hospitality, offering an immersive escape into the world of
-              film and fame.</p>
-            <a class="group inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-white"
-              href="#">
-              Learn Our Story
-              <span
-                class="material-symbols-outlined ml-1.5 transition-transform group-hover:translate-x-1">arrow_forward</span>
+            <h3 class="text-2xl font-bold text-white mb-4">The Hollywood Legacy</h3>
+            <p class="text-gray-400 leading-relaxed font-light mb-6">
+              Founded by icons, redefined for the elite. We offer an immersive escape where every guest is treated like a star.
+            </p>
+            <a class="group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
+              <span class="border-b border-primary/30 pb-1 group-hover/link:border-primary group-hover/link:text-white transition-all">Our Story</span>
+              <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
             </a>
           </div>
-          <div class="flex flex-col items-start gap-3 sm:gap-4 px-2 sm:px-0">
-            <div
-              class="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-highlight ring-1 ring-white/10">
-              <span class="material-symbols-outlined text-primary text-3xl">pin_drop</span>
+
+          <div class="info-card group">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
+              <span class="material-symbols-outlined text-primary text-2xl font-light">location_on</span>
             </div>
-            <h3 class="text-xl sm:text-2xl font-bold text-white">Phnom Penh, Cambodia</h3>
-            <p class="text-sm sm:text-base text-gray-400">Discover our landmark location in the iconic JS Tower, BKK1
-              District. Steps away
-              from the Independence Monument, we place you at the epicenter of the city's vibrant culture, dining, and
-              nightlife.</p>
-            <a class="group inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-white"
-              href="#">
-              Explore the Location
-              <span
-                class="material-symbols-outlined ml-1.5 transition-transform group-hover:translate-x-1">arrow_forward</span>
+            <h3 class="text-2xl font-bold text-white mb-4">BKK1 District</h3>
+            <p class="text-gray-400 leading-relaxed font-light mb-6">
+              Residing in the iconic JS Tower, we place you at the epicenter of the city's most vibrant cultural enclave.
+            </p>
+            <a class="group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
+              <span class="border-b border-primary/30 pb-1 group-hover/link:border-primary group-hover/link:text-white transition-all">Explore BKK1</span>
+              <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
             </a>
           </div>
-          <div class="flex flex-col items-start gap-3 sm:gap-4 px-2 sm:px-0">
-            <div
-              class="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-highlight ring-1 ring-white/10">
-              <span class="material-symbols-outlined text-primary text-3xl">flight</span>
+
+          <div class="info-card group">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/5 border border-white/10 mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30">
+              <span class="material-symbols-outlined text-primary text-2xl font-light">sensor_door</span>
             </div>
-            <h3 class="text-xl sm:text-2xl font-bold text-white">Getting Here</h3>
-            <p class="text-sm sm:text-base text-gray-400">Conveniently located just 9 kilometers from Phnom Penh
-              International Airport (PNH).
-              Our concierge can arrange seamless luxury transfers, ensuring your star-studded arrival begins the moment
-              you land.</p>
-            <a class="group inline-flex items-center text-sm font-semibold text-primary transition-colors hover:text-white"
-              href="#">
-              Arrange Transport
-              <span
-                class="material-symbols-outlined ml-1.5 transition-transform group-hover:translate-x-1">arrow_forward</span>
+            <h3 class="text-2xl font-bold text-white mb-4">Curated Arrival</h3>
+            <p class="text-gray-400 leading-relaxed font-light mb-6">
+              Just 9km from PNH International, your star-studded journey begins with seamless luxury transfers.
+            </p>
+            <a class="group/link inline-flex items-center text-xs font-bold tracking-widest text-primary uppercase transition-all" href="#">
+              <span class="border-b border-primary/30 pb-1 group-hover/link:border-primary group-hover/link:text-white transition-all">Book Transfer</span>
+              <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover/link:translate-x-2">arrow_right_alt</span>
             </a>
           </div>
         </div>
@@ -84,47 +74,59 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="bg-background-dark pt-4 sm:pt-6 lg:pt-8 pb-16 sm:pb-20 lg:pb-24 xl:pb-32">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div class="mb-6 sm:mb-8 lg:mb-10 px-2 sm:px-0">
-          <h3 class="text-2xl sm:text-3xl font-bold text-white">The Vibe</h3>
+    <section class="bg-background-dark py-16 sm:py-20 overflow-hidden gallery-section">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex items-end justify-between mb-10 px-2 sm:px-0">
+          <div class="gallery-title">
+            <span class="text-xs tracking-[0.4em] text-primary uppercase block mb-4">Visual Journey</span>
+            <h3 class="text-4xl sm:text-5xl text-white font-bold">Capture The Vibe</h3>
+          </div>
+          <div class="hidden sm:block h-px grow bg-white/10 mx-12"></div>
         </div>
-        <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 lg:gap-6 xl:gap-8">
-          <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
-            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-8 gallery-grid">
+          <div class="group relative aspect-3/4.5 overflow-hidden rounded-2xl bg-surface-dark gallery-item opacity-0 translate-y-12">
+            <img class="h-full w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
               alt="Fine dining restaurant interior" src="/vibe/vibe1.png" />
             <div
-              class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
+              class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <span
-              class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 text-sm sm:text-base font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Dining</span>
+            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Social</span>
+              <span class="text-2xl text-white font-bold">Fine Dining</span>
+            </div>
           </div>
-          <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
-            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          <div class="group relative aspect-3/4.5 overflow-hidden rounded-2xl bg-surface-dark gallery-item opacity-0 translate-y-12" style="transition-delay: 100ms;">
+            <img class="h-full w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
               alt="Concert stage with purple lights" src="/vibe/vibe2.png" />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
+              class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <span
-              class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 text-sm sm:text-base font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Events</span>
+            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Entertainment</span>
+              <span class="text-2xl text-white font-bold">Elite Events</span>
+            </div>
           </div>
-          <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
-            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          <div class="group relative aspect-3/4.5 overflow-hidden rounded-2xl bg-surface-dark gallery-item opacity-0 translate-y-12" style="transition-delay: 200ms;">
+            <img class="h-full w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
               alt="Luxury hotel room interior" src="/vibe/vibe3.png" />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
+              class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <span
-              class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 text-sm sm:text-base font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Rooms</span>
+            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Rest</span>
+              <span class="text-2xl text-white font-bold">Cinematic Stays</span>
+            </div>
           </div>
-          <div class="group relative aspect-[3/4] overflow-hidden rounded-lg sm:rounded-xl bg-surface-dark">
-            <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          <div class="group relative aspect-3/4.5 overflow-hidden rounded-2xl bg-surface-dark gallery-item opacity-0 translate-y-12" style="transition-delay: 300ms;">
+            <img class="h-full w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
               alt="Cocktail bar details" src="/vibe/vibe4.png" />
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100">
+              class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80">
             </div>
-            <span
-              class="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 text-sm sm:text-base font-bold text-white opacity-0 transition-opacity group-hover:opacity-100">Bar</span>
+            <div class="absolute bottom-8 left-8 right-8 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <span class="text-xs tracking-widest text-primary uppercase font-bold block mb-2">Nightlife</span>
+              <span class="text-2xl text-white font-bold">Midnight Mixology</span>
+            </div>
           </div>
         </div>
       </div>
@@ -133,6 +135,50 @@
 </template>
 
 <script setup lang="ts">
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+onMounted(() => {
+  // Reveal animations for hero
+  gsap.to('.animate-reveal', {
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    stagger: 0.2,
+    ease: 'power3.out'
+  })
+
+  // Scroll animations for info cards
+  gsap.from('.info-card', {
+    scrollTrigger: {
+      trigger: '.info-grid',
+      start: 'top 80%',
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.15,
+    ease: 'power2.out'
+  })
+
+  // Gallery item entrance
+  gsap.to('.gallery-item', {
+    scrollTrigger: {
+      trigger: '.gallery-grid',
+      start: 'top 85%',
+    },
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: 0.1,
+    ease: 'power3.out'
+  })
+})
+
 useHead({
   title: 'Planet Hollywood Asia - Phnom Penh',
   htmlAttrs: {
@@ -155,10 +201,6 @@ useHead({
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap'
-    },
-    {
-      rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap'
     }
   ]
@@ -166,24 +208,31 @@ useHead({
 </script>
 
 <style scoped>
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+
+.animate-reveal {
+  transform: translateY(30px);
 }
 
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Glassmorphism for hover overlays could be added here if needed */
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1d1023;
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3c2249;
-  border-radius: 4px;
+  background: #222;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #af25f4;
+  background: var(--color-primary);
 }
 </style>
