@@ -101,19 +101,10 @@
     <!-- Gallery Section -->
     <section class="bg-background-dark py-12 sm:py-16 overflow-hidden gallery-section">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="flex items-end justify-between mb-16 px-2 sm:px-0">
+        <div class="mb-16 px-2 sm:px-0">
           <div class="gallery-title">
-            <span class="text-xs tracking-[0.5em] text-primary uppercase block mb-6 font-semibold">Visual Journey</span>
-            <h3 class="text-5xl sm:text-7xl text-white font-black tracking-tighter">Capture <br class="sm:hidden" />The Vibe</h3>
-          </div>
-          <div class="hidden lg:block h-px grow bg-white/10 mx-16 mb-4"></div>
-          <div class="hidden sm:flex gap-4 mb-2">
-             <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/30 cursor-pointer hover:border-primary hover:text-primary transition-all">
-                <span class="material-symbols-outlined">west</span>
-             </div>
-             <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/30 cursor-pointer hover:border-primary hover:text-primary transition-all">
-                <span class="material-symbols-outlined">east</span>
-             </div>
+            <h3 class="text-3xl sm:text-5xl text-white font-black tracking-tight uppercase">Brand Personality</h3>
+            <span class="text-xs tracking-[0.3em] text-white/40 uppercase block mt-2 font-semibold">Positioning</span>
           </div>
         </div>
         
